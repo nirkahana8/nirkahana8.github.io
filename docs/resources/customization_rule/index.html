@@ -1,0 +1,3761 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Reference documentation for the pb Terraform provider (POC)">
+      
+      
+      
+        <link rel="canonical" href="https://nirkahana8.github.io/docs/resources/customization_rule/">
+      
+      
+        <link rel="prev" href="../..">
+      
+      
+        <link rel="next" href="../security_rule/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>pb_customization_rule - Prisma Browser Terraform Provider</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#pb_customization_rule-resource" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Prisma Browser Terraform Provider" class="md-header__button md-logo" aria-label="Prisma Browser Terraform Provider" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Prisma Browser Terraform Provider
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              pb_customization_rule
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Prisma Browser Terraform Provider" class="md-nav__button md-logo" aria-label="Prisma Browser Terraform Provider" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Prisma Browser Terraform Provider
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resources
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Resources
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    pb_customization_rule
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    pb_customization_rule
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schema
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Schema">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#required" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Required
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Optional
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#read-only" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Read-Only
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsadmin_messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.admin_messages
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsadmin_messagesmessages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.admin_messages.messages
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsauto_launch_external_applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.auto_launch_external_applications
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsauto_launch_external_applicationsrules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.auto_launch_external_applications.rules
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsautomatic_client_certificate_selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.automatic_client_certificate_selection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsautomatic_client_certificate_selectionrules_" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.automatic_client_certificate_selection.rules_
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsautomatic_client_certificate_selectionrules_filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.automatic_client_certificate_selection.rules_.filter
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsautomatic_client_certificate_selectionrules_filterissuer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.automatic_client_certificate_selection.rules_.filter.issuer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsautomatic_client_certificate_selectionrules_filtersubject" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.automatic_client_certificate_selection.rules_.filter.subject
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsbackground_image" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.background_image
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsbrand_color" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.brand_color
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsbrowser_icon" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.browser_icon
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsbuilt_in_dns_client" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.built_in_dns_client
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlscached_session_duration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.cached_session_duration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlscompany_logo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.company_logo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlscompany_name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.company_name
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlscustom_browser_preferences" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.custom_browser_preferences
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlscustom_http_header" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.custom_http_header
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlscustom_notice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.custom_notice
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlscustom_profile_preferences" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.custom_profile_preferences
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlscustom_texts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.custom_texts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlscustom_textsoverrides" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.custom_texts.overrides
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlscustom_textsoverrideslink" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.custom_texts.overrides.link
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsdefault_ai_provider" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.default_ai_provider
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsdefault_search_provider" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.default_search_provider
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsdeployment_upgrade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.deployment_upgrade
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsdeployment_upgradeforce_rollback" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.deployment_upgrade.force_rollback
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsdeployment_upgradepinned_versions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.deployment_upgrade.pinned_versions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsdesktop_sharing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.desktop_sharing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsextension_force_install" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.extension_force_install
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsextension_force_installextensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.extension_force_install.extensions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsforce_page_refresh_on_policy_update" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.force_page_refresh_on_policy_update
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlshistory_collection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.history_collection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlshome_page" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.home_page
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsidentity_provider_synced_shortcuts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.identity_provider_synced_shortcuts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsincognito" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.incognito
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsinternal_network_detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.internal_network_detection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsinternal_network_detectionhost_detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.internal_network_detection.host_detection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsmanaged_shortcuts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.managed_shortcuts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsmanaged_shortcutspinned_shortcuts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.managed_shortcuts.pinned_shortcuts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsmanaged_shortcutssections" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.managed_shortcuts.sections
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsmanaged_shortcutssectionsapps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.managed_shortcuts.sections.apps
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsmanaged_shortcutsshortcuts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.managed_shortcuts.shortcuts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsmicrosoft_auto_sso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.microsoft_auto_sso
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsnew_tab_page" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.new_tab_page
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlson_browser_startup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.on_browser_startup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsonboarding_wizard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.onboarding_wizard
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsonboarding_wizardsteps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.onboarding_wizard.steps
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsonboarding_wizardstepscustomize" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.onboarding_wizard.steps.customize
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsonboarding_wizardstepsextension" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.onboarding_wizard.steps.extension
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsonboarding_wizardstepsimport_" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.onboarding_wizard.steps.import_
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsonboarding_wizardstepsmobile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.onboarding_wizard.steps.mobile
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsonboarding_wizardstepspassword_manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.onboarding_wizard.steps.password_manager
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsonboarding_wizardstepspolicy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.onboarding_wizard.steps.policy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsonboarding_wizardstepsrestriction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.onboarding_wizard.steps.restriction
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsonboarding_wizardstepswelcome" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.onboarding_wizard.steps.welcome
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsonboarding_wizardstepswelcomelink_" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.onboarding_wizard.steps.welcome.link_
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlspage_translation_google_translate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.page_translation_google_translate
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsprisma_browser_desktop_extender" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.prisma_browser_desktop_extender
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsprisma_browser_desktop_extenderexclusions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.prisma_browser_desktop_extender.exclusions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsprisma_browser_desktop_extenderexclusionsprocesses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.prisma_browser_desktop_extender.exclusions.processes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsprisma_browser_desktop_extenderexclusionssuppressed_processes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.prisma_browser_desktop_extender.exclusions.suppressed_processes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsprofile_sync" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.profile_sync
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsproxy_auto_configuration_pac_file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.proxy_auto_configuration_pac_file
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsreal_user_monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.real_user_monitoring
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsrequest_desktop_mobile_site" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.request_desktop_mobile_site
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsrequest_desktop_mobile_siterules__" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.request_desktop_mobile_site.rules__
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlssearch_engine_content_filtering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.search_engine_content_filtering
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlssearch_engine_content_filteringengines" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.search_engine_content_filtering.engines
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlssearch_suggestions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.search_suggestions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlssuggest_default_browser" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.suggest_default_browser
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlstheme_color" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.theme_color
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlstraffic_flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.traffic_flow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsuser_agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.user_agent
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-positioning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for positioning
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-positioningtarget" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for positioning.target
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-positioningtargetanchor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for positioning.target.anchor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for scope
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-scopedevice_groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for scope.device_groups
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-scopelocations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for scope.locations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-scopeprivate_ips" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for scope.private_ips
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-scopepublic_ips" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for scope.public_ips
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-scopeusers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for scope.users
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for metadata
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-metadataconfiguration_version" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for metadata.configuration_version
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-policy_profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for policy_profile
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-section" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for section
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../security_rule/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    pb_security_rule
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../access_and_data_rule/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    pb_access_and_data_rule
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sign_in_rule/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    pb_sign_in_rule
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../device_group/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    pb_device_group
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user_group/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    pb_user_group
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cloud_storage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    pb_cloud_storage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Sources
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Data Sources
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data-sources/user/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    pb_user
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data-sources/users/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    pb_users
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data-sources/user_groups/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    pb_user_groups
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data-sources/device/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    pb_device
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data-sources/devices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    pb_devices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data-sources/device_groups/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    pb_device_groups
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schema
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Schema">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#required" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Required
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Optional
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#read-only" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Read-Only
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsadmin_messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.admin_messages
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsadmin_messagesmessages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.admin_messages.messages
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsauto_launch_external_applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.auto_launch_external_applications
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsauto_launch_external_applicationsrules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.auto_launch_external_applications.rules
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsautomatic_client_certificate_selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.automatic_client_certificate_selection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsautomatic_client_certificate_selectionrules_" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.automatic_client_certificate_selection.rules_
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsautomatic_client_certificate_selectionrules_filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.automatic_client_certificate_selection.rules_.filter
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsautomatic_client_certificate_selectionrules_filterissuer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.automatic_client_certificate_selection.rules_.filter.issuer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsautomatic_client_certificate_selectionrules_filtersubject" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.automatic_client_certificate_selection.rules_.filter.subject
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsbackground_image" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.background_image
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsbrand_color" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.brand_color
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsbrowser_icon" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.browser_icon
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsbuilt_in_dns_client" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.built_in_dns_client
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlscached_session_duration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.cached_session_duration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlscompany_logo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.company_logo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlscompany_name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.company_name
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlscustom_browser_preferences" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.custom_browser_preferences
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlscustom_http_header" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.custom_http_header
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlscustom_notice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.custom_notice
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlscustom_profile_preferences" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.custom_profile_preferences
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlscustom_texts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.custom_texts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlscustom_textsoverrides" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.custom_texts.overrides
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlscustom_textsoverrideslink" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.custom_texts.overrides.link
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsdefault_ai_provider" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.default_ai_provider
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsdefault_search_provider" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.default_search_provider
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsdeployment_upgrade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.deployment_upgrade
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsdeployment_upgradeforce_rollback" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.deployment_upgrade.force_rollback
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsdeployment_upgradepinned_versions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.deployment_upgrade.pinned_versions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsdesktop_sharing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.desktop_sharing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsextension_force_install" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.extension_force_install
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsextension_force_installextensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.extension_force_install.extensions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsforce_page_refresh_on_policy_update" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.force_page_refresh_on_policy_update
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlshistory_collection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.history_collection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlshome_page" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.home_page
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsidentity_provider_synced_shortcuts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.identity_provider_synced_shortcuts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsincognito" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.incognito
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsinternal_network_detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.internal_network_detection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsinternal_network_detectionhost_detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.internal_network_detection.host_detection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsmanaged_shortcuts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.managed_shortcuts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsmanaged_shortcutspinned_shortcuts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.managed_shortcuts.pinned_shortcuts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsmanaged_shortcutssections" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.managed_shortcuts.sections
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsmanaged_shortcutssectionsapps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.managed_shortcuts.sections.apps
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsmanaged_shortcutsshortcuts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.managed_shortcuts.shortcuts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsmicrosoft_auto_sso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.microsoft_auto_sso
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsnew_tab_page" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.new_tab_page
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlson_browser_startup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.on_browser_startup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsonboarding_wizard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.onboarding_wizard
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsonboarding_wizardsteps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.onboarding_wizard.steps
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsonboarding_wizardstepscustomize" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.onboarding_wizard.steps.customize
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsonboarding_wizardstepsextension" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.onboarding_wizard.steps.extension
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsonboarding_wizardstepsimport_" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.onboarding_wizard.steps.import_
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsonboarding_wizardstepsmobile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.onboarding_wizard.steps.mobile
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsonboarding_wizardstepspassword_manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.onboarding_wizard.steps.password_manager
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsonboarding_wizardstepspolicy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.onboarding_wizard.steps.policy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsonboarding_wizardstepsrestriction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.onboarding_wizard.steps.restriction
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsonboarding_wizardstepswelcome" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.onboarding_wizard.steps.welcome
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsonboarding_wizardstepswelcomelink_" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.onboarding_wizard.steps.welcome.link_
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlspage_translation_google_translate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.page_translation_google_translate
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsprisma_browser_desktop_extender" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.prisma_browser_desktop_extender
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsprisma_browser_desktop_extenderexclusions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.prisma_browser_desktop_extender.exclusions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsprisma_browser_desktop_extenderexclusionsprocesses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.prisma_browser_desktop_extender.exclusions.processes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsprisma_browser_desktop_extenderexclusionssuppressed_processes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.prisma_browser_desktop_extender.exclusions.suppressed_processes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsprofile_sync" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.profile_sync
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsproxy_auto_configuration_pac_file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.proxy_auto_configuration_pac_file
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsreal_user_monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.real_user_monitoring
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsrequest_desktop_mobile_site" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.request_desktop_mobile_site
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsrequest_desktop_mobile_siterules__" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.request_desktop_mobile_site.rules__
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlssearch_engine_content_filtering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.search_engine_content_filtering
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlssearch_engine_content_filteringengines" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.search_engine_content_filtering.engines
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlssearch_suggestions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.search_suggestions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlssuggest_default_browser" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.suggest_default_browser
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlstheme_color" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.theme_color
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlstraffic_flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.traffic_flow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-controlsuser_agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for controls.user_agent
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-positioning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for positioning
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-positioningtarget" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for positioning.target
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-positioningtargetanchor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for positioning.target.anchor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for scope
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-scopedevice_groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for scope.device_groups
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-scopelocations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for scope.locations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-scopeprivate_ips" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for scope.private_ips
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-scopepublic_ips" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for scope.public_ips
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-scopeusers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for scope.users
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for metadata
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-metadataconfiguration_version" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for metadata.configuration_version
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-policy_profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for policy_profile
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-section" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for section
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="pb_customization_rule-resource">pb_customization_rule (Resource)</h1>
+<!-- schema generated by tfplugindocs -->
+<h2 id="schema">Schema</h2>
+<h3 id="required">Required</h3>
+<ul>
+<li><code>controls</code> (Attributes) Controls for customization rules. (see <a href="#nestedatt--controls">below for nested schema</a>)</li>
+<li><code>mode</code> (String) The mode of the rule. The 'monitor' mode is not supported for this rule type.</li>
+<li><code>name</code> (String) The name or title of the rule.</li>
+</ul>
+<h3 id="optional">Optional</h3>
+<ul>
+<li><code>configuration_version</code> (String) Configuration version to retrieve (draft, active, or version number)</li>
+<li><code>description</code> (String) The detailed description of the rule.</li>
+<li><code>positioning</code> (Attributes) Optional placement directive for the entity. On create, when omitted, the entity is placed at the top of the stack. On update, when omitted, the entity's current position is preserved. (see <a href="#nestedatt--positioning">below for nested schema</a>)</li>
+<li><code>scope</code> (Attributes) Provide scope to describe this rule (see <a href="#nestedatt--scope">below for nested schema</a>)</li>
+</ul>
+<h3 id="read-only">Read-Only</h3>
+<ul>
+<li><code>id</code> (String) The unique identifier of the created resource (PULID, 29 chars).</li>
+<li><code>metadata</code> (Attributes) (see <a href="#nestedatt--metadata">below for nested schema</a>)</li>
+<li><code>policy_profile</code> (Attributes) The linked policy profile (see <a href="#nestedatt--policy_profile">below for nested schema</a>)</li>
+<li><code>priority</code> (Number) Order position of the rule in the list</li>
+<li><code>section</code> (Attributes) Section this rule belongs to (null if standalone) (see <a href="#nestedatt--section">below for nested schema</a>)</li>
+</ul>
+<p><a id="nestedatt--controls"></a></p>
+<h3 id="nested-schema-for-controls">Nested Schema for <code>controls</code></h3>
+<p>Optional:</p>
+<ul>
+<li><code>admin_messages</code> (Attributes) Control whether admin messages appear on the new tab page. (see <a href="#nestedatt--controls--admin_messages">below for nested schema</a>)</li>
+<li><code>auto_launch_external_applications</code> (Attributes) Control whether websites can open external desktop apps without prompting users. (see <a href="#nestedatt--controls--auto_launch_external_applications">below for nested schema</a>)</li>
+<li><code>automatic_client_certificate_selection</code> (Attributes) Automatically selects matching client certificates for specified URLs to facilitate seamless authentication. (see <a href="#nestedatt--controls--automatic_client_certificate_selection">below for nested schema</a>)</li>
+<li><code>background_image</code> (Attributes) Set new tab page background (see <a href="#nestedatt--controls--background_image">below for nested schema</a>)</li>
+<li><code>brand_color</code> (Attributes) Choose a brand color to be applied across all user-facing browser elements, including dialogs, block pages, and other elements (see <a href="#nestedatt--controls--brand_color">below for nested schema</a>)</li>
+<li><code>browser_icon</code> (Attributes) Set the icon for the browser in the operating system (see <a href="#nestedatt--controls--browser_icon">below for nested schema</a>)</li>
+<li><code>built_in_dns_client</code> (Attributes) Choose whether DNS is resolved by the browsers built-in client or by the operating system. (see <a href="#nestedatt--controls--built_in_dns_client">below for nested schema</a>)</li>
+<li><code>cached_session_duration</code> (Attributes) Set the duration the browser can run using securely cached credentials without syncing to the Prisma Browser management console. (see <a href="#nestedatt--controls--cached_session_duration">below for nested schema</a>)</li>
+<li><code>company_logo</code> (Attributes) Set the logo displayed in the browser on dialogs, homepage, and other pages. (see <a href="#nestedatt--controls--company_logo">below for nested schema</a>)</li>
+<li><code>company_name</code> (Attributes) Set the name displayed in the browser on dialogs, homepage, and other pages. (see <a href="#nestedatt--controls--company_name">below for nested schema</a>)</li>
+<li><code>custom_browser_preferences</code> (Attributes) Apply custom browser preferences. Please contact Prisma Browser's support team for further guidance. When <code>mode</code> is <code>enabled</code>, <code>preferences</code> is required; when <code>mode</code> is <code>disabled</code>, <code>preferences</code> must not be set. (see <a href="#nestedatt--controls--custom_browser_preferences">below for nested schema</a>)</li>
+<li><code>custom_http_header</code> (Attributes) Set a custom HTTP header to identify HTTP/S requests. (see <a href="#nestedatt--controls--custom_http_header">below for nested schema</a>)</li>
+<li><code>custom_notice</code> (Attributes) Set a customized notice that will be displayed to end-users when they use the Prisma mobile browser. (see <a href="#nestedatt--controls--custom_notice">below for nested schema</a>)</li>
+<li><code>custom_profile_preferences</code> (Attributes) Apply custom browser profile preferences. Please contact Prisma Browser's support team for further guidance. When <code>mode</code> is <code>enabled</code>, <code>preferences</code> is required; when <code>mode</code> is <code>disabled</code>, <code>preferences</code> must not be set. (see <a href="#nestedatt--controls--custom_profile_preferences">below for nested schema</a>)</li>
+<li><code>custom_texts</code> (Attributes) Customize and edit texts shown in browser dialogs and block pages. (see <a href="#nestedatt--controls--custom_texts">below for nested schema</a>)</li>
+<li><code>default_ai_provider</code> (Attributes) Selected provider will appear as a "Prompt AI" shortcut in the New Tab Page Enterprise Omnibox. (see <a href="#nestedatt--controls--default_ai_provider">below for nested schema</a>)</li>
+<li><code>default_search_provider</code> (Attributes) Control the default search engine provider for the address bar and context menu search access. (see <a href="#nestedatt--controls--default_search_provider">below for nested schema</a>)</li>
+<li><code>deployment_upgrade</code> (Attributes) Select Prisma Browser upgrade channel. (see <a href="#nestedatt--controls--deployment_upgrade">below for nested schema</a>)</li>
+<li><code>desktop_sharing</code> (Attributes) Control end-user ability to share their entire desktop screen or desktop apps during video conferencing sessions via web apps such as Zoom, MS Teams, and Slack. (see <a href="#nestedatt--controls--desktop_sharing">below for nested schema</a>)</li>
+<li><code>extension_force_install</code> (Attributes) Set specific extensions to be installed automatically in Prisma Browser. (see <a href="#nestedatt--controls--extension_force_install">below for nested schema</a>)</li>
+<li><code>force_page_refresh_on_policy_update</code> (Attributes) Force a page refresh while the end-user is browsing to immediately enforce policy changes for certain controls. (see <a href="#nestedatt--controls--force_page_refresh_on_policy_update">below for nested schema</a>)</li>
+<li><code>history_collection</code> (Attributes) Collect new users' browsing history to identify trends and support enforcement decisions based on historical data. (see <a href="#nestedatt--controls--history_collection">below for nested schema</a>)</li>
+<li><code>home_page</code> (Attributes) Set the target page when a user clicks the Home Page button. (see <a href="#nestedatt--controls--home_page">below for nested schema</a>)</li>
+<li><code>identity_provider_synced_shortcuts</code> (Attributes) Display a user's IDP synced company assigned applications as shortcuts on their New Tab page. (see <a href="#nestedatt--controls--identity_provider_synced_shortcuts">below for nested schema</a>)</li>
+<li><code>incognito</code> (Attributes) Control the ability to open Prisma Browser in Incognito mode. (see <a href="#nestedatt--controls--incognito">below for nested schema</a>)</li>
+<li><code>internal_network_detection</code> (Attributes) Configure internal network detection to ensure traffic is routed in an optimal way. (see <a href="#nestedatt--controls--internal_network_detection">below for nested schema</a>)</li>
+<li><code>managed_shortcuts</code> (Attributes) Set the applications that appear on the new tab page and in bookmarks. (see <a href="#nestedatt--controls--managed_shortcuts">below for nested schema</a>)</li>
+<li><code>microsoft_auto_sso</code> (Attributes) Enable automatic web-application user sign-in for Microsoft Entra ID accounts, based on the device signed-in account. (see <a href="#nestedatt--controls--microsoft_auto_sso">below for nested schema</a>)</li>
+<li><code>new_tab_page</code> (Attributes) Set the type of page when a new Prisma Browser or tab is opened. (see <a href="#nestedatt--controls--new_tab_page">below for nested schema</a>)</li>
+<li><code>on_browser_startup</code> (Attributes) Control the browser's 'On Startup' settings (see <a href="#nestedatt--controls--on_browser_startup">below for nested schema</a>)</li>
+<li><code>onboarding_wizard</code> (Attributes) Configure the end-user onboarding wizard. (see <a href="#nestedatt--controls--onboarding_wizard">below for nested schema</a>)</li>
+<li><code>page_translation_google_translate</code> (Attributes) Control the Google Translation banner on foreign-language pages. (see <a href="#nestedatt--controls--page_translation_google_translate">below for nested schema</a>)</li>
+<li><code>prisma_browser_desktop_extender</code> (Attributes) Control the use of Prisma Browser Local Extender (PABL). (see <a href="#nestedatt--controls--prisma_browser_desktop_extender">below for nested schema</a>)</li>
+<li><code>profile_sync</code> (Attributes) Set up user profile sync across all the devices a user is logged in to. (see <a href="#nestedatt--controls--profile_sync">below for nested schema</a>)</li>
+<li><code>proxy_auto_configuration_pac_file</code> (Attributes) Configure Prisma Browser to use a proxy auto-configuration (PAC) file. (see <a href="#nestedatt--controls--proxy_auto_configuration_pac_file">below for nested schema</a>)</li>
+<li><code>real_user_monitoring</code> (Attributes) Control the use of RUM within Prisma Browser. (see <a href="#nestedatt--controls--real_user_monitoring">below for nested schema</a>)</li>
+<li><code>request_desktop_mobile_site</code> (Attributes) Override default site settings for specific domains on mobile devices. (see <a href="#nestedatt--controls--request_desktop_mobile_site">below for nested schema</a>)</li>
+<li><code>search_engine_content_filtering</code> (Attributes) Enable content filtering for search engines to reduce exposure to inappropriate or distracting material (e.g., adult or violent content). This setting is supported by selected search engines, as appears in the list below. (see <a href="#nestedatt--controls--search_engine_content_filtering">below for nested schema</a>)</li>
+<li><code>search_suggestions</code> (Attributes) Show live search suggestions in the address bar as users type. (see <a href="#nestedatt--controls--search_suggestions">below for nested schema</a>)</li>
+<li><code>suggest_default_browser</code> (Attributes) Controls whether Prisma Browser suggests itself as the default browser to the user. (see <a href="#nestedatt--controls--suggest_default_browser">below for nested schema</a>)</li>
+<li><code>theme_color</code> (Attributes) Set Prisma Browser's theme color. (see <a href="#nestedatt--controls--theme_color">below for nested schema</a>)</li>
+<li><code>traffic_flow</code> (Attributes) Choose the way the Prisma Browser handles network traffic. (see <a href="#nestedatt--controls--traffic_flow">below for nested schema</a>)</li>
+<li><code>user_agent</code> (Attributes) Set additional User-Agent component to the default User-Agent string to identify HTTP/S requests. (see <a href="#nestedatt--controls--user_agent">below for nested schema</a>)</li>
+</ul>
+<p><a id="nestedatt--controls--admin_messages"></a></p>
+<h3 id="nested-schema-for-controlsadmin_messages">Nested Schema for <code>controls.admin_messages</code></h3>
+<p>Required:</p>
+<ul>
+<li><code>mode</code> (String) Whether admin messages appear on the new tab page</li>
+</ul>
+<p>Optional:</p>
+<ul>
+<li><code>messages</code> (Attributes List) Custom admin messages appearing on the new tab page (see <a href="#nestedatt--controls--admin_messages--messages">below for nested schema</a>)</li>
+</ul>
+<p><a id="nestedatt--controls--admin_messages--messages"></a></p>
+<h3 id="nested-schema-for-controlsadmin_messagesmessages">Nested Schema for <code>controls.admin_messages.messages</code></h3>
+<p>Required:</p>
+<ul>
+<li><code>description</code> (String) Message body displayed on the new tab page</li>
+<li><code>title</code> (String) Message title displayed on the new tab page</li>
+</ul>
+<p>Optional:</p>
+<ul>
+<li><code>external_link</code> (String) Optional URL linked from the message. Must be provided together with externalLinkName.</li>
+<li><code>external_link_name</code> (String) Optional link name for the message URL. Must be provided together with externalLink.</li>
+</ul>
+<p><a id="nestedatt--controls--auto_launch_external_applications"></a></p>
+<h3 id="nested-schema-for-controlsauto_launch_external_applications">Nested Schema for <code>controls.auto_launch_external_applications</code></h3>
+<p>Required:</p>
+<ul>
+<li><code>action</code> (String) Whether matching websites can bypass the external application launch prompt</li>
+</ul>
+<p>Optional:</p>
+<ul>
+<li><code>rules</code> (Attributes List) Rules for auto-launching external applications (see <a href="#nestedatt--controls--auto_launch_external_applications--rules">below for nested schema</a>)</li>
+</ul>
+<p><a id="nestedatt--controls--auto_launch_external_applications--rules"></a></p>
+<h3 id="nested-schema-for-controlsauto_launch_external_applicationsrules">Nested Schema for <code>controls.auto_launch_external_applications.rules</code></h3>
+<p>Required:</p>
+<ul>
+<li><code>allowed_origins</code> (List of String) Origins allowed to launch the protocol without prompting</li>
+<li><code>protocol</code> (String) External application protocol scheme</li>
+</ul>
+<p><a id="nestedatt--controls--automatic_client_certificate_selection"></a></p>
+<h3 id="nested-schema-for-controlsautomatic_client_certificate_selection">Nested Schema for <code>controls.automatic_client_certificate_selection</code></h3>
+<p>Required:</p>
+<ul>
+<li><code>action</code> (String) Whether automatic client certificate selection is enabled</li>
+</ul>
+<p>Optional:</p>
+<ul>
+<li><code>rules_</code> (Attributes List) URL sets and certificate filters for automatic client certificate selection (see <a href="#nestedatt--controls--automatic_client_certificate_selection--rules_">below for nested schema</a>)</li>
+</ul>
+<p><a id="nestedatt--controls--automatic_client_certificate_selection--rules_"></a></p>
+<h3 id="nested-schema-for-controlsautomatic_client_certificate_selectionrules_">Nested Schema for <code>controls.automatic_client_certificate_selection.rules_</code></h3>
+<p>Required:</p>
+<ul>
+<li><code>filter</code> (Attributes) Certificate matching criteria for the URL set (see <a href="#nestedatt--controls--automatic_client_certificate_selection--rules_--filter">below for nested schema</a>)</li>
+<li><code>url_patterns</code> (List of String) URL patterns where matching client certificates are selected automatically</li>
+</ul>
+<p><a id="nestedatt--controls--automatic_client_certificate_selection--rules_--filter"></a></p>
+<h3 id="nested-schema-for-controlsautomatic_client_certificate_selectionrules_filter">Nested Schema for <code>controls.automatic_client_certificate_selection.rules_.filter</code></h3>
+<p>Optional:</p>
+<ul>
+<li><code>issuer</code> (Attributes) Optional issuer certificate criteria (see <a href="#nestedatt--controls--automatic_client_certificate_selection--rules_--filter--issuer">below for nested schema</a>)</li>
+<li><code>subject</code> (Attributes) Optional subject certificate criteria (see <a href="#nestedatt--controls--automatic_client_certificate_selection--rules_--filter--subject">below for nested schema</a>)</li>
+</ul>
+<p><a id="nestedatt--controls--automatic_client_certificate_selection--rules_--filter--issuer"></a></p>
+<h3 id="nested-schema-for-controlsautomatic_client_certificate_selectionrules_filterissuer">Nested Schema for <code>controls.automatic_client_certificate_selection.rules_.filter.issuer</code></h3>
+<p>Optional:</p>
+<ul>
+<li><code>common_name</code> (String) Issuer common name (CN)</li>
+<li><code>location</code> (String) Issuer location (L)</li>
+<li><code>organization</code> (String) Issuer organization (O)</li>
+<li><code>organizational_unit</code> (String) Issuer organizational unit (OU)</li>
+</ul>
+<p><a id="nestedatt--controls--automatic_client_certificate_selection--rules_--filter--subject"></a></p>
+<h3 id="nested-schema-for-controlsautomatic_client_certificate_selectionrules_filtersubject">Nested Schema for <code>controls.automatic_client_certificate_selection.rules_.filter.subject</code></h3>
+<p>Optional:</p>
+<ul>
+<li><code>common_name</code> (String) Subject common name (CN)</li>
+<li><code>location</code> (String) Subject location (L)</li>
+<li><code>organization</code> (String) Subject organization (O)</li>
+<li><code>organizational_unit</code> (String) Subject organizational unit (OU)</li>
+</ul>
+<p><a id="nestedatt--controls--background_image"></a></p>
+<h3 id="nested-schema-for-controlsbackground_image">Nested Schema for <code>controls.background_image</code></h3>
+<p>Required:</p>
+<ul>
+<li><code>mode</code> (String) New tab page background configuration</li>
+</ul>
+<p>Optional:</p>
+<ul>
+<li><code>background_color</code> (String) Custom fill color for the new tab background</li>
+<li><code>background_image_filter_color</code> (String) Custom overlay color applied on top of the background image</li>
+<li><code>background_image_filter_mode</code> (String) Whether to use the default image filter or set a custom filter overlay</li>
+<li><code>background_image_filter_opacity</code> (String) Opacity of the custom overlay applied on top of the background image</li>
+<li><code>background_image_id</code> (String) Background image asset identifier. Set <code>backgroundImageId</code> to the value returned by POST /assets/background-image.</li>
+<li><code>invert_logo_color</code> (Boolean) Whether to invert the logo color so it stands out on the homepage</li>
+<li><code>page_mode</code> (String) New tab page display mode</li>
+</ul>
+<p><a id="nestedatt--controls--brand_color"></a></p>
+<h3 id="nested-schema-for-controlsbrand_color">Nested Schema for <code>controls.brand_color</code></h3>
+<p>Required:</p>
+<ul>
+<li><code>mode</code> (String) Whether to use the default brand color or a custom one</li>
+</ul>
+<p>Optional:</p>
+<ul>
+<li><code>color</code> (String) Brand color applied to user-facing browser elements</li>
+</ul>
+<p><a id="nestedatt--controls--browser_icon"></a></p>
+<h3 id="nested-schema-for-controlsbrowser_icon">Nested Schema for <code>controls.browser_icon</code></h3>
+<p>Required:</p>
+<ul>
+<li><code>mode</code> (String) Whether a custom browser icon is configured</li>
+</ul>
+<p>Optional:</p>
+<ul>
+<li><code>browser_icon_id</code> (String) Browser icon asset identifier. Set <code>browserIconId</code> to the value returned by POST /assets/browser-icon.</li>
+</ul>
+<p><a id="nestedatt--controls--built_in_dns_client"></a></p>
+<h3 id="nested-schema-for-controlsbuilt_in_dns_client">Nested Schema for <code>controls.built_in_dns_client</code></h3>
+<p>Required:</p>
+<ul>
+<li><code>action</code> (String) How DNS resolution is handled</li>
+</ul>
+<p><a id="nestedatt--controls--cached_session_duration"></a></p>
+<h3 id="nested-schema-for-controlscached_session_duration">Nested Schema for <code>controls.cached_session_duration</code></h3>
+<p>Required:</p>
+<ul>
+<li><code>mode</code> (String) Whether to use the default cached session duration or a custom duration</li>
+</ul>
+<p>Optional:</p>
+<ul>
+<li><code>duration_days</code> (Number) Maximum cached session duration in days</li>
+</ul>
+<p><a id="nestedatt--controls--company_logo"></a></p>
+<h3 id="nested-schema-for-controlscompany_logo">Nested Schema for <code>controls.company_logo</code></h3>
+<p>Required:</p>
+<ul>
+<li><code>mode</code> (String) Whether a company logo is configured</li>
+</ul>
+<p>Optional:</p>
+<ul>
+<li><code>company_logo_id</code> (String) Company logo asset identifier. Set <code>companyLogoId</code> to the value returned by POST /assets/company-logo.</li>
+</ul>
+<p><a id="nestedatt--controls--company_name"></a></p>
+<h3 id="nested-schema-for-controlscompany_name">Nested Schema for <code>controls.company_name</code></h3>
+<p>Required:</p>
+<ul>
+<li><code>mode</code> (String) Whether to display a company name or no name</li>
+</ul>
+<p>Optional:</p>
+<ul>
+<li><code>name</code> (String) Company name displayed in browser surfaces. Rejects CR, LF, and other control characters while allowing spaces and unicode.</li>
+</ul>
+<p><a id="nestedatt--controls--custom_browser_preferences"></a></p>
+<h3 id="nested-schema-for-controlscustom_browser_preferences">Nested Schema for <code>controls.custom_browser_preferences</code></h3>
+<p>Required:</p>
+<ul>
+<li><code>mode</code> (String) Whether custom browser preferences are applied</li>
+</ul>
+<p>Optional:</p>
+<ul>
+<li><code>preferences</code> (String) Custom browser preferences as a JSON object (e.g. '{"spellcheck.dictionaries":["en-US"]}'). Must be a JSON object; scalars, booleans, null, and arrays are rejected. Required when <code>mode</code> is <code>enabled</code>; must not be set when <code>mode</code> is <code>disabled</code>.</li>
+</ul>
+<p><a id="nestedatt--controls--custom_http_header"></a></p>
+<h3 id="nested-schema-for-controlscustom_http_header">Nested Schema for <code>controls.custom_http_header</code></h3>
+<p>Required:</p>
+<ul>
+<li><code>mode</code> (String) Whether to keep default headers or add a custom header.</li>
+</ul>
+<p>Optional:</p>
+<ul>
+<li><code>custom_header_name</code> (String) HTTP header name. Must contain only alphanumeric characters, underscores, and hyphens (mirrors the dashboard wizard charset).</li>
+<li><code>custom_header_value</code> (String) HTTP header value. Allowed characters mirror the dashboard wizard's punctuation allowlist; CR, LF, and other control characters are rejected.</li>
+</ul>
+<p><a id="nestedatt--controls--custom_notice"></a></p>
+<h3 id="nested-schema-for-controlscustom_notice">Nested Schema for <code>controls.custom_notice</code></h3>
+<p>Required:</p>
+<ul>
+<li><code>action</code> (String) Whether the custom notice is shown.</li>
+</ul>
+<p>Optional:</p>
+<ul>
+<li><code>description</code> (String) Notice description.</li>
+<li><code>frequency</code> (String) How often the notice is shown.</li>
+<li><code>title</code> (String) Notice title.</li>
+</ul>
+<p><a id="nestedatt--controls--custom_profile_preferences"></a></p>
+<h3 id="nested-schema-for-controlscustom_profile_preferences">Nested Schema for <code>controls.custom_profile_preferences</code></h3>
+<p>Required:</p>
+<ul>
+<li><code>mode</code> (String) Whether custom profile preferences are applied</li>
+</ul>
+<p>Optional:</p>
+<ul>
+<li><code>preferences</code> (String) Custom profile preferences as a JSON object (e.g. '{"homepage":"https://example.com"}'). Must be a JSON object; scalars, booleans, null, and arrays are rejected. Required when <code>mode</code> is <code>enabled</code>; must not be set when <code>mode</code> is <code>disabled</code>.</li>
+</ul>
+<p><a id="nestedatt--controls--custom_texts"></a></p>
+<h3 id="nested-schema-for-controlscustom_texts">Nested Schema for <code>controls.custom_texts</code></h3>
+<p>Required:</p>
+<ul>
+<li><code>mode</code> (String) Whether browser text overrides are configured</li>
+</ul>
+<p>Optional:</p>
+<ul>
+<li><code>overrides</code> (Attributes List) List of trigger-specific text overrides. Required when mode is customizeTexts. Must not be set when mode is useDefaultTexts. (see <a href="#nestedatt--controls--custom_texts--overrides">below for nested schema</a>)</li>
+</ul>
+<p><a id="nestedatt--controls--custom_texts--overrides"></a></p>
+<h3 id="nested-schema-for-controlscustom_textsoverrides">Nested Schema for <code>controls.custom_texts.overrides</code></h3>
+<p>Required:</p>
+<ul>
+<li><code>trigger</code> (String) Trigger whose default text is overridden</li>
+</ul>
+<p>Optional:</p>
+<ul>
+<li><code>description</code> (String) Replacement body text for the selected trigger</li>
+<li><code>link</code> (Attributes) Optional external link shown with the custom text (see <a href="#nestedatt--controls--custom_texts--overrides--link">below for nested schema</a>)</li>
+<li><code>title</code> (String) Replacement title for the selected trigger</li>
+</ul>
+<p><a id="nestedatt--controls--custom_texts--overrides--link"></a></p>
+<h3 id="nested-schema-for-controlscustom_textsoverrideslink">Nested Schema for <code>controls.custom_texts.overrides.link</code></h3>
+<p>Required:</p>
+<ul>
+<li><code>label</code> (String) Link text displayed to the end user</li>
+<li><code>url</code> (String) Link destination URL</li>
+</ul>
+<p><a id="nestedatt--controls--default_ai_provider"></a></p>
+<h3 id="nested-schema-for-controlsdefault_ai_provider">Nested Schema for <code>controls.default_ai_provider</code></h3>
+<p>Required:</p>
+<ul>
+<li><code>action</code> (String) Whether the default AI provider shortcut is shown.</li>
+</ul>
+<p>Optional:</p>
+<ul>
+<li><code>provider</code> (String) Default AI provider shown as the "Prompt AI" shortcut.</li>
+</ul>
+<p><a id="nestedatt--controls--default_search_provider"></a></p>
+<h3 id="nested-schema-for-controlsdefault_search_provider">Nested Schema for <code>controls.default_search_provider</code></h3>
+<p>Required:</p>
+<ul>
+<li><code>action</code> (String) Whether the default search provider is managed.</li>
+</ul>
+<p>Optional:</p>
+<ul>
+<li><code>provider</code> (String) Search provider selection.</li>
+<li><code>provider_name</code> (String) Default search provider display name.</li>
+<li><code>recommended</code> (Boolean) Whether this setting is recommended and user-changeable.</li>
+<li><code>search_url</code> (String) Default search provider URL template. Must be an http(s) URL (or a "{google:baseURL}" built-in template) containing the {searchTerms} placeholder.</li>
+</ul>
+<p><a id="nestedatt--controls--deployment_upgrade"></a></p>
+<h3 id="nested-schema-for-controlsdeployment_upgrade">Nested Schema for <code>controls.deployment_upgrade</code></h3>
+<p>Required:</p>
+<ul>
+<li><code>mode</code> (String) Prisma Browser upgrade channel</li>
+</ul>
+<p>Optional:</p>
+<ul>
+<li><code>expedite_critical_security_updates</code> (Boolean) Whether critical security updates can bypass the configured delay. Applies when mode is default and versionUpdateDelayDays &gt; 0, or mode is lts and patchDelayDays &gt; 0. Defaults to true when applicable. Must not be set when the relevant delay is 0, or when mode is pinned or noUpdates.</li>
+<li><code>force_rollback</code> (Attributes) Whether to force rollback when the pinned version is older than latest. Applies when mode is pinned. Defaults to false for both platforms when omitted. (see <a href="#nestedatt--controls--deployment_upgrade--force_rollback">below for nested schema</a>)</li>
+<li><code>grace_period_hours</code> (Number) Time in hours users can defer the forced update relaunch. Applies when mode is default, lts, or pinned. Defaults to 4 when omitted. Must not be set when mode is noUpdates.</li>
+<li><code>major_release_delay_days</code> (Number) Delay in days before receiving the next available LTS major release. Applies when mode is lts.</li>
+<li><code>patch_delay_days</code> (Number) Delay in days before receiving LTS security and bug patches. Applies when mode is lts. Must be less than or equal to majorReleaseDelayDays.</li>
+<li><code>pinned_versions</code> (Attributes) Pinned target versions by desktop OS. Required when mode is pinned. Must not be set for other modes. (see <a href="#nestedatt--controls--deployment_upgrade--pinned_versions">below for nested schema</a>)</li>
+<li><code>version_update_delay_days</code> (Number) Delay in days before receiving the latest default-channel version. Applies when mode is default.</li>
+</ul>
+<p><a id="nestedatt--controls--deployment_upgrade--force_rollback"></a></p>
+<h3 id="nested-schema-for-controlsdeployment_upgradeforce_rollback">Nested Schema for <code>controls.deployment_upgrade.force_rollback</code></h3>
+<p>Optional:</p>
+<ul>
+<li><code>mac</code> (Boolean) Whether to force macOS instances to roll back to the pinned version</li>
+<li><code>windows</code> (Boolean) Whether to force Windows instances to roll back to the pinned version</li>
+</ul>
+<p><a id="nestedatt--controls--deployment_upgrade--pinned_versions"></a></p>
+<h3 id="nested-schema-for-controlsdeployment_upgradepinned_versions">Nested Schema for <code>controls.deployment_upgrade.pinned_versions</code></h3>
+<p>Required:</p>
+<ul>
+<li><code>mac</code> (String) Pinned macOS browser version</li>
+<li><code>windows</code> (String) Pinned Windows browser version</li>
+</ul>
+<p><a id="nestedatt--controls--desktop_sharing"></a></p>
+<h3 id="nested-schema-for-controlsdesktop_sharing">Nested Schema for <code>controls.desktop_sharing</code></h3>
+<p>Required:</p>
+<ul>
+<li><code>action</code> (String) The action for this control.</li>
+</ul>
+<p><a id="nestedatt--controls--extension_force_install"></a></p>
+<h3 id="nested-schema-for-controlsextension_force_install">Nested Schema for <code>controls.extension_force_install</code></h3>
+<p>Required:</p>
+<ul>
+<li><code>extensions</code> (Attributes List) Extensions installed automatically in Prisma Browser (see <a href="#nestedatt--controls--extension_force_install--extensions">below for nested schema</a>)</li>
+</ul>
+<p><a id="nestedatt--controls--extension_force_install--extensions"></a></p>
+<h3 id="nested-schema-for-controlsextension_force_installextensions">Nested Schema for <code>controls.extension_force_install.extensions</code></h3>
+<p>Required:</p>
+<ul>
+<li><code>id</code> (String) Chrome extension ID (32 lowercase letters)</li>
+<li><code>source</code> (String) Extension source. When customURL, sourceUrl is required and must not be set for chromeWebstore.</li>
+</ul>
+<p>Optional:</p>
+<ul>
+<li><code>custom_configuration</code> (String) Custom extension configuration JSON</li>
+<li><code>install_in_incognito</code> (Boolean) Whether automatic installation extends to Incognito mode</li>
+<li><code>pinned</code> (Boolean) Whether the extension is pinned to the toolbar</li>
+<li><code>source_url</code> (String) Custom extension package URL. Required when source is customURL. Must not be set when source is chromeWebstore.</li>
+</ul>
+<p><a id="nestedatt--controls--force_page_refresh_on_policy_update"></a></p>
+<h3 id="nested-schema-for-controlsforce_page_refresh_on_policy_update">Nested Schema for <code>controls.force_page_refresh_on_policy_update</code></h3>
+<p>Required:</p>
+<ul>
+<li><code>action</code> (String) The action for this control.</li>
+</ul>
+<p><a id="nestedatt--controls--history_collection"></a></p>
+<h3 id="nested-schema-for-controlshistory_collection">Nested Schema for <code>controls.history_collection</code></h3>
+<p>Required:</p>
+<ul>
+<li><code>action</code> (String) The action for this control.</li>
+</ul>
+<p><a id="nestedatt--controls--home_page"></a></p>
+<h3 id="nested-schema-for-controlshome_page">Nested Schema for <code>controls.home_page</code></h3>
+<p>Required:</p>
+<ul>
+<li><code>mode</code> (String) Home Page button mode.</li>
+</ul>
+<p>Optional:</p>
+<ul>
+<li><code>custom_url</code> (String) Custom Home Page URL. An http(s) URL or a schemeless host.</li>
+<li><code>recommended</code> (Boolean) Whether to make this Home Page setting recommended and user-changeable.</li>
+<li><code>show_home_page_button</code> (Boolean) Whether to always show the Home Page button.</li>
+</ul>
+<p><a id="nestedatt--controls--identity_provider_synced_shortcuts"></a></p>
+<h3 id="nested-schema-for-controlsidentity_provider_synced_shortcuts">Nested Schema for <code>controls.identity_provider_synced_shortcuts</code></h3>
+<p>Required:</p>
+<ul>
+<li><code>action</code> (String) Whether IDP-synced shortcuts are displayed.</li>
+</ul>
+<p>Optional:</p>
+<ul>
+<li><code>idp_apps_provider_id</code> (String) Entra ID integration used to sync application shortcuts.</li>
+<li><code>idp_provider</code> (String) Identity provider used for synced shortcuts.</li>
+</ul>
+<p><a id="nestedatt--controls--incognito"></a></p>
+<h3 id="nested-schema-for-controlsincognito">Nested Schema for <code>controls.incognito</code></h3>
+<p>Required:</p>
+<ul>
+<li><code>action</code> (String) Whether to configure Incognito</li>
+</ul>
+<p><a id="nestedatt--controls--internal_network_detection"></a></p>
+<h3 id="nested-schema-for-controlsinternal_network_detection">Nested Schema for <code>controls.internal_network_detection</code></h3>
+<p>Required:</p>
+<ul>
+<li><code>action</code> (String) Whether internal network detection is enabled.</li>
+</ul>
+<p>Optional:</p>
+<ul>
+<li><code>agent_detection</code> (Boolean) Whether to detect GlobalProtect or Prisma Access agent presence.</li>
+<li><code>host_detection</code> (Attributes) Host-based internal network detection settings. (see <a href="#nestedatt--controls--internal_network_detection--host_detection">below for nested schema</a>)</li>
+</ul>
+<p><a id="nestedatt--controls--internal_network_detection--host_detection"></a></p>
+<h3 id="nested-schema-for-controlsinternal_network_detectionhost_detection">Nested Schema for <code>controls.internal_network_detection.host_detection</code></h3>
+<p>Required:</p>
+<ul>
+<li><code>expected_ip_addresses</code> (List of String) Expected IPv4 addresses for the resolved FQDN.</li>
+<li><code>fqdn</code> (String) Internal-only FQDN to resolve.</li>
+</ul>
+<p><a id="nestedatt--controls--managed_shortcuts"></a></p>
+<h3 id="nested-schema-for-controlsmanaged_shortcuts">Nested Schema for <code>controls.managed_shortcuts</code></h3>
+<p>Required:</p>
+<ul>
+<li><code>mode</code> (String) Whether managed shortcuts are configured</li>
+</ul>
+<p>Optional:</p>
+<ul>
+<li><code>pinned_shortcuts</code> (Attributes List) Applications pinned to the top of the new tab page. Maximum 16 items. (see <a href="#nestedatt--controls--managed_shortcuts--pinned_shortcuts">below for nested schema</a>)</li>
+<li><code>sections</code> (Attributes List) Ordered list of NTP sections. Each section groups shortcuts or controls visibility of a system section. (see <a href="#nestedatt--controls--managed_shortcuts--sections">below for nested schema</a>)</li>
+<li><code>shortcuts</code> (Attributes List) Managed shortcuts shown on the new tab page and in bookmarks. Required when mode is setShortcuts. Must not be set when mode is noShortcuts.
+At most 16 entries may have <code>pinned: true</code>; requests that exceed this cap are rejected with HTTP 400. (see <a href="#nestedatt--controls--managed_shortcuts--shortcuts">below for nested schema</a>)</li>
+</ul>
+<p><a id="nestedatt--controls--managed_shortcuts--pinned_shortcuts"></a></p>
+<h3 id="nested-schema-for-controlsmanaged_shortcutspinned_shortcuts">Nested Schema for <code>controls.managed_shortcuts.pinned_shortcuts</code></h3>
+<p>Required:</p>
+<ul>
+<li><code>name</code> (String) Pinned shortcut display name</li>
+<li><code>url</code> (String) Pinned shortcut destination URL</li>
+</ul>
+<p>Optional:</p>
+<ul>
+<li><code>shortcut_icon_id</code> (String) Shortcut icon asset identifier</li>
+</ul>
+<p><a id="nestedatt--controls--managed_shortcuts--sections"></a></p>
+<h3 id="nested-schema-for-controlsmanaged_shortcutssections">Nested Schema for <code>controls.managed_shortcuts.sections</code></h3>
+<p>Required:</p>
+<ul>
+<li><code>id</code> (String) Unique section identifier</li>
+<li><code>name</code> (String) Section display name</li>
+<li><code>position</code> (Number) Display order</li>
+<li><code>type_</code> (String) Section type</li>
+<li><code>visible</code> (Boolean) Whether the section is visible on the NTP</li>
+</ul>
+<p>Optional:</p>
+<ul>
+<li><code>apps</code> (Attributes List) Applications in this section (see <a href="#nestedatt--controls--managed_shortcuts--sections--apps">below for nested schema</a>)</li>
+</ul>
+<p><a id="nestedatt--controls--managed_shortcuts--sections--apps"></a></p>
+<h3 id="nested-schema-for-controlsmanaged_shortcutssectionsapps">Nested Schema for <code>controls.managed_shortcuts.sections.apps</code></h3>
+<p>Required:</p>
+<ul>
+<li><code>name</code> (String) Application display name</li>
+<li><code>url</code> (String) Application destination URL</li>
+</ul>
+<p>Optional:</p>
+<ul>
+<li><code>shortcut_icon_id</code> (String) Shortcut icon asset identifier</li>
+</ul>
+<p><a id="nestedatt--controls--managed_shortcuts--shortcuts"></a></p>
+<h3 id="nested-schema-for-controlsmanaged_shortcutsshortcuts">Nested Schema for <code>controls.managed_shortcuts.shortcuts</code></h3>
+<p>Required:</p>
+<ul>
+<li><code>name</code> (String) Shortcut display name</li>
+<li><code>url</code> (String) Shortcut destination URL</li>
+</ul>
+<p>Optional:</p>
+<ul>
+<li><code>pinned</code> (Boolean) Whether the shortcut is pinned</li>
+<li><code>shortcut_icon_id</code> (String) Shortcut icon asset identifier</li>
+</ul>
+<p><a id="nestedatt--controls--microsoft_auto_sso"></a></p>
+<h3 id="nested-schema-for-controlsmicrosoft_auto_sso">Nested Schema for <code>controls.microsoft_auto_sso</code></h3>
+<p>Required:</p>
+<ul>
+<li><code>action</code> (String) The action for this control.</li>
+</ul>
+<p><a id="nestedatt--controls--new_tab_page"></a></p>
+<h3 id="nested-schema-for-controlsnew_tab_page">Nested Schema for <code>controls.new_tab_page</code></h3>
+<p>Required:</p>
+<ul>
+<li><code>page_type</code> (String) New tab page type.</li>
+</ul>
+<p>Optional:</p>
+<ul>
+<li><code>custom_url</code> (String) Custom new tab page URL. An http(s) URL or a schemeless host.</li>
+</ul>
+<p><a id="nestedatt--controls--on_browser_startup"></a></p>
+<h3 id="nested-schema-for-controlson_browser_startup">Nested Schema for <code>controls.on_browser_startup</code></h3>
+<p>Required:</p>
+<ul>
+<li><code>action</code> (String) Browser startup behavior</li>
+</ul>
+<p>Optional:</p>
+<ul>
+<li><code>recommended</code> (Boolean) Whether this setting is recommended and user-changeable.</li>
+<li><code>urls_to_open</code> (List of String) URLs opened on startup or after restoring the previous session. Required and must be non-empty when action is openUrls or restorePreviousSessionAndOpenUrls; must not be set for other actions. Each entry must be an http(s)/ftp URL, a schemeless host (e.g. example.com), a browser page (chrome:// or prisma://), or a file:// URL. Dangerous schemes (javascript:, data:, vbscript:) and other custom schemes are rejected.</li>
+</ul>
+<p><a id="nestedatt--controls--onboarding_wizard"></a></p>
+<h3 id="nested-schema-for-controlsonboarding_wizard">Nested Schema for <code>controls.onboarding_wizard</code></h3>
+<p>Required:</p>
+<ul>
+<li><code>enabled</code> (Boolean) Whether the onboarding wizard is enabled.</li>
+</ul>
+<p>Optional:</p>
+<ul>
+<li><code>steps</code> (Attributes) Onboarding wizard steps shown to end users. Required when enabled is true. Must not be set when enabled is false. (see <a href="#nestedatt--controls--onboarding_wizard--steps">below for nested schema</a>)</li>
+</ul>
+<p><a id="nestedatt--controls--onboarding_wizard--steps"></a></p>
+<h3 id="nested-schema-for-controlsonboarding_wizardsteps">Nested Schema for <code>controls.onboarding_wizard.steps</code></h3>
+<p>Required:</p>
+<ul>
+<li><code>customize</code> (Attributes) Customize step configuration. (see <a href="#nestedatt--controls--onboarding_wizard--steps--customize">below for nested schema</a>)</li>
+<li><code>extension</code> (Attributes) Popup extensions &amp; Notifications step configuration. (see <a href="#nestedatt--controls--onboarding_wizard--steps--extension">below for nested schema</a>)</li>
+<li><code>import_</code> (Attributes) Import step configuration. (see <a href="#nestedatt--controls--onboarding_wizard--steps--import_">below for nested schema</a>)</li>
+<li><code>mobile</code> (Attributes) Mobile &amp; Sync step configuration. (see <a href="#nestedatt--controls--onboarding_wizard--steps--mobile">below for nested schema</a>)</li>
+<li><code>password_manager</code> (Attributes) Password Manager step configuration. (see <a href="#nestedatt--controls--onboarding_wizard--steps--password_manager">below for nested schema</a>)</li>
+<li><code>policy</code> (Attributes) Labels &amp; Policy indicator step configuration. (see <a href="#nestedatt--controls--onboarding_wizard--steps--policy">below for nested schema</a>)</li>
+<li><code>restriction</code> (Attributes) Restrictions step configuration. (see <a href="#nestedatt--controls--onboarding_wizard--steps--restriction">below for nested schema</a>)</li>
+<li><code>welcome</code> (Attributes) Welcome step configuration. (see <a href="#nestedatt--controls--onboarding_wizard--steps--welcome">below for nested schema</a>)</li>
+</ul>
+<p><a id="nestedatt--controls--onboarding_wizard--steps--customize"></a></p>
+<h3 id="nested-schema-for-controlsonboarding_wizardstepscustomize">Nested Schema for <code>controls.onboarding_wizard.steps.customize</code></h3>
+<p>Required:</p>
+<ul>
+<li><code>enabled</code> (Boolean) Whether the Customize step is enabled.</li>
+</ul>
+<p><a id="nestedatt--controls--onboarding_wizard--steps--extension"></a></p>
+<h3 id="nested-schema-for-controlsonboarding_wizardstepsextension">Nested Schema for <code>controls.onboarding_wizard.steps.extension</code></h3>
+<p>Required:</p>
+<ul>
+<li><code>enabled</code> (Boolean) Whether the Popup extensions &amp; Notifications step is enabled.</li>
+</ul>
+<p><a id="nestedatt--controls--onboarding_wizard--steps--import_"></a></p>
+<h3 id="nested-schema-for-controlsonboarding_wizardstepsimport_">Nested Schema for <code>controls.onboarding_wizard.steps.import_</code></h3>
+<p>Required:</p>
+<ul>
+<li><code>enabled</code> (Boolean) Whether the Import step is enabled.</li>
+</ul>
+<p><a id="nestedatt--controls--onboarding_wizard--steps--mobile"></a></p>
+<h3 id="nested-schema-for-controlsonboarding_wizardstepsmobile">Nested Schema for <code>controls.onboarding_wizard.steps.mobile</code></h3>
+<p>Required:</p>
+<ul>
+<li><code>enabled</code> (Boolean) Whether the Mobile &amp; Sync step is enabled.</li>
+</ul>
+<p><a id="nestedatt--controls--onboarding_wizard--steps--password_manager"></a></p>
+<h3 id="nested-schema-for-controlsonboarding_wizardstepspassword_manager">Nested Schema for <code>controls.onboarding_wizard.steps.password_manager</code></h3>
+<p>Required:</p>
+<ul>
+<li><code>enabled</code> (Boolean) Whether the Password Manager step is enabled.</li>
+</ul>
+<p><a id="nestedatt--controls--onboarding_wizard--steps--policy"></a></p>
+<h3 id="nested-schema-for-controlsonboarding_wizardstepspolicy">Nested Schema for <code>controls.onboarding_wizard.steps.policy</code></h3>
+<p>Required:</p>
+<ul>
+<li><code>enabled</code> (Boolean) Whether the Labels &amp; Policy indicator step is enabled.</li>
+</ul>
+<p><a id="nestedatt--controls--onboarding_wizard--steps--restriction"></a></p>
+<h3 id="nested-schema-for-controlsonboarding_wizardstepsrestriction">Nested Schema for <code>controls.onboarding_wizard.steps.restriction</code></h3>
+<p>Required:</p>
+<ul>
+<li><code>enabled</code> (Boolean) Whether the Restrictions step is enabled.</li>
+</ul>
+<p><a id="nestedatt--controls--onboarding_wizard--steps--welcome"></a></p>
+<h3 id="nested-schema-for-controlsonboarding_wizardstepswelcome">Nested Schema for <code>controls.onboarding_wizard.steps.welcome</code></h3>
+<p>Required:</p>
+<ul>
+<li><code>enabled</code> (Boolean) Whether the Welcome step is enabled.</li>
+</ul>
+<p>Optional:</p>
+<ul>
+<li><code>description</code> (String) Custom description for the Welcome step.</li>
+<li><code>link_</code> (Attributes) Optional Welcome step link. (see <a href="#nestedatt--controls--onboarding_wizard--steps--welcome--link_">below for nested schema</a>)</li>
+<li><code>title</code> (String) Custom title for the Welcome step.</li>
+</ul>
+<p><a id="nestedatt--controls--onboarding_wizard--steps--welcome--link_"></a></p>
+<h3 id="nested-schema-for-controlsonboarding_wizardstepswelcomelink_">Nested Schema for <code>controls.onboarding_wizard.steps.welcome.link_</code></h3>
+<p>Required:</p>
+<ul>
+<li><code>label</code> (String) Link label.</li>
+<li><code>url</code> (String) Link URL. An http(s) URL or a schemeless host.</li>
+</ul>
+<p><a id="nestedatt--controls--page_translation_google_translate"></a></p>
+<h3 id="nested-schema-for-controlspage_translation_google_translate">Nested Schema for <code>controls.page_translation_google_translate</code></h3>
+<p>Required:</p>
+<ul>
+<li><code>action</code> (String) How the Google Translation banner is offered.</li>
+</ul>
+<p><a id="nestedatt--controls--prisma_browser_desktop_extender"></a></p>
+<h3 id="nested-schema-for-controlsprisma_browser_desktop_extender">Nested Schema for <code>controls.prisma_browser_desktop_extender</code></h3>
+<p>Required:</p>
+<ul>
+<li><code>action</code> (String) Whether Prisma Browser Local Extender is activated.</li>
+</ul>
+<p>Optional:</p>
+<ul>
+<li><code>exclusions</code> (Attributes) Exclusion rules for file protection. Only applicable when action is enable. (see <a href="#nestedatt--controls--prisma_browser_desktop_extender--exclusions">below for nested schema</a>)</li>
+</ul>
+<p><a id="nestedatt--controls--prisma_browser_desktop_extender--exclusions"></a></p>
+<h3 id="nested-schema-for-controlsprisma_browser_desktop_extenderexclusions">Nested Schema for <code>controls.prisma_browser_desktop_extender.exclusions</code></h3>
+<p>Optional:</p>
+<ul>
+<li><code>paths</code> (List of String) File or folder paths excluded from monitoring/protection entirely.</li>
+<li><code>processes</code> (Attributes List) Trusted processes that fully bypass file protection (no events generated). (see <a href="#nestedatt--controls--prisma_browser_desktop_extender--exclusions--processes">below for nested schema</a>)</li>
+<li><code>suppressed_processes</code> (Attributes List) Processes that enforce protection silently (no user notifications or events). (see <a href="#nestedatt--controls--prisma_browser_desktop_extender--exclusions--suppressed_processes">below for nested schema</a>)</li>
+</ul>
+<p><a id="nestedatt--controls--prisma_browser_desktop_extender--exclusions--processes"></a></p>
+<h3 id="nested-schema-for-controlsprisma_browser_desktop_extenderexclusionsprocesses">Nested Schema for <code>controls.prisma_browser_desktop_extender.exclusions.processes</code></h3>
+<p>Required:</p>
+<ul>
+<li><code>name</code> (String) Process path or name.</li>
+</ul>
+<p><a id="nestedatt--controls--prisma_browser_desktop_extender--exclusions--suppressed_processes"></a></p>
+<h3 id="nested-schema-for-controlsprisma_browser_desktop_extenderexclusionssuppressed_processes">Nested Schema for <code>controls.prisma_browser_desktop_extender.exclusions.suppressed_processes</code></h3>
+<p>Required:</p>
+<ul>
+<li><code>name</code> (String) Process path or name.</li>
+</ul>
+<p><a id="nestedatt--controls--profile_sync"></a></p>
+<h3 id="nested-schema-for-controlsprofile_sync">Nested Schema for <code>controls.profile_sync</code></h3>
+<p>Required:</p>
+<ul>
+<li><code>mode</code> (String) Whether profile sync is enabled.</li>
+</ul>
+<p>Optional:</p>
+<ul>
+<li><code>sync_mode</code> (String) Profile sync scope.</li>
+<li><code>sync_types</code> (List of String) Profile data types to sync.</li>
+</ul>
+<p><a id="nestedatt--controls--proxy_auto_configuration_pac_file"></a></p>
+<h3 id="nested-schema-for-controlsproxy_auto_configuration_pac_file">Nested Schema for <code>controls.proxy_auto_configuration_pac_file</code></h3>
+<p>Required:</p>
+<ul>
+<li><code>mode</code> (String) Whether to configure a PAC file.</li>
+</ul>
+<p>Optional:</p>
+<ul>
+<li><code>pac_file_id</code> (String) PAC file asset identifier. Set <code>pacFileId</code> to the value returned by POST /assets/pac-file.</li>
+</ul>
+<p><a id="nestedatt--controls--real_user_monitoring"></a></p>
+<h3 id="nested-schema-for-controlsreal_user_monitoring">Nested Schema for <code>controls.real_user_monitoring</code></h3>
+<p>Required:</p>
+<ul>
+<li><code>action</code> (String) The action for this control.</li>
+</ul>
+<p><a id="nestedatt--controls--request_desktop_mobile_site"></a></p>
+<h3 id="nested-schema-for-controlsrequest_desktop_mobile_site">Nested Schema for <code>controls.request_desktop_mobile_site</code></h3>
+<p>Required:</p>
+<ul>
+<li><code>rules__</code> (Attributes List) Desktop or mobile site overrides for selected domains. (see <a href="#nestedatt--controls--request_desktop_mobile_site--rules__">below for nested schema</a>)</li>
+</ul>
+<p><a id="nestedatt--controls--request_desktop_mobile_site--rules__"></a></p>
+<h3 id="nested-schema-for-controlsrequest_desktop_mobile_siterules__">Nested Schema for <code>controls.request_desktop_mobile_site.rules__</code></h3>
+<p>Required:</p>
+<ul>
+<li><code>domain</code> (String) Match target the browser compares against visited URLs to apply the site-mode override. Accepts a hostname/domain (optionally with "<em>." or "</em>" wildcards, including a bare "<em>" catch-all for all sites), or a "scheme://host[:port]/path" match pattern. Must be non-empty and contain at least one letter, digit, or "</em>". Percent-encoding, fragments, and the path/query punctuation real match patterns use are admitted; whitespace and markup/injection characters that never appear in a host or match pattern are rejected.</li>
+<li><code>mode</code> (String) Requested site mode for the domain.</li>
+</ul>
+<p><a id="nestedatt--controls--search_engine_content_filtering"></a></p>
+<h3 id="nested-schema-for-controlssearch_engine_content_filtering">Nested Schema for <code>controls.search_engine_content_filtering</code></h3>
+<p>Required:</p>
+<ul>
+<li><code>action</code> (String) Whether search engine content filtering is enabled.</li>
+</ul>
+<p>Optional:</p>
+<ul>
+<li><code>engines</code> (Attributes List) Search engines to enforce strict content filtering for. Required when action is "enable". Must not be set when action is "disable". (see <a href="#nestedatt--controls--search_engine_content_filtering--engines">below for nested schema</a>)</li>
+</ul>
+<p><a id="nestedatt--controls--search_engine_content_filtering--engines"></a></p>
+<h3 id="nested-schema-for-controlssearch_engine_content_filteringengines">Nested Schema for <code>controls.search_engine_content_filtering.engines</code></h3>
+<p>Required:</p>
+<ul>
+<li><code>name</code> (String) Search engine name.</li>
+</ul>
+<p><a id="nestedatt--controls--search_suggestions"></a></p>
+<h3 id="nested-schema-for-controlssearch_suggestions">Nested Schema for <code>controls.search_suggestions</code></h3>
+<p>Required:</p>
+<ul>
+<li><code>action</code> (String) Whether live search suggestions are shown in the address bar.</li>
+</ul>
+<p><a id="nestedatt--controls--suggest_default_browser"></a></p>
+<h3 id="nested-schema-for-controlssuggest_default_browser">Nested Schema for <code>controls.suggest_default_browser</code></h3>
+<p>Required:</p>
+<ul>
+<li><code>action</code> (String) Whether Prisma Browser suggests becoming the default browser.</li>
+</ul>
+<p><a id="nestedatt--controls--theme_color"></a></p>
+<h3 id="nested-schema-for-controlstheme_color">Nested Schema for <code>controls.theme_color</code></h3>
+<p>Required:</p>
+<ul>
+<li><code>mode</code> (String) Whether end users choose their own theme color or the admin applies a fixed color.</li>
+</ul>
+<p>Optional:</p>
+<ul>
+<li><code>color</code> (String) Theme color applied to Prisma Browser.</li>
+</ul>
+<p><a id="nestedatt--controls--traffic_flow"></a></p>
+<h3 id="nested-schema-for-controlstraffic_flow">Nested Schema for <code>controls.traffic_flow</code></h3>
+<p>Required:</p>
+<ul>
+<li><code>action</code> (String) How browser network traffic is routed through Prisma Access</li>
+</ul>
+<p><a id="nestedatt--controls--user_agent"></a></p>
+<h3 id="nested-schema-for-controlsuser_agent">Nested Schema for <code>controls.user_agent</code></h3>
+<p>Required:</p>
+<ul>
+<li><code>mode</code> (String) Whether to use the default User-Agent or append an additional component.</li>
+</ul>
+<p>Optional:</p>
+<ul>
+<li><code>additional_component</code> (String) HTTP header value. Allowed characters mirror the dashboard wizard's punctuation allowlist; CR, LF, and other control characters are rejected.</li>
+</ul>
+<p><a id="nestedatt--positioning"></a></p>
+<h3 id="nested-schema-for-positioning">Nested Schema for <code>positioning</code></h3>
+<p>Required:</p>
+<ul>
+<li><code>target</code> (Attributes) (see <a href="#nestedatt--positioning--target">below for nested schema</a>)</li>
+</ul>
+<p><a id="nestedatt--positioning--target"></a></p>
+<h3 id="nested-schema-for-positioningtarget">Nested Schema for <code>positioning.target</code></h3>
+<p>Required:</p>
+<ul>
+<li><code>position</code> (String) Where to place the entity: top (first), bottom (last), before (above anchor), after (below anchor). The before and after values require the anchor field. The top and bottom values must not include an anchor field — providing an anchor with top or bottom is a validation error.</li>
+</ul>
+<p>Optional:</p>
+<ul>
+<li><code>anchor</code> (Attributes) (see <a href="#nestedatt--positioning--target--anchor">below for nested schema</a>)</li>
+<li><code>section_id</code> (String) The section the rule should belong to. Only valid for rule POST and PATCH; must be null/omitted for section POST and PATCH (sections cannot be nested). The anchor (if any) must reside in this same container.</li>
+</ul>
+<p><a id="nestedatt--positioning--target--anchor"></a></p>
+<h3 id="nested-schema-for-positioningtargetanchor">Nested Schema for <code>positioning.target.anchor</code></h3>
+<p>Required:</p>
+<ul>
+<li><code>id</code> (String) The entity ID of the anchor item.</li>
+<li><code>type_</code> (String)</li>
+</ul>
+<p><a id="nestedatt--scope"></a></p>
+<h3 id="nested-schema-for-scope">Nested Schema for <code>scope</code></h3>
+<p>Optional:</p>
+<ul>
+<li><code>device_groups</code> (Attributes) The device groups the rule applies to. (see <a href="#nestedatt--scope--device_groups">below for nested schema</a>)</li>
+<li><code>locations</code> (Attributes) The locations the rule applies to. (see <a href="#nestedatt--scope--locations">below for nested schema</a>)</li>
+<li><code>private_ips</code> (Attributes) The private IP addresses the rule applies to. (see <a href="#nestedatt--scope--private_ips">below for nested schema</a>)</li>
+<li><code>public_ips</code> (Attributes) The public IP addresses the rule applies to. (see <a href="#nestedatt--scope--public_ips">below for nested schema</a>)</li>
+<li><code>users</code> (Attributes) The users or user groups the rule applies to. (see <a href="#nestedatt--scope--users">below for nested schema</a>)</li>
+</ul>
+<p><a id="nestedatt--scope--device_groups"></a></p>
+<h3 id="nested-schema-for-scopedevice_groups">Nested Schema for <code>scope.device_groups</code></h3>
+<p>Optional:</p>
+<ul>
+<li><code>device_groups</code> (List of String)</li>
+<li><code>is_any</code> (Boolean) Flag indicating if any device groups are included in the scope. If isAny is set to true, no other fields should be present, and all device groups will be included in the scope. If isAny is set to false, the final scope must contain at least one device group.</li>
+</ul>
+<p><a id="nestedatt--scope--locations"></a></p>
+<h3 id="nested-schema-for-scopelocations">Nested Schema for <code>scope.locations</code></h3>
+<p>Optional:</p>
+<ul>
+<li><code>is_any</code> (Boolean) Flag indicating if any locations are included in the scope. If isAny is set to true, no other fields should be present, and all locations will be included in the scope. If isAny is set to false, the final scope must contain at least one location.</li>
+<li><code>locations</code> (List of String) Geographical locations to which the rule applies.</li>
+</ul>
+<p><a id="nestedatt--scope--private_ips"></a></p>
+<h3 id="nested-schema-for-scopeprivate_ips">Nested Schema for <code>scope.private_ips</code></h3>
+<p>Optional:</p>
+<ul>
+<li><code>is_any</code> (Boolean) Flag indicating if any private IP addresses are included in the scope. If isAny is set to true, no other fields should be present, and all private IP addresses will be included in the scope. If isAny is set to false, the final scope must contain at least one private IP.</li>
+<li><code>private_ips</code> (List of String) Private IP addresses affected by the rule.</li>
+</ul>
+<p><a id="nestedatt--scope--public_ips"></a></p>
+<h3 id="nested-schema-for-scopepublic_ips">Nested Schema for <code>scope.public_ips</code></h3>
+<p>Optional:</p>
+<ul>
+<li><code>is_any</code> (Boolean) Flag indicating if any public IP addresses are included in the scope. If isAny is set to true, no other fields should be present, and all public IP addresses will be included in the scope. If isAny is set to false, the final scope must contain at least one public IP.</li>
+<li><code>public_ips</code> (List of String) Public IP addresses affected by the rule.</li>
+</ul>
+<p><a id="nestedatt--scope--users"></a></p>
+<h3 id="nested-schema-for-scopeusers">Nested Schema for <code>scope.users</code></h3>
+<p>Optional:</p>
+<ul>
+<li><code>is_any</code> (Boolean) Flag indicating if any users or user groups are included in the scope. If isAny is set to true, no other fields should be present, and all users and user groups will be included in the scope. If isAny is set to false, the final scope must contain at least one user or user group.</li>
+<li><code>user_groups</code> (List of String)</li>
+<li><code>users</code> (List of String)</li>
+</ul>
+<p><a id="nestedatt--metadata"></a></p>
+<h3 id="nested-schema-for-metadata">Nested Schema for <code>metadata</code></h3>
+<p>Read-Only:</p>
+<ul>
+<li><code>configuration_version</code> (Attributes) Configuration version information (see <a href="#nestedatt--metadata--configuration_version">below for nested schema</a>)</li>
+<li><code>created_by</code> (String) Email or identifier of the admin who created the rule</li>
+<li><code>created_time</code> (String) Timestamp when the rule was created</li>
+<li><code>last_updated_by</code> (String) Email or identifier of the admin who last updated the rule</li>
+<li><code>last_updated_time</code> (String) Timestamp when the rule was last updated</li>
+</ul>
+<p><a id="nestedatt--metadata--configuration_version"></a></p>
+<h3 id="nested-schema-for-metadataconfiguration_version">Nested Schema for <code>metadata.configuration_version</code></h3>
+<p>Read-Only:</p>
+<ul>
+<li><code>id</code> (String) Configuration version identifier</li>
+<li><code>number</code> (Number) Configuration version number</li>
+<li><code>status</code> (String) Configuration version status</li>
+</ul>
+<p><a id="nestedatt--policy_profile"></a></p>
+<h3 id="nested-schema-for-policy_profile">Nested Schema for <code>policy_profile</code></h3>
+<p>Read-Only:</p>
+<ul>
+<li><code>id</code> (String) Policy profile identifier</li>
+<li><code>name</code> (String) Policy profile name</li>
+</ul>
+<p><a id="nestedatt--section"></a></p>
+<h3 id="nested-schema-for-section">Nested Schema for <code>section</code></h3>
+<p>Read-Only:</p>
+<ul>
+<li><code>id</code> (String) ID of the section</li>
+<li><code>name</code> (String) Name of the section</li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.top", "search.suggest", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
