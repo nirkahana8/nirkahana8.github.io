@@ -127,7 +127,21 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
     
   
 </form>
@@ -1817,7 +1831,9 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
@@ -3316,26 +3332,26 @@
 
 
 
-<h1 id="pb_access_and_data_rule-resource">pb_access_and_data_rule (Resource)</h1>
-<h2 id="example-usage">Example Usage</h2>
-<div class="highlight"><pre><span></span><code><span class="kr">resource</span><span class="w"> </span><span class="nc">&quot;pb_access_and_data_rule&quot;</span><span class="w"> </span><span class="nv">&quot;example&quot;</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Restrict uploads to sanctioned apps&quot;</span>
-<span class="w">  </span><span class="na">mode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;active&quot;</span>
-
-<span class="w">  </span><span class="nb">applications</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-<span class="c1">    # Application scope for the rule (see the Schema section below).</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="w">  </span><span class="nb">access</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-<span class="c1">    # Access control configuration (see the Schema section below).</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="w">  </span><span class="nb">tracking</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-<span class="c1">    # Tracking / logging configuration (see the Schema section below).</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="p">}</span>
+<h1 id="pb_access_and_data_rule-resource">pb_access_and_data_rule (Resource)<a class="headerlink" href="#pb_access_and_data_rule-resource" title="Permanent link">&para;</a></h1>
+<h2 id="example-usage">Example Usage<a class="headerlink" href="#example-usage" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kr">resource</span><span class="w"> </span><span class="nc">&quot;pb_access_and_data_rule&quot;</span><span class="w"> </span><span class="nv">&quot;example&quot;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Restrict uploads to sanctioned apps&quot;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="na">mode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;active&quot;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span><span class="nb">applications</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c1">    # Application scope for the rule (see the Schema section below).</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">  </span><span class="nb">access</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="c1">    # Access control configuration (see the Schema section below).</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">  </span><span class="nb">tracking</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="c1">    # Tracking / logging configuration (see the Schema section below).</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="p">}</span>
 </code></pre></div>
 <!-- schema generated by tfplugindocs -->
 
-<h2 id="argument-reference">Argument Reference</h2>
+<h2 id="argument-reference">Argument Reference<a class="headerlink" href="#argument-reference" title="Permanent link">&para;</a></h2>
 <p>The following arguments are <strong>required</strong>:</p>
 <ul>
 <li><code>access</code> (Attributes) Access control configuration for an access-and-data rule.</li>
@@ -3353,7 +3369,7 @@
 <li><code>positioning</code> (Attributes) Optional placement directive for the entity. On create, when omitted, the entity is placed at the top of the stack. On update, when omitted, the entity's current position is preserved. (see <a href="#nestedatt--positioning">below for nested schema</a>)</li>
 <li><code>scope</code> (Attributes) Provide scope to describe this rule (see <a href="#nestedatt--scope">below for nested schema</a>)</li>
 </ul>
-<h2 id="attributes-reference">Attributes Reference</h2>
+<h2 id="attributes-reference">Attributes Reference<a class="headerlink" href="#attributes-reference" title="Permanent link">&para;</a></h2>
 <p>In addition to the arguments above, the following attributes are exported:</p>
 <ul>
 <li><code>id</code> (String) The unique identifier of the created resource (PULID, 29 chars).</li>
@@ -3362,7 +3378,7 @@
 <li><code>section</code> (Attributes) Section this rule belongs to (null if standalone) (see <a href="#nestedatt--section">below for nested schema</a>)</li>
 </ul>
 <p><a id="nestedatt--access"></a></p>
-<h3 id="nested-schema-for-access">Nested Schema for <code>access</code></h3>
+<h3 id="nested-schema-for-access">Nested Schema for <code>access</code><a class="headerlink" href="#nested-schema-for-access" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>action</code> (String) Top-level web-access decision.</li>
@@ -3378,7 +3394,7 @@
 <li><code>user_prompt</code> (Attributes) How an end user is prompted before access is granted, and how long their decision is remembered. (see <a href="#nestedatt--access--user_prompt">below for nested schema</a>)</li>
 </ul>
 <p><a id="nestedatt--access--custom_dialog_text"></a></p>
-<h3 id="nested-schema-for-accesscustom_dialog_text">Nested Schema for <code>access.custom_dialog_text</code></h3>
+<h3 id="nested-schema-for-accesscustom_dialog_text">Nested Schema for <code>access.custom_dialog_text</code><a class="headerlink" href="#nested-schema-for-accesscustom_dialog_text" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>title</code> (String) Dialog title.</li>
@@ -3389,14 +3405,14 @@
 <li><code>external_link</code> (Attributes) (see <a href="#nestedatt--access--custom_dialog_text--external_link">below for nested schema</a>)</li>
 </ul>
 <p><a id="nestedatt--access--custom_dialog_text--external_link"></a></p>
-<h3 id="nested-schema-for-accesscustom_dialog_textexternal_link">Nested Schema for <code>access.custom_dialog_text.external_link</code></h3>
+<h3 id="nested-schema-for-accesscustom_dialog_textexternal_link">Nested Schema for <code>access.custom_dialog_text.external_link</code><a class="headerlink" href="#nested-schema-for-accesscustom_dialog_textexternal_link" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>label</code> (String)</li>
 <li><code>url</code> (String) An HTTP or HTTPS URL.</li>
 </ul>
 <p><a id="nestedatt--access--custom_label"></a></p>
-<h3 id="nested-schema-for-accesscustom_label">Nested Schema for <code>access.custom_label</code></h3>
+<h3 id="nested-schema-for-accesscustom_label">Nested Schema for <code>access.custom_label</code><a class="headerlink" href="#nested-schema-for-accesscustom_label" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>color</code> (String) Hex color for the label badge.</li>
@@ -3407,7 +3423,7 @@
 <li><code>name</code> (String) Display name for the custom label.</li>
 </ul>
 <p><a id="nestedatt--access--open_in_prisma_browser"></a></p>
-<h3 id="nested-schema-for-accessopen_in_prisma_browser">Nested Schema for <code>access.open_in_prisma_browser</code></h3>
+<h3 id="nested-schema-for-accessopen_in_prisma_browser">Nested Schema for <code>access.open_in_prisma_browser</code><a class="headerlink" href="#nested-schema-for-accessopen_in_prisma_browser" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>redirect_to_prisma_browser</code> (Boolean) Enforce the Extension to Prisma Browser redirect for matched traffic.</li>
@@ -3418,7 +3434,7 @@
 <li><code>custom_dialog_text_</code> (Attributes) Custom dialog text shown to the user. (see <a href="#nestedatt--access--open_in_prisma_browser--custom_dialog_text_">below for nested schema</a>)</li>
 </ul>
 <p><a id="nestedatt--access--open_in_prisma_browser--custom_dialog_text_"></a></p>
-<h3 id="nested-schema-for-accessopen_in_prisma_browsercustom_dialog_text_">Nested Schema for <code>access.open_in_prisma_browser.custom_dialog_text_</code></h3>
+<h3 id="nested-schema-for-accessopen_in_prisma_browsercustom_dialog_text_">Nested Schema for <code>access.open_in_prisma_browser.custom_dialog_text_</code><a class="headerlink" href="#nested-schema-for-accessopen_in_prisma_browsercustom_dialog_text_" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>title</code> (String) Dialog title.</li>
@@ -3429,21 +3445,21 @@
 <li><code>external_link_</code> (Attributes) (see <a href="#nestedatt--access--open_in_prisma_browser--custom_dialog_text_--external_link_">below for nested schema</a>)</li>
 </ul>
 <p><a id="nestedatt--access--open_in_prisma_browser--custom_dialog_text_--external_link_"></a></p>
-<h3 id="nested-schema-for-accessopen_in_prisma_browsercustom_dialog_text_external_link_">Nested Schema for <code>access.open_in_prisma_browser.custom_dialog_text_.external_link_</code></h3>
+<h3 id="nested-schema-for-accessopen_in_prisma_browsercustom_dialog_text_external_link_">Nested Schema for <code>access.open_in_prisma_browser.custom_dialog_text_.external_link_</code><a class="headerlink" href="#nested-schema-for-accessopen_in_prisma_browsercustom_dialog_text_external_link_" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>label</code> (String)</li>
 <li><code>url</code> (String) An HTTP or HTTPS URL.</li>
 </ul>
 <p><a id="nestedatt--access--user_prompt"></a></p>
-<h3 id="nested-schema-for-accessuser_prompt">Nested Schema for <code>access.user_prompt</code></h3>
+<h3 id="nested-schema-for-accessuser_prompt">Nested Schema for <code>access.user_prompt</code><a class="headerlink" href="#nested-schema-for-accessuser_prompt" title="Permanent link">&para;</a></h3>
 <p>Optional:</p>
 <ul>
 <li><code>duration_minutes</code> (String) How long the user's decision is remembered. Only valid when mode is not 'none'. When mode is adminApproval and this field is omitted, the server defaults to '540' (9 hours), matching the dashboard UI default.</li>
 <li><code>mode</code> (String) What the user sees when the access restriction triggers.</li>
 </ul>
 <p><a id="nestedatt--applications"></a></p>
-<h3 id="nested-schema-for-applications">Nested Schema for <code>applications</code></h3>
+<h3 id="nested-schema-for-applications">Nested Schema for <code>applications</code><a class="headerlink" href="#nested-schema-for-applications" title="Permanent link">&para;</a></h3>
 <p>Optional:</p>
 <ul>
 <li><code>application_groups</code> (Attributes) Application group references (see <a href="#nestedatt--applications--application_groups">below for nested schema</a>)</li>
@@ -3455,7 +3471,7 @@
 Each provider section is optional. To remove a provider's restrictions, omit its section entirely. (see <a href="#nestedatt--applications--tenant_conditions">below for nested schema</a>)</li>
 </ul>
 <p><a id="nestedatt--applications--application_groups"></a></p>
-<h3 id="nested-schema-for-applicationsapplication_groups">Nested Schema for <code>applications.application_groups</code></h3>
+<h3 id="nested-schema-for-applicationsapplication_groups">Nested Schema for <code>applications.application_groups</code><a class="headerlink" href="#nested-schema-for-applicationsapplication_groups" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>access_mode</code> (String) Whether this rule applies to no or specific application groups</li>
@@ -3469,20 +3485,20 @@ Each provider section is optional. To remove a provider's restrictions, omit its
 <li><code>application_group_ids</code> (Attributes List) (see <a href="#nestedatt--applications--application_groups--application_group_ids">below for nested schema</a>)</li>
 </ul>
 <p><a id="nestedatt--applications--application_groups--specific"></a></p>
-<h3 id="nested-schema-for-applicationsapplication_groupsspecific">Nested Schema for <code>applications.application_groups.specific</code></h3>
+<h3 id="nested-schema-for-applicationsapplication_groupsspecific">Nested Schema for <code>applications.application_groups.specific</code><a class="headerlink" href="#nested-schema-for-applicationsapplication_groupsspecific" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>application_group_ids</code> (List of String)</li>
 </ul>
 <p><a id="nestedatt--applications--application_groups--application_group_ids"></a></p>
-<h3 id="nested-schema-for-applicationsapplication_groupsapplication_group_ids">Nested Schema for <code>applications.application_groups.application_group_ids</code></h3>
+<h3 id="nested-schema-for-applicationsapplication_groupsapplication_group_ids">Nested Schema for <code>applications.application_groups.application_group_ids</code><a class="headerlink" href="#nested-schema-for-applicationsapplication_groupsapplication_group_ids" title="Permanent link">&para;</a></h3>
 <p>Read-Only:</p>
 <ul>
 <li><code>id</code> (String) Application group identifier</li>
 <li><code>name</code> (String) Application group display name</li>
 </ul>
 <p><a id="nestedatt--applications--local_desktop"></a></p>
-<h3 id="nested-schema-for-applicationslocal_desktop">Nested Schema for <code>applications.local_desktop</code></h3>
+<h3 id="nested-schema-for-applicationslocal_desktop">Nested Schema for <code>applications.local_desktop</code><a class="headerlink" href="#nested-schema-for-applicationslocal_desktop" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>access_mode</code> (String) Whether this rule applies to no, any defined, or specific local desktop apps</li>
@@ -3492,13 +3508,13 @@ Each provider section is optional. To remove a provider's restrictions, omit its
 <li><code>specific_</code> (Attributes) Present when accessMode is specific (see <a href="#nestedatt--applications--local_desktop--specific_">below for nested schema</a>)</li>
 </ul>
 <p><a id="nestedatt--applications--local_desktop--specific_"></a></p>
-<h3 id="nested-schema-for-applicationslocal_desktopspecific_">Nested Schema for <code>applications.local_desktop.specific_</code></h3>
+<h3 id="nested-schema-for-applicationslocal_desktopspecific_">Nested Schema for <code>applications.local_desktop.specific_</code><a class="headerlink" href="#nested-schema-for-applicationslocal_desktopspecific_" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>application_ids</code> (List of String)</li>
 </ul>
 <p><a id="nestedatt--applications--non_web"></a></p>
-<h3 id="nested-schema-for-applicationsnon_web">Nested Schema for <code>applications.non_web</code></h3>
+<h3 id="nested-schema-for-applicationsnon_web">Nested Schema for <code>applications.non_web</code><a class="headerlink" href="#nested-schema-for-applicationsnon_web" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>access_mode</code> (String) Whether this rule applies to no non-web apps, any admin-defined non-web app, or specific non-web apps</li>
@@ -3509,13 +3525,13 @@ Each provider section is optional. To remove a provider's restrictions, omit its
 <li><code>specific__</code> (Attributes) Present when accessMode is specific (see <a href="#nestedatt--applications--non_web--specific__">below for nested schema</a>)</li>
 </ul>
 <p><a id="nestedatt--applications--non_web--specific__"></a></p>
-<h3 id="nested-schema-for-applicationsnon_webspecific__">Nested Schema for <code>applications.non_web.specific__</code></h3>
+<h3 id="nested-schema-for-applicationsnon_webspecific__">Nested Schema for <code>applications.non_web.specific__</code><a class="headerlink" href="#nested-schema-for-applicationsnon_webspecific__" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>application_ids</code> (List of String)</li>
 </ul>
 <p><a id="nestedatt--applications--private"></a></p>
-<h3 id="nested-schema-for-applicationsprivate">Nested Schema for <code>applications.private</code></h3>
+<h3 id="nested-schema-for-applicationsprivate">Nested Schema for <code>applications.private</code><a class="headerlink" href="#nested-schema-for-applicationsprivate" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>access_mode</code> (String) Whether this rule applies to no, any, or specific private apps</li>
@@ -3525,13 +3541,13 @@ Each provider section is optional. To remove a provider's restrictions, omit its
 <li><code>specific___</code> (Attributes) Present when accessMode is specific (see <a href="#nestedatt--applications--private--specific___">below for nested schema</a>)</li>
 </ul>
 <p><a id="nestedatt--applications--private--specific___"></a></p>
-<h3 id="nested-schema-for-applicationsprivatespecific___">Nested Schema for <code>applications.private.specific___</code></h3>
+<h3 id="nested-schema-for-applicationsprivatespecific___">Nested Schema for <code>applications.private.specific___</code><a class="headerlink" href="#nested-schema-for-applicationsprivatespecific___" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>application_ids</code> (List of String)</li>
 </ul>
 <p><a id="nestedatt--applications--saas"></a></p>
-<h3 id="nested-schema-for-applicationssaas">Nested Schema for <code>applications.saas</code></h3>
+<h3 id="nested-schema-for-applicationssaas">Nested Schema for <code>applications.saas</code><a class="headerlink" href="#nested-schema-for-applicationssaas" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>access_mode</code> (String) Whether this rule applies to no, any, or specific SaaS apps</li>
@@ -3541,7 +3557,7 @@ Each provider section is optional. To remove a provider's restrictions, omit its
 <li><code>specific____</code> (Attributes) Present when accessMode is specific (see <a href="#nestedatt--applications--saas--specific____">below for nested schema</a>)</li>
 </ul>
 <p><a id="nestedatt--applications--saas--specific____"></a></p>
-<h3 id="nested-schema-for-applicationssaasspecific____">Nested Schema for <code>applications.saas.specific____</code></h3>
+<h3 id="nested-schema-for-applicationssaasspecific____">Nested Schema for <code>applications.saas.specific____</code><a class="headerlink" href="#nested-schema-for-applicationssaasspecific____" title="Permanent link">&para;</a></h3>
 <p>Optional:</p>
 <ul>
 <li><code>application_ids</code> (List of String)</li>
@@ -3549,7 +3565,7 @@ Each provider section is optional. To remove a provider's restrictions, omit its
 <li><code>web_classifications</code> (List of String) Array of web classifications (URL categories) for content filtering</li>
 </ul>
 <p><a id="nestedatt--applications--saas--specific____--urls"></a></p>
-<h3 id="nested-schema-for-applicationssaasspecific____urls">Nested Schema for <code>applications.saas.specific____.urls</code></h3>
+<h3 id="nested-schema-for-applicationssaasspecific____urls">Nested Schema for <code>applications.saas.specific____.urls</code><a class="headerlink" href="#nested-schema-for-applicationssaasspecific____urls" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>url</code> (String) URL pattern expression</li>
@@ -3569,7 +3585,7 @@ If <code>false</code> (default), the system automatically normalizes the URL bas
 * <strong>Domain:</strong> Supports IPv4 and Port numbers (e.g., <code>:8080</code>).
 * <strong>Path:</strong> Automatically adds a trailing <code>*</code> to all paths.</p>
 <p><a id="nestedatt--applications--tenant_conditions"></a></p>
-<h3 id="nested-schema-for-applicationstenant_conditions">Nested Schema for <code>applications.tenant_conditions</code></h3>
+<h3 id="nested-schema-for-applicationstenant_conditions">Nested Schema for <code>applications.tenant_conditions</code><a class="headerlink" href="#nested-schema-for-applicationstenant_conditions" title="Permanent link">&para;</a></h3>
 <p>Optional:</p>
 <ul>
 <li><code>aws</code> (Attributes) (see <a href="#nestedatt--applications--tenant_conditions--aws">below for nested schema</a>)</li>
@@ -3581,33 +3597,33 @@ If <code>false</code> (default), the system automatically normalizes the URL bas
 <li><code>slack</code> (Attributes) (see <a href="#nestedatt--applications--tenant_conditions--slack">below for nested schema</a>)</li>
 </ul>
 <p><a id="nestedatt--applications--tenant_conditions--aws"></a></p>
-<h3 id="nested-schema-for-applicationstenant_conditionsaws">Nested Schema for <code>applications.tenant_conditions.aws</code></h3>
+<h3 id="nested-schema-for-applicationstenant_conditionsaws">Nested Schema for <code>applications.tenant_conditions.aws</code><a class="headerlink" href="#nested-schema-for-applicationstenant_conditionsaws" title="Permanent link">&para;</a></h3>
 <p>Optional:</p>
 <ul>
 <li><code>account_ids</code> (List of String) List of allowed AWS account IDs</li>
 <li><code>regions</code> (List of String) List of allowed AWS regions</li>
 </ul>
 <p><a id="nestedatt--applications--tenant_conditions--claudeai"></a></p>
-<h3 id="nested-schema-for-applicationstenant_conditionsclaudeai">Nested Schema for <code>applications.tenant_conditions.claudeai</code></h3>
+<h3 id="nested-schema-for-applicationstenant_conditionsclaudeai">Nested Schema for <code>applications.tenant_conditions.claudeai</code><a class="headerlink" href="#nested-schema-for-applicationstenant_conditionsclaudeai" title="Permanent link">&para;</a></h3>
 <p>Optional:</p>
 <ul>
 <li><code>account_ids</code> (List of String) List of allowed Claude AI account IDs</li>
 <li><code>domains</code> (List of String) List of allowed Claude AI domains</li>
 </ul>
 <p><a id="nestedatt--applications--tenant_conditions--github"></a></p>
-<h3 id="nested-schema-for-applicationstenant_conditionsgithub">Nested Schema for <code>applications.tenant_conditions.github</code></h3>
+<h3 id="nested-schema-for-applicationstenant_conditionsgithub">Nested Schema for <code>applications.tenant_conditions.github</code><a class="headerlink" href="#nested-schema-for-applicationstenant_conditionsgithub" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>account_ids</code> (List of String) List of allowed GitHub account IDs</li>
 </ul>
 <p><a id="nestedatt--applications--tenant_conditions--google"></a></p>
-<h3 id="nested-schema-for-applicationstenant_conditionsgoogle">Nested Schema for <code>applications.tenant_conditions.google</code></h3>
+<h3 id="nested-schema-for-applicationstenant_conditionsgoogle">Nested Schema for <code>applications.tenant_conditions.google</code><a class="headerlink" href="#nested-schema-for-applicationstenant_conditionsgoogle" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>domains</code> (List of String) List of allowed Google domains</li>
 </ul>
 <p><a id="nestedatt--applications--tenant_conditions--microsoft365"></a></p>
-<h3 id="nested-schema-for-applicationstenant_conditionsmicrosoft365">Nested Schema for <code>applications.tenant_conditions.microsoft365</code></h3>
+<h3 id="nested-schema-for-applicationstenant_conditionsmicrosoft365">Nested Schema for <code>applications.tenant_conditions.microsoft365</code><a class="headerlink" href="#nested-schema-for-applicationstenant_conditionsmicrosoft365" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>domains</code> (List of String) List of allowed Microsoft 365 domains</li>
@@ -3617,20 +3633,20 @@ If <code>false</code> (default), the system automatically normalizes the URL bas
 <li><code>resource_hosts</code> (List of String) List of allowed Microsoft 365 resource hosts</li>
 </ul>
 <p><a id="nestedatt--applications--tenant_conditions--openai"></a></p>
-<h3 id="nested-schema-for-applicationstenant_conditionsopenai">Nested Schema for <code>applications.tenant_conditions.openai</code></h3>
+<h3 id="nested-schema-for-applicationstenant_conditionsopenai">Nested Schema for <code>applications.tenant_conditions.openai</code><a class="headerlink" href="#nested-schema-for-applicationstenant_conditionsopenai" title="Permanent link">&para;</a></h3>
 <p>Optional:</p>
 <ul>
 <li><code>account_ids</code> (List of String) List of allowed OpenAI account IDs</li>
 <li><code>domains</code> (List of String) List of allowed OpenAI domains</li>
 </ul>
 <p><a id="nestedatt--applications--tenant_conditions--slack"></a></p>
-<h3 id="nested-schema-for-applicationstenant_conditionsslack">Nested Schema for <code>applications.tenant_conditions.slack</code></h3>
+<h3 id="nested-schema-for-applicationstenant_conditionsslack">Nested Schema for <code>applications.tenant_conditions.slack</code><a class="headerlink" href="#nested-schema-for-applicationstenant_conditionsslack" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>workspace_names</code> (List of String) List of allowed Slack workspace names</li>
 </ul>
 <p><a id="nestedatt--tracking"></a></p>
-<h3 id="nested-schema-for-tracking">Nested Schema for <code>tracking</code></h3>
+<h3 id="nested-schema-for-tracking">Nested Schema for <code>tracking</code><a class="headerlink" href="#nested-schema-for-tracking" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>log_level</code> (String) Log privacy level for access and data tracking.</li>
@@ -3643,7 +3659,7 @@ If <code>false</code> (default), the system automatically normalizes the URL bas
 <li><code>should_log_spa_navigation_events</code> (Boolean) Whether to log single-page app (SPA) navigation events. Not applicable when logLevel is 'off'.</li>
 </ul>
 <p><a id="nestedatt--data_controls"></a></p>
-<h3 id="nested-schema-for-data_controls">Nested Schema for <code>data_controls</code></h3>
+<h3 id="nested-schema-for-data_controls">Nested Schema for <code>data_controls</code><a class="headerlink" href="#nested-schema-for-data_controls" title="Permanent link">&para;</a></h3>
 <p>Optional:</p>
 <ul>
 <li><code>bypass_dlp_profile_validation</code> (Boolean) Bypass the content-agnostic data-profile compatibility check for controls in this object. When false (default), controls incompatible with the configured dlpProfileId are rejected with HTTP 400. When true, the rule saves and content-agnostic incompatible controls become runtime no-ops. Controls entirely unsupported for the resulting content type are always rejected, even when this is true.</li>
@@ -3668,20 +3684,20 @@ If <code>false</code> (default), the system automatically normalizes the URL bas
 <li><code>webpage_watermarking</code> (Attributes) Control webpage watermarking to deter users from taking screenshots using external means (e.g. mobile device). (see <a href="#nestedatt--data_controls--webpage_watermarking">below for nested schema</a>)</li>
 </ul>
 <p><a id="nestedatt--data_controls--camera"></a></p>
-<h3 id="nested-schema-for-data_controlscamera">Nested Schema for <code>data_controls.camera</code></h3>
+<h3 id="nested-schema-for-data_controlscamera">Nested Schema for <code>data_controls.camera</code><a class="headerlink" href="#nested-schema-for-data_controlscamera" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>action</code> (String) The action for this control.</li>
 </ul>
 <p><a id="nestedatt--data_controls--clipboard"></a></p>
-<h3 id="nested-schema-for-data_controlsclipboard">Nested Schema for <code>data_controls.clipboard</code></h3>
+<h3 id="nested-schema-for-data_controlsclipboard">Nested Schema for <code>data_controls.clipboard</code><a class="headerlink" href="#nested-schema-for-data_controlsclipboard" title="Permanent link">&para;</a></h3>
 <p>Optional:</p>
 <ul>
 <li><code>data_in</code> (Attributes) Clipboard direction settings. (see <a href="#nestedatt--data_controls--clipboard--data_in">below for nested schema</a>)</li>
 <li><code>data_out</code> (Attributes) Clipboard direction settings. (see <a href="#nestedatt--data_controls--clipboard--data_out">below for nested schema</a>)</li>
 </ul>
 <p><a id="nestedatt--data_controls--clipboard--data_in"></a></p>
-<h3 id="nested-schema-for-data_controlsclipboarddata_in">Nested Schema for <code>data_controls.clipboard.data_in</code></h3>
+<h3 id="nested-schema-for-data_controlsclipboarddata_in">Nested Schema for <code>data_controls.clipboard.data_in</code><a class="headerlink" href="#nested-schema-for-data_controlsclipboarddata_in" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>active</code> (Boolean) Whether this clipboard direction is configured.</li>
@@ -3695,7 +3711,7 @@ If <code>false</code> (default), the system automatically normalizes the URL bas
 <li><code>user_prompt_</code> (Attributes) How an end user is prompted before a control's restriction is applied, and how long their decision is remembered. Optional; absence is equivalent to { mode: "none" } — no prompt is shown. (see <a href="#nestedatt--data_controls--clipboard--data_in--user_prompt_">below for nested schema</a>)</li>
 </ul>
 <p><a id="nestedatt--data_controls--clipboard--data_in--custom_dialog_text__"></a></p>
-<h3 id="nested-schema-for-data_controlsclipboarddata_incustom_dialog_text__">Nested Schema for <code>data_controls.clipboard.data_in.custom_dialog_text__</code></h3>
+<h3 id="nested-schema-for-data_controlsclipboarddata_incustom_dialog_text__">Nested Schema for <code>data_controls.clipboard.data_in.custom_dialog_text__</code><a class="headerlink" href="#nested-schema-for-data_controlsclipboarddata_incustom_dialog_text__" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>title</code> (String) Dialog title.</li>
@@ -3706,14 +3722,14 @@ If <code>false</code> (default), the system automatically normalizes the URL bas
 <li><code>external_link__</code> (Attributes) (see <a href="#nestedatt--data_controls--clipboard--data_in--custom_dialog_text__--external_link__">below for nested schema</a>)</li>
 </ul>
 <p><a id="nestedatt--data_controls--clipboard--data_in--custom_dialog_text__--external_link__"></a></p>
-<h3 id="nested-schema-for-data_controlsclipboarddata_incustom_dialog_text__external_link__">Nested Schema for <code>data_controls.clipboard.data_in.custom_dialog_text__.external_link__</code></h3>
+<h3 id="nested-schema-for-data_controlsclipboarddata_incustom_dialog_text__external_link__">Nested Schema for <code>data_controls.clipboard.data_in.custom_dialog_text__.external_link__</code><a class="headerlink" href="#nested-schema-for-data_controlsclipboarddata_incustom_dialog_text__external_link__" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>label</code> (String)</li>
 <li><code>url</code> (String) An HTTP or HTTPS URL.</li>
 </ul>
 <p><a id="nestedatt--data_controls--clipboard--data_in--user_prompt_"></a></p>
-<h3 id="nested-schema-for-data_controlsclipboarddata_inuser_prompt_">Nested Schema for <code>data_controls.clipboard.data_in.user_prompt_</code></h3>
+<h3 id="nested-schema-for-data_controlsclipboarddata_inuser_prompt_">Nested Schema for <code>data_controls.clipboard.data_in.user_prompt_</code><a class="headerlink" href="#nested-schema-for-data_controlsclipboarddata_inuser_prompt_" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>mode</code> (String) What the user sees when the restriction triggers. none: no prompt, restriction is enforced silently. warnAndAllow: pop-up warning shown; user can continue. proceedWithReason: pop-up shown; user must enter a reason before continuing. adminApproval: pop-up shown; user submits a permission request an admin must approve. Explicit mode=none is accepted and is equivalent to omitting userPrompt.</li>
@@ -3723,7 +3739,7 @@ If <code>false</code> (default), the system automatically normalizes the URL bas
 <li><code>duration_minutes</code> (String) How long the user's decision is remembered before they are prompted again. Only valid when mode is adminApproval; rejected for all other modes. When mode is adminApproval and this field is omitted, the server defaults to '540' (9 hours), matching the dashboard UI default.</li>
 </ul>
 <p><a id="nestedatt--data_controls--clipboard--data_out"></a></p>
-<h3 id="nested-schema-for-data_controlsclipboarddata_out">Nested Schema for <code>data_controls.clipboard.data_out</code></h3>
+<h3 id="nested-schema-for-data_controlsclipboarddata_out">Nested Schema for <code>data_controls.clipboard.data_out</code><a class="headerlink" href="#nested-schema-for-data_controlsclipboarddata_out" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>active</code> (Boolean) Whether this clipboard direction is configured.</li>
@@ -3737,7 +3753,7 @@ If <code>false</code> (default), the system automatically normalizes the URL bas
 <li><code>user_prompt__</code> (Attributes) How an end user is prompted before a control's restriction is applied, and how long their decision is remembered. Optional; absence is equivalent to { mode: "none" } — no prompt is shown. (see <a href="#nestedatt--data_controls--clipboard--data_out--user_prompt__">below for nested schema</a>)</li>
 </ul>
 <p><a id="nestedatt--data_controls--clipboard--data_out--custom_dialog_text___"></a></p>
-<h3 id="nested-schema-for-data_controlsclipboarddata_outcustom_dialog_text___">Nested Schema for <code>data_controls.clipboard.data_out.custom_dialog_text___</code></h3>
+<h3 id="nested-schema-for-data_controlsclipboarddata_outcustom_dialog_text___">Nested Schema for <code>data_controls.clipboard.data_out.custom_dialog_text___</code><a class="headerlink" href="#nested-schema-for-data_controlsclipboarddata_outcustom_dialog_text___" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>title</code> (String) Dialog title.</li>
@@ -3748,14 +3764,14 @@ If <code>false</code> (default), the system automatically normalizes the URL bas
 <li><code>external_link___</code> (Attributes) (see <a href="#nestedatt--data_controls--clipboard--data_out--custom_dialog_text___--external_link___">below for nested schema</a>)</li>
 </ul>
 <p><a id="nestedatt--data_controls--clipboard--data_out--custom_dialog_text___--external_link___"></a></p>
-<h3 id="nested-schema-for-data_controlsclipboarddata_outcustom_dialog_text___external_link___">Nested Schema for <code>data_controls.clipboard.data_out.custom_dialog_text___.external_link___</code></h3>
+<h3 id="nested-schema-for-data_controlsclipboarddata_outcustom_dialog_text___external_link___">Nested Schema for <code>data_controls.clipboard.data_out.custom_dialog_text___.external_link___</code><a class="headerlink" href="#nested-schema-for-data_controlsclipboarddata_outcustom_dialog_text___external_link___" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>label</code> (String)</li>
 <li><code>url</code> (String) An HTTP or HTTPS URL.</li>
 </ul>
 <p><a id="nestedatt--data_controls--clipboard--data_out--user_prompt__"></a></p>
-<h3 id="nested-schema-for-data_controlsclipboarddata_outuser_prompt__">Nested Schema for <code>data_controls.clipboard.data_out.user_prompt__</code></h3>
+<h3 id="nested-schema-for-data_controlsclipboarddata_outuser_prompt__">Nested Schema for <code>data_controls.clipboard.data_out.user_prompt__</code><a class="headerlink" href="#nested-schema-for-data_controlsclipboarddata_outuser_prompt__" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>mode</code> (String) What the user sees when the restriction triggers. none: no prompt, restriction is enforced silently. warnAndAllow: pop-up warning shown; user can continue. proceedWithReason: pop-up shown; user must enter a reason before continuing. adminApproval: pop-up shown; user submits a permission request an admin must approve. Explicit mode=none is accepted and is equivalent to omitting userPrompt.</li>
@@ -3765,7 +3781,7 @@ If <code>false</code> (default), the system automatically normalizes the URL bas
 <li><code>duration_minutes</code> (String) How long the user's decision is remembered before they are prompted again. Only valid when mode is adminApproval; rejected for all other modes. When mode is adminApproval and this field is omitted, the server defaults to '540' (9 hours), matching the dashboard UI default.</li>
 </ul>
 <p><a id="nestedatt--data_controls--custom_http_header"></a></p>
-<h3 id="nested-schema-for-data_controlscustom_http_header">Nested Schema for <code>data_controls.custom_http_header</code></h3>
+<h3 id="nested-schema-for-data_controlscustom_http_header">Nested Schema for <code>data_controls.custom_http_header</code><a class="headerlink" href="#nested-schema-for-data_controlscustom_http_header" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>mode</code> (String) Whether to keep default headers or add a custom header.</li>
@@ -3776,27 +3792,27 @@ If <code>false</code> (default), the system automatically normalizes the URL bas
 <li><code>custom_header_value</code> (String) HTTP header value. Allowed characters mirror the dashboard wizard's punctuation allowlist; CR, LF, and other control characters are rejected.</li>
 </ul>
 <p><a id="nestedatt--data_controls--developer_tools_on_web_pages"></a></p>
-<h3 id="nested-schema-for-data_controlsdeveloper_tools_on_web_pages">Nested Schema for <code>data_controls.developer_tools_on_web_pages</code></h3>
+<h3 id="nested-schema-for-data_controlsdeveloper_tools_on_web_pages">Nested Schema for <code>data_controls.developer_tools_on_web_pages</code><a class="headerlink" href="#nested-schema-for-data_controlsdeveloper_tools_on_web_pages" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>action</code> (String) The action for this control.</li>
 </ul>
 <p><a id="nestedatt--data_controls--dlp_profile"></a></p>
-<h3 id="nested-schema-for-data_controlsdlp_profile">Nested Schema for <code>data_controls.dlp_profile</code></h3>
+<h3 id="nested-schema-for-data_controlsdlp_profile">Nested Schema for <code>data_controls.dlp_profile</code><a class="headerlink" href="#nested-schema-for-data_controlsdlp_profile" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>id</code> (String) EDLP data profile id (the external id from the Enterprise DLP API). Discover and validate profile ids via the EDLP Data Profiles API: list all with GET /v2/api/data-profiles, or fetch one with GET /v2/api/data-profiles/{resourceId}. Use this id as dlpProfileId when creating or updating a rule.</li>
 <li><code>name</code> (String) EDLP data profile display name.</li>
 </ul>
 <p><a id="nestedatt--data_controls--file_protection"></a></p>
-<h3 id="nested-schema-for-data_controlsfile_protection">Nested Schema for <code>data_controls.file_protection</code></h3>
+<h3 id="nested-schema-for-data_controlsfile_protection">Nested Schema for <code>data_controls.file_protection</code><a class="headerlink" href="#nested-schema-for-data_controlsfile_protection" title="Permanent link">&para;</a></h3>
 <p>Optional:</p>
 <ul>
 <li><code>file_download</code> (Attributes) Download direction settings for file protection. (see <a href="#nestedatt--data_controls--file_protection--file_download">below for nested schema</a>)</li>
 <li><code>file_upload</code> (Attributes) Upload direction settings for file protection. (see <a href="#nestedatt--data_controls--file_protection--file_upload">below for nested schema</a>)</li>
 </ul>
 <p><a id="nestedatt--data_controls--file_protection--file_download"></a></p>
-<h3 id="nested-schema-for-data_controlsfile_protectionfile_download">Nested Schema for <code>data_controls.file_protection.file_download</code></h3>
+<h3 id="nested-schema-for-data_controlsfile_protectionfile_download">Nested Schema for <code>data_controls.file_protection.file_download</code><a class="headerlink" href="#nested-schema-for-data_controlsfile_protectionfile_download" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>action</code> (String) How downloads are handled. allow saves the file to the user's local disk normally. useInPrismaBrowserOnly saves the file encrypted so it can only be opened inside Prisma Browser. saveToOrganizationStorage routes the download to an organization-managed cloud storage location instead of the local disk. block prevents the download.</li>
@@ -3814,14 +3830,14 @@ If <code>false</code> (default), the system automatically normalizes the URL bas
 <li><code>file_type_filter</code> (Attributes) Filter by file type — categories, sub-categories, or specific extensions. (see <a href="#nestedatt--data_controls--file_protection--file_download--file_type_filter">below for nested schema</a>)</li>
 </ul>
 <p><a id="nestedatt--data_controls--file_protection--file_download--before_download"></a></p>
-<h3 id="nested-schema-for-data_controlsfile_protectionfile_downloadbefore_download">Nested Schema for <code>data_controls.file_protection.file_download.before_download</code></h3>
+<h3 id="nested-schema-for-data_controlsfile_protectionfile_downloadbefore_download">Nested Schema for <code>data_controls.file_protection.file_download.before_download</code><a class="headerlink" href="#nested-schema-for-data_controlsfile_protectionfile_downloadbefore_download" title="Permanent link">&para;</a></h3>
 <p>Optional:</p>
 <ul>
 <li><code>mfa_required</code> (Boolean) Whether the user must complete an MFA challenge before the control's restricted action is allowed. The MFA method (pinCode / identityProvider) is configured globally on the Browser Security Authentication Factor control and is not set per-rule.</li>
 <li><code>user_prompt___</code> (Attributes) How an end user is prompted before a control's restriction is applied, and how long their decision is remembered. Optional; absence is equivalent to { mode: "none" } — no prompt is shown. (see <a href="#nestedatt--data_controls--file_protection--file_download--before_download--user_prompt___">below for nested schema</a>)</li>
 </ul>
 <p><a id="nestedatt--data_controls--file_protection--file_download--before_download--user_prompt___"></a></p>
-<h3 id="nested-schema-for-data_controlsfile_protectionfile_downloadbefore_downloaduser_prompt___">Nested Schema for <code>data_controls.file_protection.file_download.before_download.user_prompt___</code></h3>
+<h3 id="nested-schema-for-data_controlsfile_protectionfile_downloadbefore_downloaduser_prompt___">Nested Schema for <code>data_controls.file_protection.file_download.before_download.user_prompt___</code><a class="headerlink" href="#nested-schema-for-data_controlsfile_protectionfile_downloadbefore_downloaduser_prompt___" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>mode</code> (String) What the user sees when the restriction triggers. none: no prompt, restriction is enforced silently. warnAndAllow: pop-up warning shown; user can continue. proceedWithReason: pop-up shown; user must enter a reason before continuing. adminApproval: pop-up shown; user submits a permission request an admin must approve. Explicit mode=none is accepted and is equivalent to omitting userPrompt.</li>
@@ -3831,7 +3847,7 @@ If <code>false</code> (default), the system automatically normalizes the URL bas
 <li><code>duration_minutes</code> (String) How long the user's decision is remembered before they are prompted again. Only valid when mode is adminApproval; rejected for all other modes. When mode is adminApproval and this field is omitted, the server defaults to '540' (9 hours), matching the dashboard UI default.</li>
 </ul>
 <p><a id="nestedatt--data_controls--file_protection--file_download--custom_dialog_text____"></a></p>
-<h3 id="nested-schema-for-data_controlsfile_protectionfile_downloadcustom_dialog_text____">Nested Schema for <code>data_controls.file_protection.file_download.custom_dialog_text____</code></h3>
+<h3 id="nested-schema-for-data_controlsfile_protectionfile_downloadcustom_dialog_text____">Nested Schema for <code>data_controls.file_protection.file_download.custom_dialog_text____</code><a class="headerlink" href="#nested-schema-for-data_controlsfile_protectionfile_downloadcustom_dialog_text____" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>title</code> (String) Dialog title.</li>
@@ -3842,21 +3858,21 @@ If <code>false</code> (default), the system automatically normalizes the URL bas
 <li><code>external_link____</code> (Attributes) (see <a href="#nestedatt--data_controls--file_protection--file_download--custom_dialog_text____--external_link____">below for nested schema</a>)</li>
 </ul>
 <p><a id="nestedatt--data_controls--file_protection--file_download--custom_dialog_text____--external_link____"></a></p>
-<h3 id="nested-schema-for-data_controlsfile_protectionfile_downloadcustom_dialog_text____external_link____">Nested Schema for <code>data_controls.file_protection.file_download.custom_dialog_text____.external_link____</code></h3>
+<h3 id="nested-schema-for-data_controlsfile_protectionfile_downloadcustom_dialog_text____external_link____">Nested Schema for <code>data_controls.file_protection.file_download.custom_dialog_text____.external_link____</code><a class="headerlink" href="#nested-schema-for-data_controlsfile_protectionfile_downloadcustom_dialog_text____external_link____" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>label</code> (String)</li>
 <li><code>url</code> (String) An HTTP or HTTPS URL.</li>
 </ul>
 <p><a id="nestedatt--data_controls--file_protection--file_download--file_sha256filter"></a></p>
-<h3 id="nested-schema-for-data_controlsfile_protectionfile_downloadfile_sha256filter">Nested Schema for <code>data_controls.file_protection.file_download.file_sha256filter</code></h3>
+<h3 id="nested-schema-for-data_controlsfile_protectionfile_downloadfile_sha256filter">Nested Schema for <code>data_controls.file_protection.file_download.file_sha256filter</code><a class="headerlink" href="#nested-schema-for-data_controlsfile_protectionfile_downloadfile_sha256filter" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>hashes</code> (List of String) SHA-256 hashes of the files this rule should target — for example, hashes of known sensitive or known-good documents your organization wants to protect or whitelist. Submit hashes in any case (abc / ABC / aBc); GET responses always return lowercase.</li>
 <li><code>operator</code> (String) Whether the rule applies to files whose hash is in the list (in), or to all files except those (notIn).</li>
 </ul>
 <p><a id="nestedatt--data_controls--file_protection--file_download--file_size_limit"></a></p>
-<h3 id="nested-schema-for-data_controlsfile_protectionfile_downloadfile_size_limit">Nested Schema for <code>data_controls.file_protection.file_download.file_size_limit</code></h3>
+<h3 id="nested-schema-for-data_controlsfile_protectionfile_downloadfile_size_limit">Nested Schema for <code>data_controls.file_protection.file_download.file_size_limit</code><a class="headerlink" href="#nested-schema-for-data_controlsfile_protectionfile_downloadfile_size_limit" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>operator</code> (String) Whether the rule applies to files smaller than or larger than the threshold.</li>
@@ -3867,7 +3883,7 @@ If <code>false</code> (default), the system automatically normalizes the URL bas
 <li><code>unit</code> (String) Unit for value — bytes, kilobytes, megabytes, or gigabytes.</li>
 </ul>
 <p><a id="nestedatt--data_controls--file_protection--file_download--file_type_filter"></a></p>
-<h3 id="nested-schema-for-data_controlsfile_protectionfile_downloadfile_type_filter">Nested Schema for <code>data_controls.file_protection.file_download.file_type_filter</code></h3>
+<h3 id="nested-schema-for-data_controlsfile_protectionfile_downloadfile_type_filter">Nested Schema for <code>data_controls.file_protection.file_download.file_type_filter</code><a class="headerlink" href="#nested-schema-for-data_controlsfile_protectionfile_downloadfile_type_filter" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>operator</code> (String) Whether the rule applies to files in the combined list of predefinedTypes + customExtensions (in), or to all files except those (notIn).</li>
@@ -3878,7 +3894,7 @@ If <code>false</code> (default), the system automatically normalizes the URL bas
 <li><code>predefined_types</code> (List of String) Broad file-type buckets from the Prisma Browser catalog. Either a category (e.g., documents) or a sub-category (e.g., excel). Use this when the rule should match a whole group of files; for specific extensions, use customExtensions instead.</li>
 </ul>
 <p><a id="nestedatt--data_controls--file_protection--file_upload"></a></p>
-<h3 id="nested-schema-for-data_controlsfile_protectionfile_upload">Nested Schema for <code>data_controls.file_protection.file_upload</code></h3>
+<h3 id="nested-schema-for-data_controlsfile_protectionfile_upload">Nested Schema for <code>data_controls.file_protection.file_upload</code><a class="headerlink" href="#nested-schema-for-data_controlsfile_protectionfile_upload" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>action</code> (String) How uploads are handled. allow lets any file be uploaded to the rule's apps. allowProtectedBetweenRuleApps lets a user upload only Prisma-protected files that were previously downloaded from one of this rule's web applications — keeping protected content moving only between apps that share the same scope. Requires fileDownload.action=useInPrismaBrowserOnly on a matching rule. blockOnlyProtected is the inverse — ordinary files upload normally but protected files are blocked. block prevents all uploads. allowProtectedBetweenRuleApps is a legacy, read-only value: it may be returned for pre-existing rules but is not accepted when creating or updating a rule, and such requests are rejected.</li>
@@ -3893,14 +3909,14 @@ If <code>false</code> (default), the system automatically normalizes the URL bas
 <li><code>file_type_filter_</code> (Attributes) Filter by file type — categories, sub-categories, or specific extensions. (see <a href="#nestedatt--data_controls--file_protection--file_upload--file_type_filter_">below for nested schema</a>)</li>
 </ul>
 <p><a id="nestedatt--data_controls--file_protection--file_upload--before_upload"></a></p>
-<h3 id="nested-schema-for-data_controlsfile_protectionfile_uploadbefore_upload">Nested Schema for <code>data_controls.file_protection.file_upload.before_upload</code></h3>
+<h3 id="nested-schema-for-data_controlsfile_protectionfile_uploadbefore_upload">Nested Schema for <code>data_controls.file_protection.file_upload.before_upload</code><a class="headerlink" href="#nested-schema-for-data_controlsfile_protectionfile_uploadbefore_upload" title="Permanent link">&para;</a></h3>
 <p>Optional:</p>
 <ul>
 <li><code>mfa_required</code> (Boolean) Whether the user must complete an MFA challenge before the control's restricted action is allowed. The MFA method (pinCode / identityProvider) is configured globally on the Browser Security Authentication Factor control and is not set per-rule.</li>
 <li><code>user_prompt____</code> (Attributes) How an end user is prompted before a control's restriction is applied, and how long their decision is remembered. Optional; absence is equivalent to { mode: "none" } — no prompt is shown. (see <a href="#nestedatt--data_controls--file_protection--file_upload--before_upload--user_prompt____">below for nested schema</a>)</li>
 </ul>
 <p><a id="nestedatt--data_controls--file_protection--file_upload--before_upload--user_prompt____"></a></p>
-<h3 id="nested-schema-for-data_controlsfile_protectionfile_uploadbefore_uploaduser_prompt____">Nested Schema for <code>data_controls.file_protection.file_upload.before_upload.user_prompt____</code></h3>
+<h3 id="nested-schema-for-data_controlsfile_protectionfile_uploadbefore_uploaduser_prompt____">Nested Schema for <code>data_controls.file_protection.file_upload.before_upload.user_prompt____</code><a class="headerlink" href="#nested-schema-for-data_controlsfile_protectionfile_uploadbefore_uploaduser_prompt____" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>mode</code> (String) What the user sees when the restriction triggers. none: no prompt, restriction is enforced silently. warnAndAllow: pop-up warning shown; user can continue. proceedWithReason: pop-up shown; user must enter a reason before continuing. adminApproval: pop-up shown; user submits a permission request an admin must approve. Explicit mode=none is accepted and is equivalent to omitting userPrompt.</li>
@@ -3910,7 +3926,7 @@ If <code>false</code> (default), the system automatically normalizes the URL bas
 <li><code>duration_minutes</code> (String) How long the user's decision is remembered before they are prompted again. Only valid when mode is adminApproval; rejected for all other modes. When mode is adminApproval and this field is omitted, the server defaults to '540' (9 hours), matching the dashboard UI default.</li>
 </ul>
 <p><a id="nestedatt--data_controls--file_protection--file_upload--custom_dialog_text_____"></a></p>
-<h3 id="nested-schema-for-data_controlsfile_protectionfile_uploadcustom_dialog_text_____">Nested Schema for <code>data_controls.file_protection.file_upload.custom_dialog_text_____</code></h3>
+<h3 id="nested-schema-for-data_controlsfile_protectionfile_uploadcustom_dialog_text_____">Nested Schema for <code>data_controls.file_protection.file_upload.custom_dialog_text_____</code><a class="headerlink" href="#nested-schema-for-data_controlsfile_protectionfile_uploadcustom_dialog_text_____" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>title</code> (String) Dialog title.</li>
@@ -3921,21 +3937,21 @@ If <code>false</code> (default), the system automatically normalizes the URL bas
 <li><code>external_link_____</code> (Attributes) (see <a href="#nestedatt--data_controls--file_protection--file_upload--custom_dialog_text_____--external_link_____">below for nested schema</a>)</li>
 </ul>
 <p><a id="nestedatt--data_controls--file_protection--file_upload--custom_dialog_text_____--external_link_____"></a></p>
-<h3 id="nested-schema-for-data_controlsfile_protectionfile_uploadcustom_dialog_text_____external_link_____">Nested Schema for <code>data_controls.file_protection.file_upload.custom_dialog_text_____.external_link_____</code></h3>
+<h3 id="nested-schema-for-data_controlsfile_protectionfile_uploadcustom_dialog_text_____external_link_____">Nested Schema for <code>data_controls.file_protection.file_upload.custom_dialog_text_____.external_link_____</code><a class="headerlink" href="#nested-schema-for-data_controlsfile_protectionfile_uploadcustom_dialog_text_____external_link_____" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>label</code> (String)</li>
 <li><code>url</code> (String) An HTTP or HTTPS URL.</li>
 </ul>
 <p><a id="nestedatt--data_controls--file_protection--file_upload--file_sha256filter_"></a></p>
-<h3 id="nested-schema-for-data_controlsfile_protectionfile_uploadfile_sha256filter_">Nested Schema for <code>data_controls.file_protection.file_upload.file_sha256filter_</code></h3>
+<h3 id="nested-schema-for-data_controlsfile_protectionfile_uploadfile_sha256filter_">Nested Schema for <code>data_controls.file_protection.file_upload.file_sha256filter_</code><a class="headerlink" href="#nested-schema-for-data_controlsfile_protectionfile_uploadfile_sha256filter_" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>hashes</code> (List of String) SHA-256 hashes of the files this rule should target — for example, hashes of known sensitive or known-good documents your organization wants to protect or whitelist. Submit hashes in any case (abc / ABC / aBc); GET responses always return lowercase.</li>
 <li><code>operator</code> (String) Whether the rule applies to files whose hash is in the list (in), or to all files except those (notIn).</li>
 </ul>
 <p><a id="nestedatt--data_controls--file_protection--file_upload--file_size_limit_"></a></p>
-<h3 id="nested-schema-for-data_controlsfile_protectionfile_uploadfile_size_limit_">Nested Schema for <code>data_controls.file_protection.file_upload.file_size_limit_</code></h3>
+<h3 id="nested-schema-for-data_controlsfile_protectionfile_uploadfile_size_limit_">Nested Schema for <code>data_controls.file_protection.file_upload.file_size_limit_</code><a class="headerlink" href="#nested-schema-for-data_controlsfile_protectionfile_uploadfile_size_limit_" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>operator</code> (String) Whether the rule applies to files smaller than or larger than the threshold.</li>
@@ -3946,7 +3962,7 @@ If <code>false</code> (default), the system automatically normalizes the URL bas
 <li><code>unit</code> (String) Unit for value — bytes, kilobytes, megabytes, or gigabytes.</li>
 </ul>
 <p><a id="nestedatt--data_controls--file_protection--file_upload--file_type_filter_"></a></p>
-<h3 id="nested-schema-for-data_controlsfile_protectionfile_uploadfile_type_filter_">Nested Schema for <code>data_controls.file_protection.file_upload.file_type_filter_</code></h3>
+<h3 id="nested-schema-for-data_controlsfile_protectionfile_uploadfile_type_filter_">Nested Schema for <code>data_controls.file_protection.file_upload.file_type_filter_</code><a class="headerlink" href="#nested-schema-for-data_controlsfile_protectionfile_uploadfile_type_filter_" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>operator</code> (String) Whether the rule applies to files in the combined list of predefinedTypes + customExtensions (in), or to all files except those (notIn).</li>
@@ -3957,13 +3973,13 @@ If <code>false</code> (default), the system automatically normalizes the URL bas
 <li><code>predefined_types</code> (List of String) Broad file-type buckets from the Prisma Browser catalog. Either a category (e.g., documents) or a sub-category (e.g., excel). Use this when the rule should match a whole group of files; for specific extensions, use customExtensions instead.</li>
 </ul>
 <p><a id="nestedatt--data_controls--gen_aiprompt"></a></p>
-<h3 id="nested-schema-for-data_controlsgen_aiprompt">Nested Schema for <code>data_controls.gen_aiprompt</code></h3>
+<h3 id="nested-schema-for-data_controlsgen_aiprompt">Nested Schema for <code>data_controls.gen_aiprompt</code><a class="headerlink" href="#nested-schema-for-data_controlsgen_aiprompt" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>action</code> (String) The action for this control.</li>
 </ul>
 <p><a id="nestedatt--data_controls--live_page_scanning"></a></p>
-<h3 id="nested-schema-for-data_controlslive_page_scanning">Nested Schema for <code>data_controls.live_page_scanning</code></h3>
+<h3 id="nested-schema-for-data_controlslive_page_scanning">Nested Schema for <code>data_controls.live_page_scanning</code><a class="headerlink" href="#nested-schema-for-data_controlslive_page_scanning" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>action</code> (String) Whether real-time live page scanning is enabled.</li>
@@ -3973,7 +3989,7 @@ If <code>false</code> (default), the system automatically normalizes the URL bas
 <li><code>custom_dialog_text______</code> (Attributes) Custom dialog text shown to the user. (see <a href="#nestedatt--data_controls--live_page_scanning--custom_dialog_text______">below for nested schema</a>)</li>
 </ul>
 <p><a id="nestedatt--data_controls--live_page_scanning--custom_dialog_text______"></a></p>
-<h3 id="nested-schema-for-data_controlslive_page_scanningcustom_dialog_text______">Nested Schema for <code>data_controls.live_page_scanning.custom_dialog_text______</code></h3>
+<h3 id="nested-schema-for-data_controlslive_page_scanningcustom_dialog_text______">Nested Schema for <code>data_controls.live_page_scanning.custom_dialog_text______</code><a class="headerlink" href="#nested-schema-for-data_controlslive_page_scanningcustom_dialog_text______" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>title</code> (String) Dialog title.</li>
@@ -3984,14 +4000,14 @@ If <code>false</code> (default), the system automatically normalizes the URL bas
 <li><code>external_link______</code> (Attributes) (see <a href="#nestedatt--data_controls--live_page_scanning--custom_dialog_text______--external_link______">below for nested schema</a>)</li>
 </ul>
 <p><a id="nestedatt--data_controls--live_page_scanning--custom_dialog_text______--external_link______"></a></p>
-<h3 id="nested-schema-for-data_controlslive_page_scanningcustom_dialog_text______external_link______">Nested Schema for <code>data_controls.live_page_scanning.custom_dialog_text______.external_link______</code></h3>
+<h3 id="nested-schema-for-data_controlslive_page_scanningcustom_dialog_text______external_link______">Nested Schema for <code>data_controls.live_page_scanning.custom_dialog_text______.external_link______</code><a class="headerlink" href="#nested-schema-for-data_controlslive_page_scanningcustom_dialog_text______external_link______" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>label</code> (String)</li>
 <li><code>url</code> (String) An HTTP or HTTPS URL.</li>
 </ul>
 <p><a id="nestedatt--data_controls--malicious_file_protection"></a></p>
-<h3 id="nested-schema-for-data_controlsmalicious_file_protection">Nested Schema for <code>data_controls.malicious_file_protection</code></h3>
+<h3 id="nested-schema-for-data_controlsmalicious_file_protection">Nested Schema for <code>data_controls.malicious_file_protection</code><a class="headerlink" href="#nested-schema-for-data_controlsmalicious_file_protection" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>action</code> (String)</li>
@@ -4009,7 +4025,7 @@ If <code>false</code> (default), the system automatically normalizes the URL bas
 <li><code>scan_uploads</code> (Boolean)</li>
 </ul>
 <p><a id="nestedatt--data_controls--malicious_file_protection--custom_dialog_text_______"></a></p>
-<h3 id="nested-schema-for-data_controlsmalicious_file_protectioncustom_dialog_text_______">Nested Schema for <code>data_controls.malicious_file_protection.custom_dialog_text_______</code></h3>
+<h3 id="nested-schema-for-data_controlsmalicious_file_protectioncustom_dialog_text_______">Nested Schema for <code>data_controls.malicious_file_protection.custom_dialog_text_______</code><a class="headerlink" href="#nested-schema-for-data_controlsmalicious_file_protectioncustom_dialog_text_______" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>title</code> (String) Dialog title.</li>
@@ -4020,20 +4036,20 @@ If <code>false</code> (default), the system automatically normalizes the URL bas
 <li><code>external_link_______</code> (Attributes) (see <a href="#nestedatt--data_controls--malicious_file_protection--custom_dialog_text_______--external_link_______">below for nested schema</a>)</li>
 </ul>
 <p><a id="nestedatt--data_controls--malicious_file_protection--custom_dialog_text_______--external_link_______"></a></p>
-<h3 id="nested-schema-for-data_controlsmalicious_file_protectioncustom_dialog_text_______external_link_______">Nested Schema for <code>data_controls.malicious_file_protection.custom_dialog_text_______.external_link_______</code></h3>
+<h3 id="nested-schema-for-data_controlsmalicious_file_protectioncustom_dialog_text_______external_link_______">Nested Schema for <code>data_controls.malicious_file_protection.custom_dialog_text_______.external_link_______</code><a class="headerlink" href="#nested-schema-for-data_controlsmalicious_file_protectioncustom_dialog_text_______external_link_______" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>label</code> (String)</li>
 <li><code>url</code> (String) An HTTP or HTTPS URL.</li>
 </ul>
 <p><a id="nestedatt--data_controls--microphone"></a></p>
-<h3 id="nested-schema-for-data_controlsmicrophone">Nested Schema for <code>data_controls.microphone</code></h3>
+<h3 id="nested-schema-for-data_controlsmicrophone">Nested Schema for <code>data_controls.microphone</code><a class="headerlink" href="#nested-schema-for-data_controlsmicrophone" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>action</code> (String) The action for this control.</li>
 </ul>
 <p><a id="nestedatt--data_controls--print"></a></p>
-<h3 id="nested-schema-for-data_controlsprint">Nested Schema for <code>data_controls.print</code></h3>
+<h3 id="nested-schema-for-data_controlsprint">Nested Schema for <code>data_controls.print</code><a class="headerlink" href="#nested-schema-for-data_controlsprint" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>action</code> (String) Whether to allow or block printing of web pages and files opened in Prisma Browser.</li>
@@ -4044,7 +4060,7 @@ If <code>false</code> (default), the system automatically normalizes the URL bas
 <li><code>user_prompt_____</code> (Attributes) How an end user is prompted before a control's restriction is applied, and how long their decision is remembered. Optional; absence is equivalent to { mode: "none" } — no prompt is shown. (see <a href="#nestedatt--data_controls--print--user_prompt_____">below for nested schema</a>)</li>
 </ul>
 <p><a id="nestedatt--data_controls--print--custom_dialog_text________"></a></p>
-<h3 id="nested-schema-for-data_controlsprintcustom_dialog_text________">Nested Schema for <code>data_controls.print.custom_dialog_text________</code></h3>
+<h3 id="nested-schema-for-data_controlsprintcustom_dialog_text________">Nested Schema for <code>data_controls.print.custom_dialog_text________</code><a class="headerlink" href="#nested-schema-for-data_controlsprintcustom_dialog_text________" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>title</code> (String) Dialog title.</li>
@@ -4055,14 +4071,14 @@ If <code>false</code> (default), the system automatically normalizes the URL bas
 <li><code>external_link________</code> (Attributes) (see <a href="#nestedatt--data_controls--print--custom_dialog_text________--external_link________">below for nested schema</a>)</li>
 </ul>
 <p><a id="nestedatt--data_controls--print--custom_dialog_text________--external_link________"></a></p>
-<h3 id="nested-schema-for-data_controlsprintcustom_dialog_text________external_link________">Nested Schema for <code>data_controls.print.custom_dialog_text________.external_link________</code></h3>
+<h3 id="nested-schema-for-data_controlsprintcustom_dialog_text________external_link________">Nested Schema for <code>data_controls.print.custom_dialog_text________.external_link________</code><a class="headerlink" href="#nested-schema-for-data_controlsprintcustom_dialog_text________external_link________" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>label</code> (String)</li>
 <li><code>url</code> (String) An HTTP or HTTPS URL.</li>
 </ul>
 <p><a id="nestedatt--data_controls--print--user_prompt_____"></a></p>
-<h3 id="nested-schema-for-data_controlsprintuser_prompt_____">Nested Schema for <code>data_controls.print.user_prompt_____</code></h3>
+<h3 id="nested-schema-for-data_controlsprintuser_prompt_____">Nested Schema for <code>data_controls.print.user_prompt_____</code><a class="headerlink" href="#nested-schema-for-data_controlsprintuser_prompt_____" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>mode</code> (String) What the user sees when the restriction triggers. none: no prompt, restriction is enforced silently. warnAndAllow: pop-up warning shown; user can continue. proceedWithReason: pop-up shown; user must enter a reason before continuing. adminApproval: pop-up shown; user submits a permission request an admin must approve. Explicit mode=none is accepted and is equivalent to omitting userPrompt.</li>
@@ -4072,7 +4088,7 @@ If <code>false</code> (default), the system automatically normalizes the URL bas
 <li><code>duration_minutes</code> (String) How long the user's decision is remembered before they are prompted again. Only valid when mode is adminApproval; rejected for all other modes. When mode is adminApproval and this field is omitted, the server defaults to '540' (9 hours), matching the dashboard UI default.</li>
 </ul>
 <p><a id="nestedatt--data_controls--read_only_webpage"></a></p>
-<h3 id="nested-schema-for-data_controlsread_only_webpage">Nested Schema for <code>data_controls.read_only_webpage</code></h3>
+<h3 id="nested-schema-for-data_controlsread_only_webpage">Nested Schema for <code>data_controls.read_only_webpage</code><a class="headerlink" href="#nested-schema-for-data_controlsread_only_webpage" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>action</code> (String) Action for the form submission control.</li>
@@ -4083,7 +4099,7 @@ If <code>false</code> (default), the system automatically normalizes the URL bas
 <li><code>custom_dialog_text_________</code> (Attributes) Custom dialog text shown to the user. (see <a href="#nestedatt--data_controls--read_only_webpage--custom_dialog_text_________">below for nested schema</a>)</li>
 </ul>
 <p><a id="nestedatt--data_controls--read_only_webpage--custom_dialog_text_________"></a></p>
-<h3 id="nested-schema-for-data_controlsread_only_webpagecustom_dialog_text_________">Nested Schema for <code>data_controls.read_only_webpage.custom_dialog_text_________</code></h3>
+<h3 id="nested-schema-for-data_controlsread_only_webpagecustom_dialog_text_________">Nested Schema for <code>data_controls.read_only_webpage.custom_dialog_text_________</code><a class="headerlink" href="#nested-schema-for-data_controlsread_only_webpagecustom_dialog_text_________" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>title</code> (String) Dialog title.</li>
@@ -4094,14 +4110,14 @@ If <code>false</code> (default), the system automatically normalizes the URL bas
 <li><code>external_link_________</code> (Attributes) (see <a href="#nestedatt--data_controls--read_only_webpage--custom_dialog_text_________--external_link_________">below for nested schema</a>)</li>
 </ul>
 <p><a id="nestedatt--data_controls--read_only_webpage--custom_dialog_text_________--external_link_________"></a></p>
-<h3 id="nested-schema-for-data_controlsread_only_webpagecustom_dialog_text_________external_link_________">Nested Schema for <code>data_controls.read_only_webpage.custom_dialog_text_________.external_link_________</code></h3>
+<h3 id="nested-schema-for-data_controlsread_only_webpagecustom_dialog_text_________external_link_________">Nested Schema for <code>data_controls.read_only_webpage.custom_dialog_text_________.external_link_________</code><a class="headerlink" href="#nested-schema-for-data_controlsread_only_webpagecustom_dialog_text_________external_link_________" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>label</code> (String)</li>
 <li><code>url</code> (String) An HTTP or HTTPS URL.</li>
 </ul>
 <p><a id="nestedatt--data_controls--screenshot"></a></p>
-<h3 id="nested-schema-for-data_controlsscreenshot">Nested Schema for <code>data_controls.screenshot</code></h3>
+<h3 id="nested-schema-for-data_controlsscreenshot">Nested Schema for <code>data_controls.screenshot</code><a class="headerlink" href="#nested-schema-for-data_controlsscreenshot" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>action</code> (String) Screen-capture restriction. <code>allowSpecific</code> permits capture only via admin-selected mechanisms.</li>
@@ -4114,7 +4130,7 @@ If <code>false</code> (default), the system automatically normalizes the URL bas
 <li><code>user_prompt______</code> (Attributes) How an end user is prompted before a control's restriction is applied, and how long their decision is remembered. Optional; absence is equivalent to { mode: "none" } — no prompt is shown. (see <a href="#nestedatt--data_controls--screenshot--user_prompt______">below for nested schema</a>)</li>
 </ul>
 <p><a id="nestedatt--data_controls--screenshot--user_prompt______"></a></p>
-<h3 id="nested-schema-for-data_controlsscreenshotuser_prompt______">Nested Schema for <code>data_controls.screenshot.user_prompt______</code></h3>
+<h3 id="nested-schema-for-data_controlsscreenshotuser_prompt______">Nested Schema for <code>data_controls.screenshot.user_prompt______</code><a class="headerlink" href="#nested-schema-for-data_controlsscreenshotuser_prompt______" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>mode</code> (String) What the user sees when the restriction triggers. none: no prompt, restriction is enforced silently. warnAndAllow: pop-up warning shown; user can continue. proceedWithReason: pop-up shown; user must enter a reason before continuing. adminApproval: pop-up shown; user submits a permission request an admin must approve. Explicit mode=none is accepted and is equivalent to omitting userPrompt.</li>
@@ -4124,7 +4140,7 @@ If <code>false</code> (default), the system automatically normalizes the URL bas
 <li><code>duration_minutes</code> (String) How long the user's decision is remembered before they are prompted again. Only valid when mode is adminApproval; rejected for all other modes. When mode is adminApproval and this field is omitted, the server defaults to '540' (9 hours), matching the dashboard UI default.</li>
 </ul>
 <p><a id="nestedatt--data_controls--typing_guard"></a></p>
-<h3 id="nested-schema-for-data_controlstyping_guard">Nested Schema for <code>data_controls.typing_guard</code></h3>
+<h3 id="nested-schema-for-data_controlstyping_guard">Nested Schema for <code>data_controls.typing_guard</code><a class="headerlink" href="#nested-schema-for-data_controlstyping_guard" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>action</code> (String) Action for the sanitizing content control.</li>
@@ -4135,7 +4151,7 @@ If <code>false</code> (default), the system automatically normalizes the URL bas
 <li><code>user_prompt_______</code> (Attributes) How an end user is prompted before a control's restriction is applied, and how long their decision is remembered. Optional; absence is equivalent to { mode: "none" } — no prompt is shown. (see <a href="#nestedatt--data_controls--typing_guard--user_prompt_______">below for nested schema</a>)</li>
 </ul>
 <p><a id="nestedatt--data_controls--typing_guard--custom_dialog_text__________"></a></p>
-<h3 id="nested-schema-for-data_controlstyping_guardcustom_dialog_text__________">Nested Schema for <code>data_controls.typing_guard.custom_dialog_text__________</code></h3>
+<h3 id="nested-schema-for-data_controlstyping_guardcustom_dialog_text__________">Nested Schema for <code>data_controls.typing_guard.custom_dialog_text__________</code><a class="headerlink" href="#nested-schema-for-data_controlstyping_guardcustom_dialog_text__________" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>title</code> (String) Dialog title.</li>
@@ -4146,14 +4162,14 @@ If <code>false</code> (default), the system automatically normalizes the URL bas
 <li><code>external_link__________</code> (Attributes) (see <a href="#nestedatt--data_controls--typing_guard--custom_dialog_text__________--external_link__________">below for nested schema</a>)</li>
 </ul>
 <p><a id="nestedatt--data_controls--typing_guard--custom_dialog_text__________--external_link__________"></a></p>
-<h3 id="nested-schema-for-data_controlstyping_guardcustom_dialog_text__________external_link__________">Nested Schema for <code>data_controls.typing_guard.custom_dialog_text__________.external_link__________</code></h3>
+<h3 id="nested-schema-for-data_controlstyping_guardcustom_dialog_text__________external_link__________">Nested Schema for <code>data_controls.typing_guard.custom_dialog_text__________.external_link__________</code><a class="headerlink" href="#nested-schema-for-data_controlstyping_guardcustom_dialog_text__________external_link__________" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>label</code> (String)</li>
 <li><code>url</code> (String) An HTTP or HTTPS URL.</li>
 </ul>
 <p><a id="nestedatt--data_controls--typing_guard--user_prompt_______"></a></p>
-<h3 id="nested-schema-for-data_controlstyping_guarduser_prompt_______">Nested Schema for <code>data_controls.typing_guard.user_prompt_______</code></h3>
+<h3 id="nested-schema-for-data_controlstyping_guarduser_prompt_______">Nested Schema for <code>data_controls.typing_guard.user_prompt_______</code><a class="headerlink" href="#nested-schema-for-data_controlstyping_guarduser_prompt_______" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>mode</code> (String) What the user sees when the restriction triggers. none: no prompt, restriction is enforced silently. warnAndAllow: pop-up warning shown; user can continue. proceedWithReason: pop-up shown; user must enter a reason before continuing. adminApproval: pop-up shown; user submits a permission request an admin must approve. Explicit mode=none is accepted and is equivalent to omitting userPrompt.</li>
@@ -4163,7 +4179,7 @@ If <code>false</code> (default), the system automatically normalizes the URL bas
 <li><code>duration_minutes</code> (String) How long the user's decision is remembered before they are prompted again. Only valid when mode is adminApproval; rejected for all other modes. When mode is adminApproval and this field is omitted, the server defaults to '540' (9 hours), matching the dashboard UI default.</li>
 </ul>
 <p><a id="nestedatt--data_controls--user_agent"></a></p>
-<h3 id="nested-schema-for-data_controlsuser_agent">Nested Schema for <code>data_controls.user_agent</code></h3>
+<h3 id="nested-schema-for-data_controlsuser_agent">Nested Schema for <code>data_controls.user_agent</code><a class="headerlink" href="#nested-schema-for-data_controlsuser_agent" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>mode</code> (String) Whether to use the default User-Agent or append an additional component.</li>
@@ -4173,7 +4189,7 @@ If <code>false</code> (default), the system automatically normalizes the URL bas
 <li><code>additional_component</code> (String) HTTP header value. Allowed characters mirror the dashboard wizard's punctuation allowlist; CR, LF, and other control characters are rejected.</li>
 </ul>
 <p><a id="nestedatt--data_controls--web_user_interaction"></a></p>
-<h3 id="nested-schema-for-data_controlsweb_user_interaction">Nested Schema for <code>data_controls.web_user_interaction</code></h3>
+<h3 id="nested-schema-for-data_controlsweb_user_interaction">Nested Schema for <code>data_controls.web_user_interaction</code><a class="headerlink" href="#nested-schema-for-data_controlsweb_user_interaction" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>action</code> (String) Whether web user interaction control is enabled.</li>
@@ -4183,14 +4199,14 @@ If <code>false</code> (default), the system automatically normalizes the URL bas
 <li><code>selectors</code> (Attributes List) List of webpage elements to hide. Required and non-empty when action is enable; must be omitted or empty when action is disable. (see <a href="#nestedatt--data_controls--web_user_interaction--selectors">below for nested schema</a>)</li>
 </ul>
 <p><a id="nestedatt--data_controls--web_user_interaction--selectors"></a></p>
-<h3 id="nested-schema-for-data_controlsweb_user_interactionselectors">Nested Schema for <code>data_controls.web_user_interaction.selectors</code></h3>
+<h3 id="nested-schema-for-data_controlsweb_user_interactionselectors">Nested Schema for <code>data_controls.web_user_interaction.selectors</code><a class="headerlink" href="#nested-schema-for-data_controlsweb_user_interactionselectors" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>name</code> (String) Human-readable name of the element being hidden.</li>
 <li><code>selector</code> (String) CSS selector identifying the element to hide on the page.</li>
 </ul>
 <p><a id="nestedatt--data_controls--webpage_data_masking"></a></p>
-<h3 id="nested-schema-for-data_controlswebpage_data_masking">Nested Schema for <code>data_controls.webpage_data_masking</code></h3>
+<h3 id="nested-schema-for-data_controlswebpage_data_masking">Nested Schema for <code>data_controls.webpage_data_masking</code><a class="headerlink" href="#nested-schema-for-data_controlswebpage_data_masking" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>action</code> (String)</li>
@@ -4202,7 +4218,7 @@ If <code>false</code> (default), the system automatically normalizes the URL bas
 <li><code>visible_character_count</code> (String)</li>
 </ul>
 <p><a id="nestedatt--data_controls--webpage_data_masking--user_prompt________"></a></p>
-<h3 id="nested-schema-for-data_controlswebpage_data_maskinguser_prompt________">Nested Schema for <code>data_controls.webpage_data_masking.user_prompt________</code></h3>
+<h3 id="nested-schema-for-data_controlswebpage_data_maskinguser_prompt________">Nested Schema for <code>data_controls.webpage_data_masking.user_prompt________</code><a class="headerlink" href="#nested-schema-for-data_controlswebpage_data_maskinguser_prompt________" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>mode</code> (String) What the user sees when the restriction triggers. none: no prompt, restriction is enforced silently. warnAndAllow: pop-up warning shown; user can continue. proceedWithReason: pop-up shown; user must enter a reason before continuing. adminApproval: pop-up shown; user submits a permission request an admin must approve. Explicit mode=none is accepted and is equivalent to omitting userPrompt.</li>
@@ -4212,7 +4228,7 @@ If <code>false</code> (default), the system automatically normalizes the URL bas
 <li><code>duration_minutes</code> (String) How long the user's decision is remembered before they are prompted again. Only valid when mode is adminApproval; rejected for all other modes. When mode is adminApproval and this field is omitted, the server defaults to '540' (9 hours), matching the dashboard UI default.</li>
 </ul>
 <p><a id="nestedatt--data_controls--webpage_watermarking"></a></p>
-<h3 id="nested-schema-for-data_controlswebpage_watermarking">Nested Schema for <code>data_controls.webpage_watermarking</code></h3>
+<h3 id="nested-schema-for-data_controlswebpage_watermarking">Nested Schema for <code>data_controls.webpage_watermarking</code><a class="headerlink" href="#nested-schema-for-data_controlswebpage_watermarking" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>action</code> (String) Action for the watermark control.</li>
@@ -4222,7 +4238,7 @@ If <code>false</code> (default), the system automatically normalizes the URL bas
 <li><code>settings</code> (Attributes) Watermark appearance settings. Only valid when the watermark action is enable. Every field is optional; an omitted field uses its default. (see <a href="#nestedatt--data_controls--webpage_watermarking--settings">below for nested schema</a>)</li>
 </ul>
 <p><a id="nestedatt--data_controls--webpage_watermarking--settings"></a></p>
-<h3 id="nested-schema-for-data_controlswebpage_watermarkingsettings">Nested Schema for <code>data_controls.webpage_watermarking.settings</code></h3>
+<h3 id="nested-schema-for-data_controlswebpage_watermarkingsettings">Nested Schema for <code>data_controls.webpage_watermarking.settings</code><a class="headerlink" href="#nested-schema-for-data_controlswebpage_watermarkingsettings" title="Permanent link">&para;</a></h3>
 <p>Optional:</p>
 <ul>
 <li><code>density_level</code> (String) Density of the watermark. Defaults to standard.</li>
@@ -4234,14 +4250,14 @@ If <code>false</code> (default), the system automatically normalizes the URL bas
 <li><code>show_text_details</code> (Boolean) Show text details (email, timestamp) in the watermark. Omitted fields are preserved from the existing directive; defaults to true on first create.</li>
 </ul>
 <p><a id="nestedatt--login_controls"></a></p>
-<h3 id="nested-schema-for-login_controls">Nested Schema for <code>login_controls</code></h3>
+<h3 id="nested-schema-for-login_controls">Nested Schema for <code>login_controls</code><a class="headerlink" href="#nested-schema-for-login_controls" title="Permanent link">&para;</a></h3>
 <p>Optional:</p>
 <ul>
 <li><code>form_login</code> (Attributes) Control logging in to applications and websites via Prisma Browser. (see <a href="#nestedatt--login_controls--form_login">below for nested schema</a>)</li>
 <li><code>passkey_login</code> (Attributes) Control logging in to applications with a passkey. (see <a href="#nestedatt--login_controls--passkey_login">below for nested schema</a>)</li>
 </ul>
 <p><a id="nestedatt--login_controls--form_login"></a></p>
-<h3 id="nested-schema-for-login_controlsform_login">Nested Schema for <code>login_controls.form_login</code></h3>
+<h3 id="nested-schema-for-login_controlsform_login">Nested Schema for <code>login_controls.form_login</code><a class="headerlink" href="#nested-schema-for-login_controlsform_login" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>action</code> (String) Login restriction for form-based logins.</li>
@@ -4256,7 +4272,7 @@ If <code>false</code> (default), the system automatically normalizes the URL bas
 <li><code>user_prompt_________</code> (Attributes) How an end user is prompted before a control's restriction is applied, and how long their decision is remembered. Optional; absence is equivalent to { mode: "none" } — no prompt is shown. (see <a href="#nestedatt--login_controls--form_login--user_prompt_________">below for nested schema</a>)</li>
 </ul>
 <p><a id="nestedatt--login_controls--form_login--custom_dialog_text___________"></a></p>
-<h3 id="nested-schema-for-login_controlsform_logincustom_dialog_text___________">Nested Schema for <code>login_controls.form_login.custom_dialog_text___________</code></h3>
+<h3 id="nested-schema-for-login_controlsform_logincustom_dialog_text___________">Nested Schema for <code>login_controls.form_login.custom_dialog_text___________</code><a class="headerlink" href="#nested-schema-for-login_controlsform_logincustom_dialog_text___________" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>title</code> (String) Dialog title.</li>
@@ -4267,14 +4283,14 @@ If <code>false</code> (default), the system automatically normalizes the URL bas
 <li><code>external_link___________</code> (Attributes) (see <a href="#nestedatt--login_controls--form_login--custom_dialog_text___________--external_link___________">below for nested schema</a>)</li>
 </ul>
 <p><a id="nestedatt--login_controls--form_login--custom_dialog_text___________--external_link___________"></a></p>
-<h3 id="nested-schema-for-login_controlsform_logincustom_dialog_text___________external_link___________">Nested Schema for <code>login_controls.form_login.custom_dialog_text___________.external_link___________</code></h3>
+<h3 id="nested-schema-for-login_controlsform_logincustom_dialog_text___________external_link___________">Nested Schema for <code>login_controls.form_login.custom_dialog_text___________.external_link___________</code><a class="headerlink" href="#nested-schema-for-login_controlsform_logincustom_dialog_text___________external_link___________" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>label</code> (String)</li>
 <li><code>url</code> (String) An HTTP or HTTPS URL.</li>
 </ul>
 <p><a id="nestedatt--login_controls--form_login--user_prompt_________"></a></p>
-<h3 id="nested-schema-for-login_controlsform_loginuser_prompt_________">Nested Schema for <code>login_controls.form_login.user_prompt_________</code></h3>
+<h3 id="nested-schema-for-login_controlsform_loginuser_prompt_________">Nested Schema for <code>login_controls.form_login.user_prompt_________</code><a class="headerlink" href="#nested-schema-for-login_controlsform_loginuser_prompt_________" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>mode</code> (String) What the user sees when the restriction triggers. none: no prompt, restriction is enforced silently. warnAndAllow: pop-up warning shown; user can continue. proceedWithReason: pop-up shown; user must enter a reason before continuing. adminApproval: pop-up shown; user submits a permission request an admin must approve. Explicit mode=none is accepted and is equivalent to omitting userPrompt.</li>
@@ -4284,7 +4300,7 @@ If <code>false</code> (default), the system automatically normalizes the URL bas
 <li><code>duration_minutes</code> (String) How long the user's decision is remembered before they are prompted again. Only valid when mode is adminApproval; rejected for all other modes. When mode is adminApproval and this field is omitted, the server defaults to '540' (9 hours), matching the dashboard UI default.</li>
 </ul>
 <p><a id="nestedatt--login_controls--passkey_login"></a></p>
-<h3 id="nested-schema-for-login_controlspasskey_login">Nested Schema for <code>login_controls.passkey_login</code></h3>
+<h3 id="nested-schema-for-login_controlspasskey_login">Nested Schema for <code>login_controls.passkey_login</code><a class="headerlink" href="#nested-schema-for-login_controlspasskey_login" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>action</code> (String) Whether to allow or block passkey-based logins.</li>
@@ -4296,7 +4312,7 @@ If <code>false</code> (default), the system automatically normalizes the URL bas
 <li><code>user_prompt__________</code> (Attributes) How an end user is prompted before a control's restriction is applied, and how long their decision is remembered. Optional; absence is equivalent to { mode: "none" } — no prompt is shown. (see <a href="#nestedatt--login_controls--passkey_login--user_prompt__________">below for nested schema</a>)</li>
 </ul>
 <p><a id="nestedatt--login_controls--passkey_login--custom_dialog_text____________"></a></p>
-<h3 id="nested-schema-for-login_controlspasskey_logincustom_dialog_text____________">Nested Schema for <code>login_controls.passkey_login.custom_dialog_text____________</code></h3>
+<h3 id="nested-schema-for-login_controlspasskey_logincustom_dialog_text____________">Nested Schema for <code>login_controls.passkey_login.custom_dialog_text____________</code><a class="headerlink" href="#nested-schema-for-login_controlspasskey_logincustom_dialog_text____________" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>title</code> (String) Dialog title.</li>
@@ -4307,14 +4323,14 @@ If <code>false</code> (default), the system automatically normalizes the URL bas
 <li><code>external_link____________</code> (Attributes) (see <a href="#nestedatt--login_controls--passkey_login--custom_dialog_text____________--external_link____________">below for nested schema</a>)</li>
 </ul>
 <p><a id="nestedatt--login_controls--passkey_login--custom_dialog_text____________--external_link____________"></a></p>
-<h3 id="nested-schema-for-login_controlspasskey_logincustom_dialog_text____________external_link____________">Nested Schema for <code>login_controls.passkey_login.custom_dialog_text____________.external_link____________</code></h3>
+<h3 id="nested-schema-for-login_controlspasskey_logincustom_dialog_text____________external_link____________">Nested Schema for <code>login_controls.passkey_login.custom_dialog_text____________.external_link____________</code><a class="headerlink" href="#nested-schema-for-login_controlspasskey_logincustom_dialog_text____________external_link____________" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>label</code> (String)</li>
 <li><code>url</code> (String) An HTTP or HTTPS URL.</li>
 </ul>
 <p><a id="nestedatt--login_controls--passkey_login--user_prompt__________"></a></p>
-<h3 id="nested-schema-for-login_controlspasskey_loginuser_prompt__________">Nested Schema for <code>login_controls.passkey_login.user_prompt__________</code></h3>
+<h3 id="nested-schema-for-login_controlspasskey_loginuser_prompt__________">Nested Schema for <code>login_controls.passkey_login.user_prompt__________</code><a class="headerlink" href="#nested-schema-for-login_controlspasskey_loginuser_prompt__________" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>mode</code> (String) What the user sees when the restriction triggers. none: no prompt, restriction is enforced silently. warnAndAllow: pop-up warning shown; user can continue. proceedWithReason: pop-up shown; user must enter a reason before continuing. adminApproval: pop-up shown; user submits a permission request an admin must approve. Explicit mode=none is accepted and is equivalent to omitting userPrompt.</li>
@@ -4324,13 +4340,13 @@ If <code>false</code> (default), the system automatically normalizes the URL bas
 <li><code>duration_minutes</code> (String) How long the user's decision is remembered before they are prompted again. Only valid when mode is adminApproval; rejected for all other modes. When mode is adminApproval and this field is omitted, the server defaults to '540' (9 hours), matching the dashboard UI default.</li>
 </ul>
 <p><a id="nestedatt--positioning"></a></p>
-<h3 id="nested-schema-for-positioning">Nested Schema for <code>positioning</code></h3>
+<h3 id="nested-schema-for-positioning">Nested Schema for <code>positioning</code><a class="headerlink" href="#nested-schema-for-positioning" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>target</code> (Attributes) (see <a href="#nestedatt--positioning--target">below for nested schema</a>)</li>
 </ul>
 <p><a id="nestedatt--positioning--target"></a></p>
-<h3 id="nested-schema-for-positioningtarget">Nested Schema for <code>positioning.target</code></h3>
+<h3 id="nested-schema-for-positioningtarget">Nested Schema for <code>positioning.target</code><a class="headerlink" href="#nested-schema-for-positioningtarget" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>position</code> (String) Where to place the entity: top (first), bottom (last), before (above anchor), after (below anchor). The before and after values require the anchor field. The top and bottom values must not include an anchor field — providing an anchor with top or bottom is a validation error.</li>
@@ -4341,14 +4357,14 @@ If <code>false</code> (default), the system automatically normalizes the URL bas
 <li><code>section_id</code> (String) The section the rule should belong to. Only valid for rule POST and PATCH; must be null/omitted for section POST and PATCH (sections cannot be nested). The anchor (if any) must reside in this same container.</li>
 </ul>
 <p><a id="nestedatt--positioning--target--anchor"></a></p>
-<h3 id="nested-schema-for-positioningtargetanchor">Nested Schema for <code>positioning.target.anchor</code></h3>
+<h3 id="nested-schema-for-positioningtargetanchor">Nested Schema for <code>positioning.target.anchor</code><a class="headerlink" href="#nested-schema-for-positioningtargetanchor" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>id</code> (String) The entity ID of the anchor item.</li>
 <li><code>type_</code> (String)</li>
 </ul>
 <p><a id="nestedatt--scope"></a></p>
-<h3 id="nested-schema-for-scope">Nested Schema for <code>scope</code></h3>
+<h3 id="nested-schema-for-scope">Nested Schema for <code>scope</code><a class="headerlink" href="#nested-schema-for-scope" title="Permanent link">&para;</a></h3>
 <p>Optional:</p>
 <ul>
 <li><code>device_groups</code> (Attributes) The device groups the rule applies to. (see <a href="#nestedatt--scope--device_groups">below for nested schema</a>)</li>
@@ -4358,35 +4374,35 @@ If <code>false</code> (default), the system automatically normalizes the URL bas
 <li><code>users</code> (Attributes) The users or user groups the rule applies to. (see <a href="#nestedatt--scope--users">below for nested schema</a>)</li>
 </ul>
 <p><a id="nestedatt--scope--device_groups"></a></p>
-<h3 id="nested-schema-for-scopedevice_groups">Nested Schema for <code>scope.device_groups</code></h3>
+<h3 id="nested-schema-for-scopedevice_groups">Nested Schema for <code>scope.device_groups</code><a class="headerlink" href="#nested-schema-for-scopedevice_groups" title="Permanent link">&para;</a></h3>
 <p>Optional:</p>
 <ul>
 <li><code>device_groups</code> (List of String)</li>
 <li><code>is_any</code> (Boolean) Flag indicating if any device groups are included in the scope. If isAny is set to true, no other fields should be present, and all device groups will be included in the scope. If isAny is set to false, the final scope must contain at least one device group.</li>
 </ul>
 <p><a id="nestedatt--scope--locations"></a></p>
-<h3 id="nested-schema-for-scopelocations">Nested Schema for <code>scope.locations</code></h3>
+<h3 id="nested-schema-for-scopelocations">Nested Schema for <code>scope.locations</code><a class="headerlink" href="#nested-schema-for-scopelocations" title="Permanent link">&para;</a></h3>
 <p>Optional:</p>
 <ul>
 <li><code>is_any</code> (Boolean) Flag indicating if any locations are included in the scope. If isAny is set to true, no other fields should be present, and all locations will be included in the scope. If isAny is set to false, the final scope must contain at least one location.</li>
 <li><code>locations</code> (List of String) Geographical locations to which the rule applies.</li>
 </ul>
 <p><a id="nestedatt--scope--private_ips"></a></p>
-<h3 id="nested-schema-for-scopeprivate_ips">Nested Schema for <code>scope.private_ips</code></h3>
+<h3 id="nested-schema-for-scopeprivate_ips">Nested Schema for <code>scope.private_ips</code><a class="headerlink" href="#nested-schema-for-scopeprivate_ips" title="Permanent link">&para;</a></h3>
 <p>Optional:</p>
 <ul>
 <li><code>is_any</code> (Boolean) Flag indicating if any private IP addresses are included in the scope. If isAny is set to true, no other fields should be present, and all private IP addresses will be included in the scope. If isAny is set to false, the final scope must contain at least one private IP.</li>
 <li><code>private_ips</code> (List of String) Private IP addresses affected by the rule.</li>
 </ul>
 <p><a id="nestedatt--scope--public_ips"></a></p>
-<h3 id="nested-schema-for-scopepublic_ips">Nested Schema for <code>scope.public_ips</code></h3>
+<h3 id="nested-schema-for-scopepublic_ips">Nested Schema for <code>scope.public_ips</code><a class="headerlink" href="#nested-schema-for-scopepublic_ips" title="Permanent link">&para;</a></h3>
 <p>Optional:</p>
 <ul>
 <li><code>is_any</code> (Boolean) Flag indicating if any public IP addresses are included in the scope. If isAny is set to true, no other fields should be present, and all public IP addresses will be included in the scope. If isAny is set to false, the final scope must contain at least one public IP.</li>
 <li><code>public_ips</code> (List of String) Public IP addresses affected by the rule.</li>
 </ul>
 <p><a id="nestedatt--scope--users"></a></p>
-<h3 id="nested-schema-for-scopeusers">Nested Schema for <code>scope.users</code></h3>
+<h3 id="nested-schema-for-scopeusers">Nested Schema for <code>scope.users</code><a class="headerlink" href="#nested-schema-for-scopeusers" title="Permanent link">&para;</a></h3>
 <p>Optional:</p>
 <ul>
 <li><code>is_any</code> (Boolean) Flag indicating if any users or user groups are included in the scope. If isAny is set to true, no other fields should be present, and all users and user groups will be included in the scope. If isAny is set to false, the final scope must contain at least one user or user group.</li>
@@ -4394,7 +4410,7 @@ If <code>false</code> (default), the system automatically normalizes the URL bas
 <li><code>users</code> (List of String)</li>
 </ul>
 <p><a id="nestedatt--metadata"></a></p>
-<h3 id="nested-schema-for-metadata">Nested Schema for <code>metadata</code></h3>
+<h3 id="nested-schema-for-metadata">Nested Schema for <code>metadata</code><a class="headerlink" href="#nested-schema-for-metadata" title="Permanent link">&para;</a></h3>
 <p>Read-Only:</p>
 <ul>
 <li><code>configuration_version</code> (Attributes) Configuration version information (see <a href="#nestedatt--metadata--configuration_version">below for nested schema</a>)</li>
@@ -4404,7 +4420,7 @@ If <code>false</code> (default), the system automatically normalizes the URL bas
 <li><code>last_updated_time</code> (String) Timestamp when the rule was last updated</li>
 </ul>
 <p><a id="nestedatt--metadata--configuration_version"></a></p>
-<h3 id="nested-schema-for-metadataconfiguration_version">Nested Schema for <code>metadata.configuration_version</code></h3>
+<h3 id="nested-schema-for-metadataconfiguration_version">Nested Schema for <code>metadata.configuration_version</code><a class="headerlink" href="#nested-schema-for-metadataconfiguration_version" title="Permanent link">&para;</a></h3>
 <p>Read-Only:</p>
 <ul>
 <li><code>id</code> (String) Configuration version identifier</li>
@@ -4412,7 +4428,7 @@ If <code>false</code> (default), the system automatically normalizes the URL bas
 <li><code>status</code> (String) Configuration version status</li>
 </ul>
 <p><a id="nestedatt--section"></a></p>
-<h3 id="nested-schema-for-section">Nested Schema for <code>section</code></h3>
+<h3 id="nested-schema-for-section">Nested Schema for <code>section</code><a class="headerlink" href="#nested-schema-for-section" title="Permanent link">&para;</a></h3>
 <p>Read-Only:</p>
 <ul>
 <li><code>id</code> (String) ID of the section</li>
@@ -4476,7 +4492,7 @@ If <code>false</code> (default), the system automatically normalizes the URL bas
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.top", "search.suggest", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.expand", "navigation.top", "toc.follow", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>

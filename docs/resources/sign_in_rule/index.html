@@ -127,7 +127,21 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
     
   
 </form>
@@ -739,7 +753,9 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
@@ -1160,17 +1176,17 @@
 
 
 
-<h1 id="pb_sign_in_rule-resource">pb_sign_in_rule (Resource)</h1>
-<h2 id="example-usage">Example Usage</h2>
-<div class="highlight"><pre><span></span><code><span class="kr">resource</span><span class="w"> </span><span class="nc">&quot;pb_sign_in_rule&quot;</span><span class="w"> </span><span class="nv">&quot;example&quot;</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="na">name</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Allow corporate sign-in&quot;</span>
-<span class="w">  </span><span class="na">mode</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;active&quot;</span>
-<span class="w">  </span><span class="na">action</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;allow&quot;</span>
-<span class="p">}</span>
+<h1 id="pb_sign_in_rule-resource">pb_sign_in_rule (Resource)<a class="headerlink" href="#pb_sign_in_rule-resource" title="Permanent link">&para;</a></h1>
+<h2 id="example-usage">Example Usage<a class="headerlink" href="#example-usage" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kr">resource</span><span class="w"> </span><span class="nc">&quot;pb_sign_in_rule&quot;</span><span class="w"> </span><span class="nv">&quot;example&quot;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="na">name</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Allow corporate sign-in&quot;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="na">mode</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;active&quot;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="na">action</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;allow&quot;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="p">}</span>
 </code></pre></div>
 <!-- schema generated by tfplugindocs -->
 
-<h2 id="argument-reference">Argument Reference</h2>
+<h2 id="argument-reference">Argument Reference<a class="headerlink" href="#argument-reference" title="Permanent link">&para;</a></h2>
 <p>The following arguments are <strong>required</strong>:</p>
 <ul>
 <li><code>action</code> (String) Provide action to describe this rule</li>
@@ -1184,7 +1200,7 @@
 <li><code>positioning</code> (Attributes) Optional placement directive for the entity. On create, when omitted, the entity is placed at the top of the stack. On update, when omitted, the entity's current position is preserved. (see <a href="#nestedatt--positioning">below for nested schema</a>)</li>
 <li><code>scope</code> (Attributes) Provide scope to describe this rule (see <a href="#nestedatt--scope">below for nested schema</a>)</li>
 </ul>
-<h2 id="attributes-reference">Attributes Reference</h2>
+<h2 id="attributes-reference">Attributes Reference<a class="headerlink" href="#attributes-reference" title="Permanent link">&para;</a></h2>
 <p>In addition to the arguments above, the following attributes are exported:</p>
 <ul>
 <li><code>id</code> (String) The unique identifier of the created resource (PULID, 29 chars).</li>
@@ -1193,13 +1209,13 @@
 <li><code>section</code> (Attributes) Section this rule belongs to (null if standalone) (see <a href="#nestedatt--section">below for nested schema</a>)</li>
 </ul>
 <p><a id="nestedatt--positioning"></a></p>
-<h3 id="nested-schema-for-positioning">Nested Schema for <code>positioning</code></h3>
+<h3 id="nested-schema-for-positioning">Nested Schema for <code>positioning</code><a class="headerlink" href="#nested-schema-for-positioning" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>target</code> (Attributes) (see <a href="#nestedatt--positioning--target">below for nested schema</a>)</li>
 </ul>
 <p><a id="nestedatt--positioning--target"></a></p>
-<h3 id="nested-schema-for-positioningtarget">Nested Schema for <code>positioning.target</code></h3>
+<h3 id="nested-schema-for-positioningtarget">Nested Schema for <code>positioning.target</code><a class="headerlink" href="#nested-schema-for-positioningtarget" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>position</code> (String) Where to place the entity: top (first), bottom (last), before (above anchor), after (below anchor). The before and after values require the anchor field. The top and bottom values must not include an anchor field — providing an anchor with top or bottom is a validation error.</li>
@@ -1210,14 +1226,14 @@
 <li><code>section_id</code> (String) The section the rule should belong to. Only valid for rule POST and PATCH; must be null/omitted for section POST and PATCH (sections cannot be nested). The anchor (if any) must reside in this same container.</li>
 </ul>
 <p><a id="nestedatt--positioning--target--anchor"></a></p>
-<h3 id="nested-schema-for-positioningtargetanchor">Nested Schema for <code>positioning.target.anchor</code></h3>
+<h3 id="nested-schema-for-positioningtargetanchor">Nested Schema for <code>positioning.target.anchor</code><a class="headerlink" href="#nested-schema-for-positioningtargetanchor" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>id</code> (String) The entity ID of the anchor item.</li>
 <li><code>type_</code> (String)</li>
 </ul>
 <p><a id="nestedatt--scope"></a></p>
-<h3 id="nested-schema-for-scope">Nested Schema for <code>scope</code></h3>
+<h3 id="nested-schema-for-scope">Nested Schema for <code>scope</code><a class="headerlink" href="#nested-schema-for-scope" title="Permanent link">&para;</a></h3>
 <p>Optional:</p>
 <ul>
 <li><code>device_groups</code> (Attributes) The device groups the rule applies to. (see <a href="#nestedatt--scope--device_groups">below for nested schema</a>)</li>
@@ -1227,35 +1243,35 @@
 <li><code>users</code> (Attributes) The users or user groups the rule applies to. (see <a href="#nestedatt--scope--users">below for nested schema</a>)</li>
 </ul>
 <p><a id="nestedatt--scope--device_groups"></a></p>
-<h3 id="nested-schema-for-scopedevice_groups">Nested Schema for <code>scope.device_groups</code></h3>
+<h3 id="nested-schema-for-scopedevice_groups">Nested Schema for <code>scope.device_groups</code><a class="headerlink" href="#nested-schema-for-scopedevice_groups" title="Permanent link">&para;</a></h3>
 <p>Optional:</p>
 <ul>
 <li><code>device_groups</code> (List of String)</li>
 <li><code>is_any</code> (Boolean) Flag indicating if any device groups are included in the scope. If isAny is set to true, no other fields should be present, and all device groups will be included in the scope. If isAny is set to false, the final scope must contain at least one device group.</li>
 </ul>
 <p><a id="nestedatt--scope--locations"></a></p>
-<h3 id="nested-schema-for-scopelocations">Nested Schema for <code>scope.locations</code></h3>
+<h3 id="nested-schema-for-scopelocations">Nested Schema for <code>scope.locations</code><a class="headerlink" href="#nested-schema-for-scopelocations" title="Permanent link">&para;</a></h3>
 <p>Optional:</p>
 <ul>
 <li><code>is_any</code> (Boolean) Flag indicating if any locations are included in the scope. If isAny is set to true, no other fields should be present, and all locations will be included in the scope. If isAny is set to false, the final scope must contain at least one location.</li>
 <li><code>locations</code> (List of String) Geographical locations to which the rule applies.</li>
 </ul>
 <p><a id="nestedatt--scope--private_ips"></a></p>
-<h3 id="nested-schema-for-scopeprivate_ips">Nested Schema for <code>scope.private_ips</code></h3>
+<h3 id="nested-schema-for-scopeprivate_ips">Nested Schema for <code>scope.private_ips</code><a class="headerlink" href="#nested-schema-for-scopeprivate_ips" title="Permanent link">&para;</a></h3>
 <p>Optional:</p>
 <ul>
 <li><code>is_any</code> (Boolean) Flag indicating if any private IP addresses are included in the scope. If isAny is set to true, no other fields should be present, and all private IP addresses will be included in the scope. If isAny is set to false, the final scope must contain at least one private IP.</li>
 <li><code>private_ips</code> (List of String) Private IP addresses affected by the rule.</li>
 </ul>
 <p><a id="nestedatt--scope--public_ips"></a></p>
-<h3 id="nested-schema-for-scopepublic_ips">Nested Schema for <code>scope.public_ips</code></h3>
+<h3 id="nested-schema-for-scopepublic_ips">Nested Schema for <code>scope.public_ips</code><a class="headerlink" href="#nested-schema-for-scopepublic_ips" title="Permanent link">&para;</a></h3>
 <p>Optional:</p>
 <ul>
 <li><code>is_any</code> (Boolean) Flag indicating if any public IP addresses are included in the scope. If isAny is set to true, no other fields should be present, and all public IP addresses will be included in the scope. If isAny is set to false, the final scope must contain at least one public IP.</li>
 <li><code>public_ips</code> (List of String) Public IP addresses affected by the rule.</li>
 </ul>
 <p><a id="nestedatt--scope--users"></a></p>
-<h3 id="nested-schema-for-scopeusers">Nested Schema for <code>scope.users</code></h3>
+<h3 id="nested-schema-for-scopeusers">Nested Schema for <code>scope.users</code><a class="headerlink" href="#nested-schema-for-scopeusers" title="Permanent link">&para;</a></h3>
 <p>Optional:</p>
 <ul>
 <li><code>is_any</code> (Boolean) Flag indicating if any users or user groups are included in the scope. If isAny is set to true, no other fields should be present, and all users and user groups will be included in the scope. If isAny is set to false, the final scope must contain at least one user or user group.</li>
@@ -1263,7 +1279,7 @@
 <li><code>users</code> (List of String)</li>
 </ul>
 <p><a id="nestedatt--metadata"></a></p>
-<h3 id="nested-schema-for-metadata">Nested Schema for <code>metadata</code></h3>
+<h3 id="nested-schema-for-metadata">Nested Schema for <code>metadata</code><a class="headerlink" href="#nested-schema-for-metadata" title="Permanent link">&para;</a></h3>
 <p>Read-Only:</p>
 <ul>
 <li><code>configuration_version</code> (Attributes) Configuration version information (see <a href="#nestedatt--metadata--configuration_version">below for nested schema</a>)</li>
@@ -1273,7 +1289,7 @@
 <li><code>last_updated_time</code> (String) Timestamp when the rule was last updated</li>
 </ul>
 <p><a id="nestedatt--metadata--configuration_version"></a></p>
-<h3 id="nested-schema-for-metadataconfiguration_version">Nested Schema for <code>metadata.configuration_version</code></h3>
+<h3 id="nested-schema-for-metadataconfiguration_version">Nested Schema for <code>metadata.configuration_version</code><a class="headerlink" href="#nested-schema-for-metadataconfiguration_version" title="Permanent link">&para;</a></h3>
 <p>Read-Only:</p>
 <ul>
 <li><code>id</code> (String) Configuration version identifier</li>
@@ -1281,7 +1297,7 @@
 <li><code>status</code> (String) Configuration version status</li>
 </ul>
 <p><a id="nestedatt--section"></a></p>
-<h3 id="nested-schema-for-section">Nested Schema for <code>section</code></h3>
+<h3 id="nested-schema-for-section">Nested Schema for <code>section</code><a class="headerlink" href="#nested-schema-for-section" title="Permanent link">&para;</a></h3>
 <p>Read-Only:</p>
 <ul>
 <li><code>id</code> (String) ID of the section</li>
@@ -1345,7 +1361,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.top", "search.suggest", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.expand", "navigation.top", "toc.follow", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
