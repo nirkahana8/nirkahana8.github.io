@@ -612,17 +612,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#nested-schema-for-applicationsapplication_groupsapplication_group_ids" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Nested Schema for applications.application_groups.application_group_ids
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#nested-schema-for-applicationslocal_desktop" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -770,6 +759,17 @@
     <span class="md-ellipsis">
       
         Nested Schema for applications.tenant_conditions.google
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-applicationstenant_conditionsgoogle_cloud_console" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for applications.tenant_conditions.google_cloud_console
       
     </span>
   </a>
@@ -1661,6 +1661,17 @@
     <span class="md-ellipsis">
       
         Nested Schema for scope.users
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-control_set" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for control_set
       
     </span>
   </a>
@@ -2293,17 +2304,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#nested-schema-for-applicationsapplication_groupsapplication_group_ids" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Nested Schema for applications.application_groups.application_group_ids
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#nested-schema-for-applicationslocal_desktop" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2451,6 +2451,17 @@
     <span class="md-ellipsis">
       
         Nested Schema for applications.tenant_conditions.google
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nested-schema-for-applicationstenant_conditionsgoogle_cloud_console" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for applications.tenant_conditions.google_cloud_console
       
     </span>
   </a>
@@ -3349,6 +3360,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#nested-schema-for-control_set" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nested Schema for control_set
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#nested-schema-for-metadata" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3452,6 +3474,7 @@ resulting content type are always rejected, even when bypass is enabled. (see <a
 - <code>scope</code> (Attributes) Provide scope to describe this rule (see <a href="#nestedatt--scope">below for nested schema</a>)</p>
 <h3 id="read-only">Read-Only<a class="headerlink" href="#read-only" title="Permanent link">&para;</a></h3>
 <ul>
+<li><code>control_set</code> (Attributes) Reference to the shared control set (policy profile) this rule's controls are inherited from. Present only when the rule links a shared control set. (see <a href="#nestedatt--control_set">below for nested schema</a>)</li>
 <li><code>id</code> (String) The unique identifier of the created resource (PULID, 29 chars).</li>
 <li><code>metadata</code> (Attributes) (see <a href="#nestedatt--metadata">below for nested schema</a>)</li>
 <li><code>priority</code> (Number) Order position of the rule in the list</li>
@@ -3466,7 +3489,7 @@ resulting content type are always rejected, even when bypass is enabled. (see <a
 <p>Optional:</p>
 <ul>
 <li><code>address_bar_label</code> (String) Label shown in the browser address bar for matched pages.</li>
-<li><code>authentication_duration_minutes</code> (String) Duration in minutes (as a string) for a timeframe window (e.g. user-prompt bypass window or authentication session validity). Allowed values: 0 (single use / every time), 10 (10m), 60 (1h), 240 (4h), 540 (9h), 720 (12h), 1440 (24h), 4320 (3d), 10080 (7d), 20160 (14d), 43200 (30d), 86400 (60d), 129600 (90d).</li>
+<li><code>authentication_duration_minutes</code> (String) Duration in minutes for a timeframe window (e.g. user-prompt bypass window or authentication session validity). Must be sent as a string; integer values are rejected with a 400. Allowed values: 0 (single use / every time), 10 (10m), 60 (1h), 240 (4h), 540 (9h), 720 (12h), 1440 (24h), 4320 (3d), 10080 (7d), 20160 (14d), 43200 (30d), 86400 (60d), 129600 (90d).</li>
 <li><code>custom_dialog_text</code> (Attributes) Custom dialog text shown to the user. (see <a href="#nestedatt--access--custom_dialog_text">below for nested schema</a>)</li>
 <li><code>custom_label</code> (Attributes) Custom address-bar label configuration. Required when addressBarLabel is 'custom'. (see <a href="#nestedatt--access--custom_label">below for nested schema</a>)</li>
 <li><code>mfa_required</code> (Boolean) Whether the user must complete an MFA challenge before the control's restricted action is allowed. The MFA method (pinCode / identityProvider) is configured globally on the Browser Security Authentication Factor control and is not set per-rule.</li>
@@ -3560,22 +3583,11 @@ Each provider section is optional. To remove a provider's restrictions, omit its
 <ul>
 <li><code>specific</code> (Attributes) Present when accessMode is specific (see <a href="#nestedatt--applications--application_groups--specific">below for nested schema</a>)</li>
 </ul>
-<p>Read-Only:</p>
-<ul>
-<li><code>application_group_ids</code> (Attributes List) (see <a href="#nestedatt--applications--application_groups--application_group_ids">below for nested schema</a>)</li>
-</ul>
 <p><a id="nestedatt--applications--application_groups--specific"></a></p>
 <h3 id="nested-schema-for-applicationsapplication_groupsspecific">Nested Schema for <code>applications.application_groups.specific</code><a class="headerlink" href="#nested-schema-for-applicationsapplication_groupsspecific" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
 <li><code>application_group_ids</code> (List of String)</li>
-</ul>
-<p><a id="nestedatt--applications--application_groups--application_group_ids"></a></p>
-<h3 id="nested-schema-for-applicationsapplication_groupsapplication_group_ids">Nested Schema for <code>applications.application_groups.application_group_ids</code><a class="headerlink" href="#nested-schema-for-applicationsapplication_groupsapplication_group_ids" title="Permanent link">&para;</a></h3>
-<p>Read-Only:</p>
-<ul>
-<li><code>id</code> (String) Application group identifier</li>
-<li><code>name</code> (String) Application group display name</li>
 </ul>
 <p><a id="nestedatt--applications--local_desktop"></a></p>
 <h3 id="nested-schema-for-applicationslocal_desktop">Nested Schema for <code>applications.local_desktop</code><a class="headerlink" href="#nested-schema-for-applicationslocal_desktop" title="Permanent link">&para;</a></h3>
@@ -3672,6 +3684,7 @@ If <code>false</code> (default), the system automatically normalizes the URL bas
 <li><code>claudeai</code> (Attributes) (see <a href="#nestedatt--applications--tenant_conditions--claudeai">below for nested schema</a>)</li>
 <li><code>github</code> (Attributes) (see <a href="#nestedatt--applications--tenant_conditions--github">below for nested schema</a>)</li>
 <li><code>google</code> (Attributes) (see <a href="#nestedatt--applications--tenant_conditions--google">below for nested schema</a>)</li>
+<li><code>google_cloud_console</code> (Attributes) (see <a href="#nestedatt--applications--tenant_conditions--google_cloud_console">below for nested schema</a>)</li>
 <li><code>microsoft365</code> (Attributes) (see <a href="#nestedatt--applications--tenant_conditions--microsoft365">below for nested schema</a>)</li>
 <li><code>openai</code> (Attributes) (see <a href="#nestedatt--applications--tenant_conditions--openai">below for nested schema</a>)</li>
 <li><code>slack</code> (Attributes) (see <a href="#nestedatt--applications--tenant_conditions--slack">below for nested schema</a>)</li>
@@ -3701,6 +3714,12 @@ If <code>false</code> (default), the system automatically normalizes the URL bas
 <p>Required:</p>
 <ul>
 <li><code>domains</code> (List of String) List of allowed Google domains</li>
+</ul>
+<p><a id="nestedatt--applications--tenant_conditions--google_cloud_console"></a></p>
+<h3 id="nested-schema-for-applicationstenant_conditionsgoogle_cloud_console">Nested Schema for <code>applications.tenant_conditions.google_cloud_console</code><a class="headerlink" href="#nested-schema-for-applicationstenant_conditionsgoogle_cloud_console" title="Permanent link">&para;</a></h3>
+<p>Required:</p>
+<ul>
+<li><code>domains</code> (List of String) List of allowed Google Cloud Console domains</li>
 </ul>
 <p><a id="nestedatt--applications--tenant_conditions--microsoft365"></a></p>
 <h3 id="nested-schema-for-applicationstenant_conditionsmicrosoft365">Nested Schema for <code>applications.tenant_conditions.microsoft365</code><a class="headerlink" href="#nested-schema-for-applicationstenant_conditionsmicrosoft365" title="Permanent link">&para;</a></h3>
@@ -3734,8 +3753,8 @@ If <code>false</code> (default), the system automatically normalizes the URL bas
 </ul>
 <p>Optional:</p>
 <ul>
-<li><code>evidence_type</code> (String) Evidence capture type for access and data tracking.</li>
-<li><code>should_log_query_params</code> (Boolean) Whether to log URL query parameters. Only present when logLevel is 'on'.</li>
+<li><code>evidence_type</code> (String) Evidence capture type for access and data tracking. Only applicable when logLevel is 'enhanced'.</li>
+<li><code>should_log_query_params</code> (Boolean) Whether to log URL query parameters. Only applicable when logLevel is 'on'.</li>
 <li><code>should_log_spa_navigation_events</code> (Boolean) Whether to log single-page app (SPA) navigation events. Not applicable when logLevel is 'off'.</li>
 </ul>
 <p><a id="nestedatt--data_controls"></a></p>
@@ -3744,7 +3763,7 @@ If <code>false</code> (default), the system automatically normalizes the URL bas
 <ul>
 <li><code>bypass_dlp_profile_validation</code> (Boolean) Bypass the content-agnostic data-profile compatibility check for controls in this object. When false (default), controls incompatible with the configured dlpProfileId are rejected with HTTP 400. When true, the rule saves and content-agnostic incompatible controls become runtime no-ops. Controls entirely unsupported for the resulting content type are always rejected, even when this is true.</li>
 <li><code>camera</code> (Attributes) Control the ability to use camera in web pages. (see <a href="#nestedatt--data_controls--camera">below for nested schema</a>)</li>
-<li><code>clipboard</code> (Attributes) Control cut, copy and paste. (see <a href="#nestedatt--data_controls--clipboard">below for nested schema</a>)</li>
+<li><code>clipboard</code> (Attributes) Control cut, copy and paste. At least one direction must be active: either dataIn.active or dataOut.active must be true. (see <a href="#nestedatt--data_controls--clipboard">below for nested schema</a>)</li>
 <li><code>custom_http_header</code> (Attributes) Set a custom HTTP header to identify HTTP/S requests. (see <a href="#nestedatt--data_controls--custom_http_header">below for nested schema</a>)</li>
 <li><code>developer_tools_on_web_pages</code> (Attributes) Control DevTools to avoid potential data leaks, inspecting page content, and running unauthorized code in the console. (see <a href="#nestedatt--data_controls--developer_tools_on_web_pages">below for nested schema</a>)</li>
 <li><code>dlp_profile</code> (Attributes) Expanded reference to an Enterprise DLP (EDLP) data profile. (see <a href="#nestedatt--data_controls--dlp_profile">below for nested schema</a>)</li>
@@ -4488,6 +4507,13 @@ If <code>false</code> (default), the system automatically normalizes the URL bas
 <li><code>is_any</code> (Boolean) Flag indicating if any users or user groups are included in the scope. If isAny is set to true, no other fields should be present, and all users and user groups will be included in the scope. If isAny is set to false, the final scope must contain at least one user or user group.</li>
 <li><code>user_groups</code> (List of String)</li>
 <li><code>users</code> (List of String)</li>
+</ul>
+<p><a id="nestedatt--control_set"></a></p>
+<h3 id="nested-schema-for-control_set">Nested Schema for <code>control_set</code><a class="headerlink" href="#nested-schema-for-control_set" title="Permanent link">&para;</a></h3>
+<p>Read-Only:</p>
+<ul>
+<li><code>id</code> (String) Control set (policy profile) identifier.</li>
+<li><code>name</code> (String) Control set (policy profile) display name.</li>
 </ul>
 <p><a id="nestedatt--metadata"></a></p>
 <h3 id="nested-schema-for-metadata">Nested Schema for <code>metadata</code><a class="headerlink" href="#nested-schema-for-metadata" title="Permanent link">&para;</a></h3>

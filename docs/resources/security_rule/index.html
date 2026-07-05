@@ -2798,7 +2798,7 @@
 <li><code>open_links_in_external_apps</code> (Attributes) Control the ability of other apps to open links from Prisma Browser. (see <a href="#nestedatt--controls--open_links_in_external_apps">below for nested schema</a>)</li>
 <li><code>pages_with_insecure_content</code> (Attributes) Set whether pages with insecure content are available. (see <a href="#nestedatt--controls--pages_with_insecure_content">below for nested schema</a>)</li>
 <li><code>pages_with_ssl_errors</code> (Attributes) Block "Proceed to [FQDN] (unsafe)" option when getting an SSL error. Such errors might appear during SSL MitM attack. (see <a href="#nestedatt--controls--pages_with_ssl_errors">below for nested schema</a>)</li>
-<li><code>password_manager</code> (Attributes) Enterprise password management powered by Idira. (see <a href="#nestedatt--controls--password_manager">below for nested schema</a>)</li>
+<li><code>password_manager</code> (Attributes) Enable enterprise password management powered by Idira. (see <a href="#nestedatt--controls--password_manager">below for nested schema</a>)</li>
 <li><code>pdfium</code> (Attributes) Control the use of the PDFium library to render PDF pages, which might be exploited. When PDFium is disabled, encrypted PDF files won't be loaded in Prisma Browser. (see <a href="#nestedatt--controls--pdfium">below for nested schema</a>)</li>
 <li><code>popups</code> (Attributes) Control the ability to display popups in the browser. (see <a href="#nestedatt--controls--popups">below for nested schema</a>)</li>
 <li><code>post_quantum_key_security</code> (Attributes) Control whether to offer a post-quantum key agreement algorithm in TLS. (see <a href="#nestedatt--controls--post_quantum_key_security">below for nested schema</a>)</li>
@@ -3185,7 +3185,12 @@
 <h3 id="nested-schema-for-controlspassword_manager">Nested Schema for <code>controls.password_manager</code><a class="headerlink" href="#nested-schema-for-controlspassword_manager" title="Permanent link">&para;</a></h3>
 <p>Required:</p>
 <ul>
-<li><code>action</code> (String) The action for this control.</li>
+<li><code>action</code> (String) Whether Password Manager is enabled.</li>
+</ul>
+<p>Optional:</p>
+<ul>
+<li><code>mfa_prompt_frequency_minutes</code> (Number) How many minutes before the user must complete MFA again. Use 0 to require MFA every time.</li>
+<li><code>mfa_required</code> (Boolean) Whether MFA is required before accessing stored passwords.</li>
 </ul>
 <p><a id="nestedatt--controls--pdfium"></a></p>
 <h3 id="nested-schema-for-controlspdfium">Nested Schema for <code>controls.pdfium</code><a class="headerlink" href="#nested-schema-for-controlspdfium" title="Permanent link">&para;</a></h3>
