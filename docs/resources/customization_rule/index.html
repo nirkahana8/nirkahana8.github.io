@@ -3383,8 +3383,7 @@
 <ul>
 <li><code>pinned_shortcuts</code> (Attributes List) Applications pinned to the top of the new tab page. Maximum 16 items. (see <a href="#nestedatt--controls--managed_shortcuts--pinned_shortcuts">below for nested schema</a>)</li>
 <li><code>sections</code> (Attributes List) Ordered list of NTP sections. Each section groups shortcuts or controls visibility of a system section. (see <a href="#nestedatt--controls--managed_shortcuts--sections">below for nested schema</a>)</li>
-<li><code>shortcuts</code> (Attributes List) Managed shortcuts shown on the new tab page and in bookmarks. Required when mode is setShortcuts. Must not be set when mode is noShortcuts.
-At most 16 entries may have <code>pinned: true</code>; requests that exceed this cap are rejected with HTTP 400. (see <a href="#nestedatt--controls--managed_shortcuts--shortcuts">below for nested schema</a>)</li>
+<li><code>shortcuts</code> (Attributes List) Managed shortcuts shown on the new tab page and in bookmarks. Required when mode is setShortcuts. Must not be set when mode is noShortcuts. At most 16 entries may have <code>pinned: true</code>; requests that exceed this cap are rejected with HTTP 400. (see <a href="#nestedatt--controls--managed_shortcuts--shortcuts">below for nested schema</a>)</li>
 </ul>
 <p><a id="nestedatt--controls--managed_shortcuts--pinned_shortcuts"></a></p>
 <h3 id="nested-schema-for-controlsmanaged_shortcutspinned_shortcuts">Nested Schema for <code>controls.managed_shortcuts.pinned_shortcuts</code><a class="headerlink" href="#nested-schema-for-controlsmanaged_shortcutspinned_shortcuts" title="Permanent link">&para;</a></h3>
