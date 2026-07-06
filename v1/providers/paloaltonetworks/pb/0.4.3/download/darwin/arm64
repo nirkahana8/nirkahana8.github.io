@@ -1,0 +1,20 @@
+{
+  "protocols": [
+    "6.0"
+  ],
+  "os": "darwin",
+  "arch": "arm64",
+  "filename": "terraform-provider-pb_0.4.3_darwin_arm64.zip",
+  "download_url": "https://github.com/nirkahana8/nirkahana8.github.io/releases/download/v0.4.3/terraform-provider-pb_0.4.3_darwin_arm64.zip",
+  "shasums_url": "https://github.com/nirkahana8/nirkahana8.github.io/releases/download/v0.4.3/terraform-provider-pb_0.4.3_SHA256SUMS",
+  "shasums_signature_url": "https://github.com/nirkahana8/nirkahana8.github.io/releases/download/v0.4.3/terraform-provider-pb_0.4.3_SHA256SUMS.sig",
+  "shasum": "3cdea654841cf7299c00d83588f26a4cdcbf2d1e66f7073a24e913074ae1665f",
+  "signing_keys": {
+    "gpg_public_keys": [
+      {
+        "key_id": "7251402513283AAA",
+        "ascii_armor": "-----BEGIN PGP PUBLIC KEY BLOCK-----\n\n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\nXd2xaIsg1OY=\n=OJKn\n-----END PGP PUBLIC KEY BLOCK-----\n"
+      }
+    ]
+  }
+}
