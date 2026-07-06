@@ -1359,28 +1359,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#nested-schema-for-metadata" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Nested Schema for metadata
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#nested-schema-for-metadataconfiguration_version" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Nested Schema for metadata.configuration_version
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#nested-schema-for-policy_profile" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2854,28 +2832,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#nested-schema-for-metadata" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Nested Schema for metadata
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#nested-schema-for-metadataconfiguration_version" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Nested Schema for metadata.configuration_version
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#nested-schema-for-policy_profile" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2957,7 +2913,6 @@
 <h3 id="read-only">Read-Only<a class="headerlink" href="#read-only" title="Permanent link">&para;</a></h3>
 <ul>
 <li><code>id</code> (String) The unique identifier of the created resource (PULID, 29 chars).</li>
-<li><code>metadata</code> (Attributes) (see <a href="#nestedatt--metadata">below for nested schema</a>)</li>
 <li><code>policy_profile</code> (Attributes) The linked policy profile (see <a href="#nestedatt--policy_profile">below for nested schema</a>)</li>
 <li><code>priority</code> (Number) Order position of the rule in the list</li>
 <li><code>section</code> (Attributes) Section this rule belongs to (null if standalone) (see <a href="#nestedatt--section">below for nested schema</a>)</li>
@@ -3744,24 +3699,6 @@ At most 16 entries may have <code>pinned: true</code>; requests that exceed this
 <li><code>is_any</code> (Boolean) Flag indicating if any users or user groups are included in the scope. If isAny is set to true, no other fields should be present, and all users and user groups will be included in the scope. If isAny is set to false, the final scope must contain at least one user or user group.</li>
 <li><code>user_groups</code> (List of String)</li>
 <li><code>users</code> (List of String)</li>
-</ul>
-<p><a id="nestedatt--metadata"></a></p>
-<h3 id="nested-schema-for-metadata">Nested Schema for <code>metadata</code><a class="headerlink" href="#nested-schema-for-metadata" title="Permanent link">&para;</a></h3>
-<p>Read-Only:</p>
-<ul>
-<li><code>configuration_version</code> (Attributes) Configuration version information (see <a href="#nestedatt--metadata--configuration_version">below for nested schema</a>)</li>
-<li><code>created_by</code> (String) Email or identifier of the admin who created the rule</li>
-<li><code>created_time</code> (String) Timestamp when the rule was created</li>
-<li><code>last_updated_by</code> (String) Email or identifier of the admin who last updated the rule</li>
-<li><code>last_updated_time</code> (String) Timestamp when the rule was last updated</li>
-</ul>
-<p><a id="nestedatt--metadata--configuration_version"></a></p>
-<h3 id="nested-schema-for-metadataconfiguration_version">Nested Schema for <code>metadata.configuration_version</code><a class="headerlink" href="#nested-schema-for-metadataconfiguration_version" title="Permanent link">&para;</a></h3>
-<p>Read-Only:</p>
-<ul>
-<li><code>id</code> (String) Configuration version identifier</li>
-<li><code>number</code> (Number) Configuration version number</li>
-<li><code>status</code> (String) Configuration version status</li>
 </ul>
 <p><a id="nestedatt--policy_profile"></a></p>
 <h3 id="nested-schema-for-policy_profile">Nested Schema for <code>policy_profile</code><a class="headerlink" href="#nested-schema-for-policy_profile" title="Permanent link">&para;</a></h3>

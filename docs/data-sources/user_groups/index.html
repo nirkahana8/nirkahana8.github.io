@@ -748,28 +748,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#nested-schema-for-metadata" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Nested Schema for metadata
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#nested-schema-for-metadataconfiguration_version" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Nested Schema for metadata.configuration_version
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#nested-schema-for-page_info" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -995,28 +973,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#nested-schema-for-metadata" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Nested Schema for metadata
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#nested-schema-for-metadataconfiguration_version" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Nested Schema for metadata.configuration_version
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#nested-schema-for-page_info" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1062,7 +1018,6 @@
 <h3 id="read-only">Read-Only<a class="headerlink" href="#read-only" title="Permanent link">&para;</a></h3>
 <ul>
 <li><code>data</code> (Attributes List) (see <a href="#nestedatt--data">below for nested schema</a>)</li>
-<li><code>metadata</code> (Attributes) Configuration metadata. Returned for configuration-versioned resources (applications, application groups, user groups, and policy endpoints). Not returned for users or devices, or for device groups (which accept the configurationVersion parameter but do not include this envelope in their responses). (see <a href="#nestedatt--metadata">below for nested schema</a>)</li>
 <li><code>page_info</code> (Attributes) (see <a href="#nestedatt--page_info">below for nested schema</a>)</li>
 </ul>
 <p><a id="nestedatt--data"></a></p>
@@ -1074,20 +1029,6 @@
 <li><code>last_updated</code> (String) Last updated</li>
 <li><code>name</code> (String) Name</li>
 <li><code>provider</code> (String) Provider</li>
-</ul>
-<p><a id="nestedatt--metadata"></a></p>
-<h3 id="nested-schema-for-metadata">Nested Schema for <code>metadata</code><a class="headerlink" href="#nested-schema-for-metadata" title="Permanent link">&para;</a></h3>
-<p>Read-Only:</p>
-<ul>
-<li><code>configuration_version</code> (Attributes) Configuration version information (see <a href="#nestedatt--metadata--configuration_version">below for nested schema</a>)</li>
-</ul>
-<p><a id="nestedatt--metadata--configuration_version"></a></p>
-<h3 id="nested-schema-for-metadataconfiguration_version">Nested Schema for <code>metadata.configuration_version</code><a class="headerlink" href="#nested-schema-for-metadataconfiguration_version" title="Permanent link">&para;</a></h3>
-<p>Read-Only:</p>
-<ul>
-<li><code>id</code> (String) Configuration version identifier</li>
-<li><code>number</code> (Number) Configuration version number</li>
-<li><code>status</code> (String) Configuration version status</li>
 </ul>
 <p><a id="nestedatt--page_info"></a></p>
 <h3 id="nested-schema-for-page_info">Nested Schema for <code>page_info</code><a class="headerlink" href="#nested-schema-for-page_info" title="Permanent link">&para;</a></h3>
