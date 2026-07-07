@@ -3490,32 +3490,21 @@
 <h2 id="schema">Schema<a class="headerlink" href="#schema" title="Permanent link">&para;</a></h2>
 <h3 id="required">Required<a class="headerlink" href="#required" title="Permanent link">&para;</a></h3>
 <ul>
-<li><code>access</code> (Attributes) Access control configuration for an access-and-data rule.</li>
+<li><code>access</code> (Attributes) Access control configuration for an access-and-data rule.<br><br>Note: on PATCH, the <code>access</code> block uses replace semantics — clients must re-send the full object on every update. Any field omitted is cleared (with the exception of internal fields not exposed by this API, such as <code>authMethod</code> and <code>enforceRedirect</code>, which are preserved from the existing rule). (see <a href="#nestedatt--access">below for nested schema</a>)</li>
+<li><code>applications</code> (Attributes) Applications scope for creating an access-and-data rule, categorized by application type. (see <a href="#nestedatt--applications">below for nested schema</a>)</li>
+<li><code>mode</code> (String) The mode of the rule.</li>
+<li><code>name</code> (String) The name or title of the rule.</li>
+<li><code>tracking</code> (Attributes) Tracking and logging configuration for the rule (see <a href="#nestedatt--tracking">below for nested schema</a>)</li>
 </ul>
-<p>Note: on PATCH, the <code>access</code> block uses replace semantics — clients must
-re-send the full object on every update. Any field omitted is cleared
-(with the exception of internal fields not exposed by this API, such as
-<code>authMethod</code> and <code>enforceRedirect</code>, which are preserved from the existing rule). (see <a href="#nestedatt--access">below for nested schema</a>)
-- <code>applications</code> (Attributes) Applications scope for creating an access-and-data rule, categorized by application type. (see <a href="#nestedatt--applications">below for nested schema</a>)
-- <code>mode</code> (String) The mode of the rule.
-- <code>name</code> (String) The name or title of the rule.
-- <code>tracking</code> (Attributes) Tracking and logging configuration for the rule (see <a href="#nestedatt--tracking">below for nested schema</a>)</p>
 <h3 id="optional">Optional<a class="headerlink" href="#optional" title="Permanent link">&para;</a></h3>
 <ul>
 <li><code>configuration_version</code> (String) Configuration version to retrieve (draft, active, or version number)</li>
-<li><code>data_controls</code> (Attributes) Data controls for access-and-data rules.</li>
+<li><code>data_controls</code> (Attributes) Data controls for access-and-data rules.<br><br>Each data control supports a specific set of data-profile content types (no profile, on-device scanning, or cloud-assisted scanning). When a rule links a data profile (an EDLP <code>dlpProfileId</code>) or uses inline content, controls that are not supported for the resulting content type are rejected with HTTP 400. Set <code>bypassDlpProfileValidation: true</code> to suppress content-agnostic compatibility rejections only — those controls save successfully but become runtime no-ops. Controls that are entirely unsupported for the resulting content type are always rejected, even when bypass is enabled. (see <a href="#nestedatt--data_controls">below for nested schema</a>)</li>
+<li><code>description</code> (String) The detailed description of the rule.</li>
+<li><code>login_controls</code> (Attributes) Login controls for access-and-data rules. (see <a href="#nestedatt--login_controls">below for nested schema</a>)</li>
+<li><code>positioning</code> (Attributes) Optional placement directive for the entity. On create, when omitted, the entity is placed at the top of the stack. On update, when omitted, the entity's current position is preserved. (see <a href="#nestedatt--positioning">below for nested schema</a>)</li>
+<li><code>scope</code> (Attributes) Provide scope to describe this rule (see <a href="#nestedatt--scope">below for nested schema</a>)</li>
 </ul>
-<p>Each data control supports a specific set of data-profile content types (no profile,
-on-device scanning, or cloud-assisted scanning). When a rule links a data profile
-(an EDLP <code>dlpProfileId</code>) or uses inline content, controls that are not supported for the
-resulting content type are rejected with HTTP 400. Set <code>bypassDlpProfileValidation: true</code>
-to suppress content-agnostic compatibility rejections only — those controls save
-successfully but become runtime no-ops. Controls that are entirely unsupported for the
-resulting content type are always rejected, even when bypass is enabled. (see <a href="#nestedatt--data_controls">below for nested schema</a>)
-- <code>description</code> (String) The detailed description of the rule.
-- <code>login_controls</code> (Attributes) Login controls for access-and-data rules. (see <a href="#nestedatt--login_controls">below for nested schema</a>)
-- <code>positioning</code> (Attributes) Optional placement directive for the entity. On create, when omitted, the entity is placed at the top of the stack. On update, when omitted, the entity's current position is preserved. (see <a href="#nestedatt--positioning">below for nested schema</a>)
-- <code>scope</code> (Attributes) Provide scope to describe this rule (see <a href="#nestedatt--scope">below for nested schema</a>)</p>
 <h3 id="read-only">Read-Only<a class="headerlink" href="#read-only" title="Permanent link">&para;</a></h3>
 <ul>
 <li><code>control_set</code> (Attributes) Reference to the shared control set (policy profile) this rule's controls are inherited from. Present only when the rule links a shared control set. (see <a href="#nestedatt--control_set">below for nested schema</a>)</li>
@@ -3613,8 +3602,7 @@ resulting content type are always rejected, even when bypass is enabled. (see <a
 <li><code>non_web</code> (Attributes) Non-web (remote connections) application scope (see <a href="#nestedatt--applications--non_web">below for nested schema</a>)</li>
 <li><code>private</code> (Attributes) Private application scope (see <a href="#nestedatt--applications--private">below for nested schema</a>)</li>
 <li><code>saas</code> (Attributes) SaaS application scope (see <a href="#nestedatt--applications--saas">below for nested schema</a>)</li>
-<li><code>tenant_conditions</code> (Attributes) Tenant restriction conditions for various cloud providers.
-Each provider section is optional. To remove a provider's restrictions, omit its section entirely. (see <a href="#nestedatt--applications--tenant_conditions">below for nested schema</a>)</li>
+<li><code>tenant_conditions</code> (Attributes) Tenant restriction conditions for various cloud providers. Each provider section is optional. To remove a provider's restrictions, omit its section entirely. (see <a href="#nestedatt--applications--tenant_conditions">below for nested schema</a>)</li>
 </ul>
 <p><a id="nestedatt--applications--application_groups"></a></p>
 <h3 id="nested-schema-for-applicationsapplication_groups">Nested Schema for <code>applications.application_groups</code><a class="headerlink" href="#nested-schema-for-applicationsapplication_groups" title="Permanent link">&para;</a></h3>
@@ -3707,18 +3695,8 @@ Each provider section is optional. To remove a provider's restrictions, omit its
 </ul>
 <p>Optional:</p>
 <ul>
-<li><code>strict_mode</code> (Boolean) If <code>true</code>, the URL is saved exactly as entered. 
-If <code>false</code> (default), the system automatically normalizes the URL based on the App Type:</li>
+<li><code>strict_mode</code> (Boolean) If <code>true</code>, the URL is saved exactly as entered. If <code>false</code> (default), the system automatically normalizes the URL based on the App Type:<br><br><strong>Custom Apps:</strong><br>• <strong>Protocol:</strong> Defaults to <code>*://</code> if omitted.<br>• <strong>Subdomain:</strong> Defaults to <code>www</code> logic (hidden).<br>• <strong>Path:</strong> Appends <code>/*</code> if no path is specified.<br><br><strong>Private Apps:</strong><br>• <strong>Protocol:</strong> Defaults to <code>https://</code>. Wildcards (<code>*</code>) are <strong>NOT</strong> allowed.<br>• <strong>Subdomain:</strong> No automatic <code>www</code> handling; <code>www</code> is treated as a unique prefix.<br>• <strong>Domain:</strong> Supports IPv4 and Port numbers (e.g., <code>:8080</code>).<br>• <strong>Path:</strong> Automatically adds a trailing <code>*</code> to all paths.</li>
 </ul>
-<p><strong>Custom Apps:</strong>
-* <strong>Protocol:</strong> Defaults to <code>*://</code> if omitted.
-* <strong>Subdomain:</strong> Defaults to <code>www</code> logic (hidden).
-* <strong>Path:</strong> Appends <code>/*</code> if no path is specified.</p>
-<p><strong>Private Apps:</strong>
-* <strong>Protocol:</strong> Defaults to <code>https://</code>. Wildcards (<code>*</code>) are <strong>NOT</strong> allowed.
-* <strong>Subdomain:</strong> No automatic <code>www</code> handling; <code>www</code> is treated as a unique prefix.
-* <strong>Domain:</strong> Supports IPv4 and Port numbers (e.g., <code>:8080</code>).
-* <strong>Path:</strong> Automatically adds a trailing <code>*</code> to all paths.</p>
 <p><a id="nestedatt--applications--tenant_conditions"></a></p>
 <h3 id="nested-schema-for-applicationstenant_conditions">Nested Schema for <code>applications.tenant_conditions</code><a class="headerlink" href="#nested-schema-for-applicationstenant_conditions" title="Permanent link">&para;</a></h3>
 <p>Optional:</p>
